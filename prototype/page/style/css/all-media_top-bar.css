@@ -1,0 +1,43 @@
+
+@media screen and (max-width: 1750px) {
+
+    .top-bar .tb-container .logo-container .lc-cell .logo-picture img { height: 42px; }
+    .top-bar .tb-container .menu-cell .nav-item .nav-i-cell { height: 80px; }
+    .top-bar .tb-container .top-bar-right { height: 80px; }
+    .top-bar .tb-container .logo-container { height: 80px; }
+
+}
+
+@media screen and (max-width: 1660px) {
+
+    .top-bar .tb-container { max-width: 100%; padding: 0 20px; }
+    .top-bar .tb-container .logo-container { padding-left: 20px; }
+    .top-bar .tb-container .top-bar-right { padding-right: 20px; }
+
+}
+
+@media screen and (max-width: 1150px) {
+
+    .top-bar .tb-container .top-bar-right .tbr-cell .tb-language-container { display: none; }
+    .top-bar .tb-container .menu-cell { height: 60px; }
+    .top-bar .tb-container .menu-cell nav { display: none; }
+
+    .top-bar .tb-container .top-bar-right { display: block; width: 100%; height: 60px; text-align: center; padding-right: 0; right: auto; left: 0; }
+    .top-bar .tb-container .top-bar-right .tbr-cell { display: block; width: 100%; padding-top: 20px; }
+
+    .top-bar .tb-container .logo-container { height: 60px; }
+    .top-bar .tb-container .logo-container .lc-cell .logo-picture img { height: 42px; }
+
+}
+
+@media screen and (max-width: 560px) {
+
+    .top-bar .tb-container .logo-container .lc-cell .logo-name { display: none; }
+
+}
+
+@media screen and (max-width: 420px) {
+
+    .top-bar .tb-container .top-bar-right .tbr-cell .tbr-call-mail .tbr-link-call { font-size: 20px; }
+
+}

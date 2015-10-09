@@ -1,0 +1,45 @@
+
+.top-section { display: block; max-width: 1000px; margin: 114px auto 0 auto; font-family: 'PFAgoraSansPro-Thin', 'Arial'; font-size: 22px; color: #000000; text-align: left; }
+
+/**/
+
+.contacts-title { display: block; width: 100%; font-family: 'PFAgoraSansPro-Medium', 'Arial'; font-size: 24px; color: #00c2d9; text-transform: uppercase; position: relative; top: -50px; opacity: 0; visibility: hidden; }
+.contacts-title.show-section { opacity: 1; visibility: visible; top: 0; }
+
+.contacts-call-container { display: block; width: 100%; margin-top: 20px; font-family: 'PFAgoraSansPro-Medium', 'Arial'; font-size: 18px; color: #474d6e; position: relative; top: -50px; opacity: 0; visibility: hidden; }
+.contacts-call-container.show-section { opacity: 1; visibility: visible; top: 0; }
+
+.contacts-call-container .c-item { display: inline-block; vertical-align: top; margin-right: 76px; }
+.contacts-call-container .c-item:last-child { margin-right: 0; }
+
+.contacts-call-container .c-item .c-item-cell-icon { display: inline-block; vertical-align: middle; margin-right: 14px; }
+
+.contacts-call-container .c-item .c-item-cell-object { display: inline-block; vertical-align: middle; }
+
+.contacts-call-container .c-item .c-item-cell-object .c-item-link { display: inline-block; vertical-align: top; font-family: 'PFAgoraSansPro-Medium', 'Arial'; font-size: 18px; color: #474d6e; text-decoration: none; }
+
+/**/
+
+.contacts-info-container { display: block; width: 100%; margin-top: 60px; margin-bottom: 60px; font-size: 18px; opacity: 0; visibility: hidden; }
+.contacts-info-container.show-section { opacity: 1; visibility: visible; top: 0; }
+
+.contacts-info-container .cic-cell { display: block; width: 482px; }
+
+.contacts-info-container .cic-cell.cic-left { float: left; }
+
+.contacts-info-container .cic-cell.cic-right { float: right; }
+
+/**/
+
+.contacts-info-container .cic-cell .cic-title { display: block; width: 100%; font-family: 'PFAgoraSansPro-Medium', 'Arial'; color: #00c2d9; text-transform: uppercase; }
+
+.contacts-info-container .cic-cell .cic-description { display: block; width: 100%; margin-top: 8px; color: #00c2d9; }
+
+.contacts-info-container .cic-cell .cic-description .cic-icon-posit { display: inline-block; vertical-align: top; margin-right: 20px; position: relative; top: 10px; }
+
+.contacts-info-container .cic-cell .cic-description .cic-address { display: inline-block; vertical-align: top; color: #474d6e; }
+
+.contacts-info-container .cic-cell .cic-description .cic-map { display: block; width: 100%; height: 480px; margin-top: 20px; overflow: hidden; }
+
+.contacts-info-container .cic-cell .cic-description .cic-map .cm-big { display: block; width: 100%; }
+.contacts-info-container .cic-cell .cic-description .cic-map .cm-small { display: none; width: 100%; }

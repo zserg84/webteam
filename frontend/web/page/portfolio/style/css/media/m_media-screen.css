@@ -1,0 +1,73 @@
+
+@media screen and (max-width: 1400px) {
+
+    .portfolio-item { max-width: 590px; }
+    .portfolio-item .pi-block { height: 340px; }
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-top { min-height: 170px; height: 170px; }
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-bottom { min-height: 170px; height: 170px; }
+
+}
+
+@media screen and (max-width: 1260px) {
+
+    .portfolio-item { max-width: 470px; }
+    .portfolio-item .pi-block { height: 270px; }
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-top { min-height: 135px; height: 135px; }
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-bottom { min-height: 135px; height: 135px; }
+
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-top .pi-item-name { font-size: 34px; padding: 0 36px; }
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-bottom .pi-item-description { font-size: 22px; padding: 0 36px; }
+
+    .portfolio-content { margin: 50px auto 0 auto; }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .top-section { font-size: 20px; }
+
+    .portfolio-item { max-width: 356px; }
+    .portfolio-item .pi-block { height: 210px; }
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-top { min-height: 105px; height: 105px; }
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-bottom { min-height: 105px; height: 105px; }
+
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-top .pi-item-name { font-size: 28px; padding: 0 30px; line-height: 32px; }
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-bottom .pi-item-description { font-size: 18px; padding: 0 30px; }
+
+
+}
+
+@media screen and (max-width: 740px) {
+
+    .top-section { font-size: 18px; padding: 0 10px; }
+
+    .fly-button-great, .fly-form-container { display: none !important; }
+
+    .to-top-container { font-size: 10px; padding: 8px; bottom: 10px; }
+    .to-top-container .icon-arrow img { width: 12px; }
+    .to-top-container.to-top-show { right: 10px; }
+
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .portfolio-content { padding: 0 12px; }
+
+    .portfolio-item { max-width: 100%; width: 100%; margin: 0 0 12px 0; }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .portfolio-item .pi-block { height: 162px; }
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-top { min-height: 81px; height: 81px; }
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-bottom { min-height: 81px; height: 81px; }
+
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-top .pi-item-name { font-size: 22px; padding: 0 30px; }
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-bottom .pi-item-description { font-size: 16px; padding: 0 30px; }
+
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-top .pi-item-name { line-height: 28px; }
+    .portfolio-item .pi-block .pi-block-cell .pi-cell-bottom .pi-item-description { line-height: 24px; }
+
+}

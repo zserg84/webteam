@@ -1,0 +1,39 @@
+
+.top-section { display: block; max-width: 990px; margin: 114px auto 0 auto; font-size: 14px; color: #000000; position: relative; top: -50px; opacity: 0; visibility: hidden; }
+.top-section.show-section { opacity: 1; visibility: visible; top: 0; }
+
+/**/
+
+.top-section .view-title { display: block; width: 100%; font-family: 'PFAgoraSansPro-Medium', 'Arial'; font-size: 30px; color: #00c2d9; text-transform: uppercase; }
+
+.top-section .view-sub-title { display: block; width: 100%; margin-top: 16px; font-size: 18px; line-height: 22px; }
+
+.top-section .view-description-container { display: block; width: 100%; font-size: 16px; }
+
+.top-section .view-description-container span { display: block; width: 100%; margin-top: 20px; }
+
+.top-section .printscreen-container { display: block; width: 100%; font-size: 16px; margin-bottom: 50px; }
+
+.top-section .printscreen-container .i-screen { display: block; width: 100%; margin-top: 50px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+
+.send-message-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+}
+.send-message-container.sm-show { opacity: 1; visibility: visible; }
+
+.send-message-container .sm-block { display: table; width: 100%; height: 100%; }
+
+.send-message-container .sm-block .sm-block-cell { display: table-cell; vertical-align: middle; text-align: center; }
+
+.send-message-container .sm-block .sm-block-cell .sm-window { display: inline-block; vertical-align: middle; width: 400px; padding: 14px 14px 18px 14px; background: #ffffff; color: #000000; border-radius: 4px; box-shadow: 0 0 20px #202020; }
+
+.send-message-container .sm-block .sm-block-cell .sm-window .sm-window-context { display: block; width: 100%; font-family: 'PFAgoraSansPro-Regular', 'Arial'; font-size: 20px; }
+
+.send-message-container .sm-block .sm-block-cell .sm-window .sm-window-btn { display: block; width: 130px; margin: 16px auto 0; padding: 2px; background: #ef2200; color: #ffffff; font-size: 18px; cursor: pointer; }
+.send-message-container .sm-block .sm-block-cell .sm-window .sm-window-btn:hover { background: #d72002; }
+
+@media screen and (max-width: 500px) {
+    .send-message-container { padding: 0 10px; }
+    .send-message-container .sm-block .sm-block-cell .sm-window { width: 100%; }
+}

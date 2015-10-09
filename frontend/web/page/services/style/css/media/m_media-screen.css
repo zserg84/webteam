@@ -1,0 +1,123 @@
+
+@media screen and (max-width: 1000px) {
+
+    .s-item .s-item-title .sit-bg.service-background_2 { background-size: auto 66%; }
+
+    .s-item .s-item-title .sit-bg.service-background_3 { background-size: auto 58%; }
+
+    .s-item .s-item-title .sit-bg.service-background_4 { background-size: auto 70%; }
+    .sid-item-4 .sens-claim-block .sens-claim-cell { width: 326px; }
+
+    .s-item .s-item-title .sit-bg.service-background_5 { background-size: auto 88%; background-position: 32px 50%; }
+
+    .s-item .s-item-title .sit-bg.service-background_6 { background-size: auto 46%; }
+
+    .sid-item-2 .sid-devel-why .devel-why-list ul { padding: 0 18px; }
+    .sid-item-2 .sid-devel-why .devel-why-list { width: 410px; }
+    .sid-item-2 .sid-devel-why .devel-why-list.devel-progress ul { width: 440px !important; }
+    .sid-item-2 .devel-new-project-list .dnp-item { width: 300px; }
+}
+
+@media screen and (max-width: 500px) {
+
+    .popup-container .popup-subscribe .popup-subscribe-cell .popup-item-window { width: 100%; }
+
+    .close-popup { left: auto; right: 36px; top: 14px; }
+
+    .s-item .s-item-title .sit-block .sit-block-cell .sit-cell-container { padding: 0 12px; }
+    .sit-first-service-title .sfs-title .sfs-title-name,
+    .sit-second-service-title .st-title { text-align: center; }
+    .sit-second-service-title .st-title { font-size: 20px; }
+    .sit-first-service-title .sfs-title .sfs-title-name { font-size: 20px; }
+    .sid-item-1, .sid-item-2, .sid-item-3, .sid-item-4, .sid-item-5, .sid-item-6 { padding: 0 20px; }
+    .wt-button-block { margin-top: 30px; }
+    .wt-button-block .wt-btn-ser { width: 100%; padding: 8px 10px; margin-bottom: 30px; font-size: 18px; }
+    .sid-item-2 .devel-new-project-list .dnp-item { width: 100%; }
+    .sid-item-2 .sid-devel-title { font-size: 20px; }
+    .sid-item-2 .devel-new-project-list .dnp-item img { width: 80%; }
+    .sid-item-3 .mob-title { font-size: 20px; }
+    .sid-item-3 .mob-we-do-why .col-xs-12 .col-xs-6 { display: block; width: 100%; }
+    .sid-item-3 .mob-we-do-why .col-xs-12 .col-xs-6:first-child { margin-bottom: 20px; }
+    .sid-item-3 .mob-we-made .mvm-item .mvm-more-width { width: 100%; }
+    .sid-item-3 .mob-real-block .mrb-item { display: block; width: 100%; text-align: center; margin-bottom: 16px; }
+
+    .sid-item-3 .mob-mebel-block .mmb-photo { display: block; width: 100%; }
+    .sid-item-3 .mob-mebel-block .mmb-photo img { width: 100%; }
+    .sid-item-3 .mob-mebel-block .mmb-cont, .sid-item-3 .mob-mebel-block .mmb-cont .mmb-cont-icon img { width: 100%; }
+
+    .sid-item-3 .mob-mebel-last .mml-block.mml-right { margin-right: 0; }
+    .sid-item-3 .mob-mebel-last .mml-block { display: block; width: 100%; }
+    .sid-item-3 .mob-mebel-last .mml-block img { width: 100%; }
+    .sid-item-4 .sens-client .sc-icon, .sid-item-4 .sens-result .sr-block .sr-icon { display: none; }
+
+    .sid-item-4 .sens-result .sr-block .sr-description { width: 100%; }
+    .sid-item-4 .sens-claim-block .sens-claim-cell { display: block; width: 100%; }
+    .sid-item-4 .sens-claim-block .sens-claim-cell .sc-icon img { width: 100%; }
+    .sid-item-4 .sens-claim-block .sens-claim-cell .sc-icon { width: 44px; }
+    .sid-item-4 .sens-client .sc-desk { margin-right: 0; }
+    .sid-item-6 .firm-title { font-size: 20px; }
+    .sid-item-6 .firm-desk .firm-icon-block { display: none; }
+    .sid-item-6 .firm-why-title { font-size: 20px; }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .top-section { max-width: 100%; width: 100%; }
+
+}
+
+@media screen and (max-width: 740px) {
+
+    .s-item .s-item-title .sit-bg.service-background_2,
+    .s-item .s-item-title .sit-bg.service-background_3,
+    .s-item .s-item-title .sit-bg.service-background_4,
+    .s-item .s-item-title .sit-bg.service-background_5,
+    .s-item .s-item-title .sit-bg.service-background_6 { opacity: 0.1; }
+
+    .sit-second-service-title.sst-left { width: 100%; }
+
+    .s-item .s-item-title .sit-block .sit-block-cell { padding: 30px 0; }
+
+    .sit-first-service-title { width: 100%; }
+
+    .sid-item-1 .sid-result .sid-res-list .srl-item { width: 100%; }
+    .sid-item-1 .sid-result .sid-res-list .srl-item .srl-icon { width: 88px; }
+    .sid-item-1 .sid-result .sid-res-list .srl-item .srl-content { margin-left: 106px; }
+
+    .sid-item-1 .sid-result .sid-res-list .srl-item .srl-content .srl-cont-block .srl-cont-cell { font-size: 14px; }
+
+    .sid-item-1 .sid-example .sid-res-list .srl-item .srl-icon { width: 100%; height: 120px; float: none; }
+    .sid-item-1 .sid-example .sid-res-list .srl-item .srl-content { display: block; width: 100%; margin-left: 0; }
+
+    .sid-item-1 .sid-example .sid-res-list .srl-item { width: 100%; background-size: 66px !important; }
+
+    .sid-item-1 .sid-example .sid-res-list .srl-item { height: auto; }
+
+    .sid-item-1 .sid-example .sid-res-list .srl-item .srl-content { text-align: center; }
+
+    .sid-item-1 .sid-example .sid-res-list .srl-item .srl-content .srl-cont-block .srl-cont-cell { vertical-align: top; padding-top: 20px; }
+
+    /**/
+
+    .sid-item-2 .sid-devel-why .icon-block-why { display: none; }
+    .sid-item-2 .sid-devel-why .devel-why-list { width: 100%; }
+    .sid-item-2 .sid-devel-why .devel-why-list.devel-progress ul { width: 100% !important; padding: 0 0; }
+
+    .sid-item-3 .mob-we-made .mvm-item .mvm-icon { display: none; }
+    .sid-item-3 .mob-title { font-size: 20px; }
+    .sid-item-4 .sens-title { font-size: 20px; }
+    .sid-item-4 .sens-client .sc-desk ul { display: block; width: 100%; padding: 0 18px; }
+    .sid-item-4 .sens-client .sc-desk { width: 100%; }
+
+    .sid-item-5 .smm-advance-block .smm-advance-item .smm-advance-icon { display: none; }
+    .sid-item-5 .smm-result-block img { display: none; }
+
+    .sid-item-5 .smm-advance-block .smm-advance-item .smm-advance-content { display: block; width: 100%; }
+    .sid-item-5 .smm-result-block .smr-content { display: block; width: 100%; margin-right: 0; }
+    .sid-item-5 .smm-title { font-size: 20px; }
+
+    .sid-item-5 .smm-luck-block { width: 100%; }
+
+
+}

@@ -1,0 +1,23 @@
+
+@media screen and (max-width: 1000px) {
+
+    .s-item .s-item-title .sit-bg.service-background_2 { background-size: auto 66%; }
+
+    .s-item .s-item-title .sit-bg.service-background_3 { background-size: auto 58%; }
+
+    .s-item .s-item-title .sit-bg.service-background_4 { background-size: auto 70%; }
+    .sid-item-4 .sens-claim-block .sens-claim-cell { width: 326px; }
+
+    .s-item .s-item-title .sit-bg.service-background_5 { background-size: auto 88%; background-position: 32px 50%; }
+
+    .s-item .s-item-title .sit-bg.service-background_6 { background-size: auto 46%; }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .popup-container .popup-subscribe .popup-subscribe-cell .popup-item-window { width: 100%; }
+
+    .close-popup { left: auto; right: 36px; top: 14px; }
+
+}

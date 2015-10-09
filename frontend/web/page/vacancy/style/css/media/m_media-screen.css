@@ -1,0 +1,14 @@
+
+@media screen and (max-width: 750px) {
+
+    .top-section { margin: 96px auto 0 auto; }
+
+    .top-section .top-title { padding: 0 12px; }
+
+    .popup-container .popup-subscribe .popup-subscribe-cell .popup-item-window { display: block; width: 100%;padding: 12px; }
+
+    .close-popup { left: auto; top: 0; right: 24px; }
+
+    .ppd-in-form { width: 100%; }
+
+}

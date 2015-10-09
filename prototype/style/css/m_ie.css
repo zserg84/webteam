@@ -1,0 +1,7 @@
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+    .team-container .tc-left-cell  { transform: perspective(1000px) rotateY(0deg); opacity: 1; visibility: visible; animation-name:  teamAnimateLeftMobile !important; }
+    .team-container .tc-right-cell  { transform: perspective(1000px) rotateY(0deg); opacity: 1; visibility: visible; animation-name:  teamAnimateLeftMobile !important; }
+
+}

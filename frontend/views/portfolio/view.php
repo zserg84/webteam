@@ -9,10 +9,10 @@ AppAssetPortfolioView::register($this);
 
 	<div class="btn-back-block">
             <a href="../" class="transit-300">
-                <div style="display: inline-block; vertical-align: middle; position: relative; top: -1px;">
-                    <img src="../view/style/images/arrow-back.png" alt="">
+                <div class="arrow-icon">
+                    <img src="/page/portfolio/view/style/images/arrow-back.png" alt="">
                 </div>
-                <div style="display: inline-block; vertical-align: middle;">
+                <div class="btn-name">
                     Назад
                 </div>
             </a>

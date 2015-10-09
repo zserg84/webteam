@@ -23,6 +23,10 @@
 .top-section .btn-back-block a { display: inline-block; vertical-align: top; padding: 5px 10px; background: #eceff5; font-size: 18px; color: #00c2d9; text-decoration: none; border-radius: 5px; position: relative; top: -18px; }
 .top-section .btn-back-block a:hover { background: #e6e9ef; }
 
+.top-section .btn-back-block .arrow-icon { display: inline-block; vertical-align: middle; position: relative; top: -1px; }
+
+.top-section .btn-back-block .btn-name { display: inline-block; vertical-align: middle; }
+
 /**/
 
 

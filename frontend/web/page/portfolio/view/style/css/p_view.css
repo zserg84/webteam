@@ -29,22 +29,5 @@
 
 /**/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.top-section .btn-back-block.text-center a { display: inline-block; vertical-align: top; margin: 20px 0 40px; padding: 8px 27px; background: #ef2200; font-size: 24px; color: #ffffff; text-decoration: none; text-transform: uppercase; border-radius: 6px; }
+.top-section .btn-back-block.text-center a:hover { background: #ff3e1e; }

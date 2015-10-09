@@ -34,6 +34,12 @@ AppAssetPortfolioView::register($this);
         <?endforeach?>
 
     </div>
+	
+	<div class="btn-back-block text-center">
+            <a href="../" class="transit-300">
+                Вернуться к списку проектов
+            </a>
+    </div>
 
 </div>
 

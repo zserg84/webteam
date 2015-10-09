@@ -6,6 +6,18 @@ use common\models\StatementLetter;
 AppAssetPortfolioView::register($this);
 ?>
 <div class="top-section transit-1000">
+
+	<div class="btn-back-block">
+            <a href="../" class="transit-300">
+                <div style="display: inline-block; vertical-align: middle; position: relative; top: -1px;">
+                    <img src="../view/style/images/arrow-back.png" alt="">
+                </div>
+                <div style="display: inline-block; vertical-align: middle;">
+                    Назад
+                </div>
+            </a>
+    </div>
+
     <div class="view-title">
         <?=$model->title?>
     </div>

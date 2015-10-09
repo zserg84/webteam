@@ -16,7 +16,14 @@
 
 .top-section .printscreen-container .i-screen { display: block; width: 100%; margin-top: 50px; }
 
+/**/
 
+.top-section .btn-back-block { display: block; width: 100%; }
+
+.top-section .btn-back-block a { display: inline-block; vertical-align: top; padding: 5px 10px; background: #eceff5; font-size: 18px; color: #00c2d9; text-decoration: none; border-radius: 5px; position: relative; top: -18px; }
+.top-section .btn-back-block a:hover { background: #e6e9ef; }
+
+/**/
 
 
 

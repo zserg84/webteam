@@ -2,13 +2,16 @@
 use frontend\widgets\statement\StatementWidget;
 use frontend\assets\AppAssetPortfolioView;
 use common\models\StatementLetter;
+use yii\helpers\Url;
 
 AppAssetPortfolioView::register($this);
+
+$backUrl = Url::toRoute(['/portfolio/index/']);
 ?>
 <div class="top-section transit-1000">
 
 	<div class="btn-back-block">
-            <a href="../" class="transit-300">
+            <a href="<?=$backUrl?>" class="transit-300">
                 <div class="arrow-icon">
                     <img src="/page/portfolio/view/style/images/arrow-back.png" alt="">
                 </div>
@@ -36,7 +39,7 @@ AppAssetPortfolioView::register($this);
     </div>
 	
 	<div class="btn-back-block text-center">
-            <a href="../" class="transit-300">
+            <a href="<?=$backUrl?>" class="transit-300">
                 Вернуться к списку проектов
             </a>
     </div>

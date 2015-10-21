@@ -44,6 +44,7 @@ $("a[href^='#']").click( function(){
     var modulePosition = $(this).attr("href");
     var yTop = 60;
     $("html, body").animate({ scrollTop: $(modulePosition).offset().top - yTop }, 800);
+    document.location.hash = $(this).attr("href");
     return false;
 });
 

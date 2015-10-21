@@ -77,7 +77,7 @@ agile web development, agile команда, agile проекты, agile раз�
                     'message',
                     'Ваше сообщение отправлено'
                 );
-                return $this->redirect(\Yii::$app->request->referrer);
+                return $this->redirect(\Yii::$app->request->referrer . '#' . $service);
             }
         }
         else{

@@ -13,8 +13,9 @@ var anc = window.location.hash.replace("#","");
 if(anc)
     slice($('#'+anc));
 
-function slice(el){console.log(el);
+function slice(el){
     var itemPosition = $(el).attr("href");
+    if (typeof itemPosition == 'undefined') return;
     var yTop = 60;
     $(el).next().toggle("normal");
     $("html, body").animate({ scrollTop: $(itemPosition).offset().top - yTop }, 500);

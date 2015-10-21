@@ -43,9 +43,8 @@ AppAsset::register($this);
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <? echo $this->render('yandex_analitics')?>
-    <? echo $this->render('google_analitics')?>
-
+    <script src="<?=Yii::getAlias('@web') . '/scripts/yandex_analitics.js'; ?>"></script>
+    <script src="<?=Yii::getAlias('@web') . '/scripts/google_analitics.js'; ?>"></script>
     <?php $this->head() ?>
 </head>
 <body>

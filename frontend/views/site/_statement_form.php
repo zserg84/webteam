@@ -61,7 +61,13 @@ $model = new StatementLetter()?>
     </div>
 <?ActiveForm::end()?>
 
-<?//$this->registerJS('
+<?
+$this->registerJS('
+    $(document).on("submit", "#statement_form", function(){
+		yaCounter23517844.reachGoal("form_send");
+    });
+');
+//$this->registerJS('
 //    $(document).on("submit", "#statement_form", function(){
 //        var data = $(this).serialize();
 //        $.post($(this).attr("action"), data, function(data){

@@ -90,4 +90,28 @@ class Specialist extends \yii\db\ActiveRecord
     {
         return new \common\modules\calculator\models\query\SpecialistQuery(get_called_class());
     }
+
+    public function getSalary(){
+        return ceil(10*$this->salary) / 10;
+    }
+
+    public function getTax(){
+        return ceil(10*$this->tax * $this->salary / 100) / 10;
+    }
+
+    public function getAmortization(){
+        return ceil(10*$this->amortization) / 10;
+    }
+
+    public function getMaintenance(){
+        return ceil(10*$this->maintenance) / 10;
+    }
+
+    public function getProfit(){
+        return ceil(10*$this->profit * $this->salary / 100) / 10;
+    }
+
+    public function getUsn(){
+        return ceil(10*$this->usn * ($this->getSalary() + $this->getTax() + $this->getAmortization() + $this->getMaintenance() + $this->getProfit())/100) / 10;
+    }
 }

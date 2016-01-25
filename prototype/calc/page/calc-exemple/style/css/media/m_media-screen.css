@@ -1,0 +1,18 @@
+
+@media screen and (max-width: 1150px) {
+
+    .top-section { max-width: 100%; width: 100%; padding: 0 20px; }
+
+}
+
+@media screen and (max-width: 750px) {
+
+    .top-section { max-width: 100%; width: 100%; padding: 0 12px; }
+
+    .top-section .ex-title { font-size: 24px; }
+
+    .top-section .ex-title { text-align: center; }
+
+    .top-section .ex-content img { margin-bottom: 50px; }
+
+}

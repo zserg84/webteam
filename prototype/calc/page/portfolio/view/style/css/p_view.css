@@ -1,0 +1,44 @@
+
+.top-section { display: block; max-width: 990px; margin: 114px auto 0 auto; font-size: 14px; color: #000000; position: relative; top: -50px; opacity: 0; visibility: hidden; }
+.top-section.show-section { opacity: 1; visibility: visible; top: 0; }
+
+/**/
+
+.top-section .view-title { display: block; width: 100%; font-family: 'PFAgoraSansPro-Medium', 'Arial'; font-size: 30px; color: #00c2d9; text-transform: uppercase; }
+
+.top-section .view-sub-title { display: block; width: 100%; margin-top: 16px; font-size: 18px; line-height: 22px; }
+
+.top-section .view-description-container { display: block; width: 100%; font-size: 16px; }
+
+.top-section .view-description-container span { display: block; width: 100%; margin-top: 20px; }
+
+.top-section .printscreen-container { display: block; width: 100%; font-size: 16px; margin-bottom: 50px; }
+
+.top-section .printscreen-container .i-screen { display: block; width: 100%; margin-top: 50px; }
+
+/**/
+
+.top-section .btn-back-block { display: block; width: 100%; }
+
+.top-section .btn-back-block a { display: inline-block; vertical-align: top; padding: 5px 10px; background: #eceff5; font-size: 18px; color: #00c2d9; text-decoration: none; border-radius: 5px; position: relative; top: -18px; }
+.top-section .btn-back-block a:hover { background: #e6e9ef; }
+
+.top-section .btn-back-block .arrow-icon { display: inline-block; vertical-align: middle; position: relative; top: -1px; }
+
+.top-section .btn-back-block .btn-name { display: inline-block; vertical-align: middle; }
+
+/**/
+
+.top-section .btn-back-block.text-center a { display: inline-block; vertical-align: top; margin: 20px 0 40px; padding: 8px 27px; background: #ef2200; font-size: 24px; color: #ffffff; text-decoration: none; text-transform: uppercase; border-radius: 6px; }
+.top-section .btn-back-block.text-center a:hover { background: #ff3e1e; }
+
+
+
+
+
+
+
+
+
+
+

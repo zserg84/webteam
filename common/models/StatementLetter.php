@@ -28,6 +28,9 @@ class StatementLetter extends \yii\db\ActiveRecord
     const FROM_SERVICE = 3;
     const FROM_PORTFOLIO_FLY = 4;
     const FROM_VACANCY = 5;
+    const FROM_CALCULATOR = 6;
+
+    const SCENARIO_CALCULATOR = 'calculator';
 
     /**
      * @inheritdoc
@@ -105,6 +108,7 @@ class StatementLetter extends \yii\db\ActiveRecord
             self::FROM_SERVICE => 'Услуги',
             self::FROM_PORTFOLIO_FLY => 'Портфолио(боковая)',
             self::FROM_VACANCY => 'Вакансии',
+            self::FROM_CALCULATOR => 'Калькулятор',
         ];
     }
 
@@ -113,5 +117,13 @@ class StatementLetter extends \yii\db\ActiveRecord
         if(isset($arr[$from]))
             return $arr[$from];
         return null;
+    }
+
+    public function scenarios(){
+        $scenarios = parent::scenarios();
+        $scenarios[self::SCENARIO_CALCULATOR] = [
+            'fio', 'email', 'phone', 'text'
+        ];
+        return $scenarios;
     }
 }

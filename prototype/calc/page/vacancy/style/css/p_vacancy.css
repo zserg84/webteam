@@ -1,0 +1,106 @@
+
+.top-section { display: block; max-width: 1600px; margin: 114px auto 0 auto; font-family: 'PFAgoraSansPro-Thin', 'Arial'; font-size: 22px; color: #000000; text-align: center; position: relative; top: -50px; opacity: 0; visibility: hidden; }
+.top-section.show-section { opacity: 1; visibility: visible; top: 0; }
+
+/**/
+
+.top-section .top-title { display: block; width: 100%; font-family: 'PFAgoraSansPro-Thin', 'Arial'; font-size: 22px; }
+
+/**/
+
+.vacancy-content { display: block; max-width: 1000px; margin: 0 auto; text-align: center; position: relative; top: -50px; opacity: 0; visibility: hidden; }
+.vacancy-content.show-content { opacity: 1; visibility: visible; top: 0; }
+
+.vacancy-content .item-vacancy { display: inline-block; vertical-align: top; width: 230px; margin: 40px; cursor: pointer; }
+
+.vacancy-content .item-vacancy .poster-container { display: block; width: 100%; height: 230px; overflow: hidden; margin: 0 auto; position: relative; }
+
+.vacancy-content .item-vacancy .poster-container img { width: 100%; height: 100%; }
+
+.vacancy-content .item-vacancy .poster-container .poster-inner { display: block; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); position: absolute; left: 0; top: 0; z-index: 1; opacity: 0; visibility: hidden; }
+
+.vacancy-content .item-vacancy .item-name { display: block; width: 230px; margin: 10px auto 0 auto; font-family: 'PFAgoraSansPro-Medium', 'Arial'; font-size: 14px; color: #474d6e; text-align: center; text-transform: uppercase; }
+
+.vacancy-content .item-vacancy:hover .poster-container .poster-inner { opacity: 1; visibility: visible; }
+.vacancy-content .item-vacancy:hover .poster-container img { transform: scale(1.2); }
+
+/**/
+
+.hidden-vacancy-content { display: none; }
+
+/**/
+
+.popup-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1050;
+
+    opacity: 0;
+    visibility: hidden;
+}
+.popup-container.popup-show { opacity: 1; visibility: visible; }
+
+.popup-container .popup-subscribe { display: table; width: 100%; height: 100%; }
+
+.popup-container .popup-subscribe .popup-subscribe-cell { display: table-cell; vertical-align: middle; padding: 20px 10px; text-align: center; }
+
+.popup-container .popup-subscribe .popup-subscribe-cell .popup-item-window { display: inline-block; vertical-align: middle; width: 650px; padding: 20px; background: #ffffff; text-align: left; box-shadow: 0 0 20px #000000; position: relative; }
+
+/**/
+
+.ppd-title { display: block; width: 100%; margin-top: 6px; font-size: 24px; color: #474d6e; text-align: center; text-transform: uppercase; }
+
+.ppd-content { display: block; width: 100%; font-family: 'PFAgoraSansPro-Medium', 'Arial'; font-size: 14px; color: #000000; }
+
+.ppd-content .ppd-desk { display: block; width: 100%; margin-top: 20px; text-align: center; }
+
+.ppd-content .ppd-desk-title { display: block; width: 100%; margin-top: 20px; }
+.ppd-content .ppd-desk-title.up-case { text-transform: uppercase; }
+
+.ppd-content span { display: block; width: 100%; font-family: 'PFAgoraSansPro-Regular', 'Arial'; }
+
+/**/
+
+.ppd-form-title { display: block; width: 100%; margin-top: 26px; font-family: 'PFAgoraSansPro-Medium', 'Arial'; font-size: 14px; color: #474d6e; text-transform: uppercase; }
+
+.ppd-in-form { display: block; width: 290px; margin-top: 16px; }
+
+.ppd-in-form .in-put {
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+    padding: 6px 10px;
+    font-size: 14px;
+    color: #000000;
+    border: 1px solid #aaacb6;
+    border-radius: 0;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.ppd-in-form .in-put:focus { border: 1px solid #000000; }
+
+.ppd-in-form .in-put.error { border: 1px solid #ef2200; }
+
+/**/
+
+.btn-container { display: block; width: 100%; margin-top: 26px; text-align: center; }
+.btn-container .btn-vacancy { display: inline-block; vertical-align: top; width: 280px; padding: 8px 10px; background: #ef2200; font-size: 14px; color: #ffffff; text-align: center; text-transform: uppercase; border-radius: 4px; border: 0; }
+
+/**/
+
+.close-popup { display: block; vertical-align: top; padding: 10px; position: absolute; left: 100%; top: -10px; z-index: 1; cursor: pointer; }
+.close-popup .close-button { display: block; vertical-align: top; position: relative; }
+.close-popup .close-button img { position: absolute; left: 0; top: 0; z-index: 1; }
+.close-popup .close-button .c-default { opacity: 1; visibility: visible; }
+.close-popup .close-button .c-active { opacity: 0; visibility: hidden; }
+.close-popup:hover .c-default { transform: rotate(270deg); opacity: 0; visibility: hidden; }
+.close-popup:hover .c-active { transform: rotate(270deg); opacity: 1; visibility: visible; }

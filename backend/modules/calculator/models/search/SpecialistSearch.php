@@ -60,6 +60,12 @@ class SpecialistSearch extends Specialist
     {
         return array_merge(parent::attributeLabels(), [
                 'name' => 'Название',
+                'salary' => 'Зарплата, тыс.р',
+                'tax' => 'Налоги, % от зарплаты',
+                'amortization' => 'Амортизация, тыс.р',
+                'maintenance' => 'Содержание, тыс.р',
+                'profit' => 'Прибыль Web Team, % от зарплаты',
+                'usn' => 'Налог УСН, % от всего',
             ]
         );
     }

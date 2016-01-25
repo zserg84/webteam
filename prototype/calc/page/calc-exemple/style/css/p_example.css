@@ -1,0 +1,25 @@
+
+.top-section { display: block; max-width: 990px; margin: 114px auto 0 auto; font-size: 14px; color: #000000; position: relative; top: 0; }
+
+/**/
+
+.top-section .ex-title { display: block; width: 100%; font-family: 'PFAgoraSansPro-Medium', 'Arial'; font-size: 30px; color: #00c2d9; text-transform: uppercase; position: relative; top: -30px; opacity: 0; visibility: hidden; }
+.top-section .ex-title.show-section { top: 0; opacity: 1; visibility: visible; }
+
+.top-section .ex-content { display: block; width: 100%; font-size: 16px; margin-top: 50px; position: relative; top: -30px; opacity: 0; visibility: hidden; }
+.top-section .ex-content.show-section { top: 0; opacity: 1; visibility: visible; }
+
+.top-section .ex-content img { display: block; width: 100%; margin-bottom: 150px; }
+
+/**/
+
+
+
+
+
+
+
+
+
+
+

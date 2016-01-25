@@ -6,6 +6,7 @@
 use yii\helpers\Html;
 use frontend\assets\AppAsset;
 use frontend\components\Helper;
+use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
 
 AppAsset::register($this);
 ?>
@@ -168,6 +169,11 @@ else{
 <!--                            </a>-->
 <!--                        </div>-->
                     </div>
+                    <?
+                    $type = Yii::$app->getRequest()->get('calculator_type', CalculatorWidget::TYPE_START);
+                    echo CalculatorWidget::widget([
+                        'type' => $type
+                    ])?>
                 </div>
             </div>
         </div>

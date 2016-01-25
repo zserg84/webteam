@@ -36,32 +36,44 @@ use kartik\switchinput\SwitchInput;
     <?endforeach;?>
     <div class="row">
         <div class="col-sm-6">
-            <?= $form->field($formModel, 'salary', ['options' => ['class' => 'form-group']]);?>
+            <?= $form->field($formModel, 'salary', ['options' => ['class' => 'form-group']])->label(
+                $formModel->getAttributeLabel('salary').', тыс.р.'
+            );?>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-6">
-            <?= $form->field($formModel, 'tax', ['options' => ['class' => 'form-group']]);?>
+            <?= $form->field($formModel, 'tax', ['options' => ['class' => 'form-group']])->label(
+                $formModel->getAttributeLabel('tax').', % от зарплаты специалиста'
+            );?>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-6">
-            <?= $form->field($formModel, 'amortization', ['options' => ['class' => 'form-group']]);?>
+            <?= $form->field($formModel, 'amortization', ['options' => ['class' => 'form-group']])->label(
+                $formModel->getAttributeLabel('amortization').', тыс.р.'
+            );?>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-6">
-            <?= $form->field($formModel, 'maintenance', ['options' => ['class' => 'form-group']]);?>
+            <?= $form->field($formModel, 'maintenance', ['options' => ['class' => 'form-group']])->label(
+                $formModel->getAttributeLabel('maintenance').', тыс.р.'
+            );?>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-6">
-            <?= $form->field($formModel, 'profit', ['options' => ['class' => 'form-group']]);?>
+            <?= $form->field($formModel, 'profit', ['options' => ['class' => 'form-group']])->label(
+                $formModel->getAttributeLabel('profit').', % от зарплаты специалиста'
+            );?>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-6">
-            <?= $form->field($formModel, 'usn', ['options' => ['class' => 'form-group']]);?>
+            <?= $form->field($formModel, 'usn', ['options' => ['class' => 'form-group']])->label(
+                $formModel->getAttributeLabel('usn').', % от суммы всех затрат'
+            );?>
         </div>
     </div>
 <?php $box->endBody(); ?>

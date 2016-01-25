@@ -101,7 +101,7 @@ class Work extends \yii\db\ActiveRecord
      */
     public function getWorkLangs()
     {
-        return $this->hasMany(WorkLang::className(), ['work_id' => 'id']);
+        return $this->hasMany(WorkLang::className(), ['work_id' => 'id'])->indexBy('lang_id');;
     }
 
     /**

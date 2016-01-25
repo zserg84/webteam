@@ -48,4 +48,11 @@ class SpecialistQuery extends \yii\db\ActiveQuery
         ]);
         return $this;
     }
+//20.7 + 3.2+ 80 + 2 + 7 = 112.9
+    public function visible(){
+        $this->andWhere([
+            'visible' => 1
+        ]);
+        return $this;
+    }
 }

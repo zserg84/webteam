@@ -1,0 +1,16 @@
+
+@media screen and (max-width: 1150px) {
+
+    .top-section { max-width: 100%; width: 100%; padding: 0 20px; }
+
+}
+
+@media screen and (max-width: 750px) {
+
+    .top-section { max-width: 100%; width: 100%; padding: 0 12px; }
+
+    .top-section .view-title { font-size: 26px; }
+
+    .top-section .view-title, .top-section .view-sub-title { text-align: center; }
+
+}

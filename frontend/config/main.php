@@ -12,6 +12,9 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'homeUrl' => '/',
+    'modules' => [
+        'calculator' => 'frontend\modules\calculator\Module',
+    ],
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',

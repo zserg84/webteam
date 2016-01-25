@@ -11,6 +11,7 @@ use yii\base\Model;
 class ContactForm extends Model
 {
     public $name;
+    public $phone;
     public $email;
     public $subject;
     public $body;

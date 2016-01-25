@@ -312,3 +312,7 @@ $(window).resize(function(){
 });
 
 $(".loader-img").addClass("loader-none");
+
+$(document).on("click", ".submit-button", function(){
+   $(this).closest("form").submit();
+});

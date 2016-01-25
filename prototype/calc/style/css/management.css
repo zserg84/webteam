@@ -1,0 +1,124 @@
+
+body { font-family: 'PFAgoraSansPro-Regular', 'Arial'; background: #ffffff; color: #000000; margin: 0; padding: 0; }
+
+/* ---------------------------------------------- */
+
+.scroll-disable-hover, .scroll-disable-hover * { pointer-events: none !important; }
+
+/**/
+
+/* placeholder */
+textarea::-webkit-input-placeholder       { color: #ffffff; opacity: 1; }
+textarea::-moz-placeholder                { color: #ffffff; opacity: 1; }
+textarea:-moz-placeholder                 { color: #ffffff; opacity: 1; }
+textarea:-ms-input-placeholder            { color: #ffffff; opacity: 1; }
+textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+/*/placeholder/*/
+/* input contact form footer */
+input::-webkit-input-placeholder       { color: #ffffff; opacity: 1; }
+input::-moz-placeholder                { color: #ffffff; opacity: 1; }
+input:-moz-placeholder                 { color: #ffffff; opacity: 1; }
+input:-ms-input-placeholder            { color: #ffffff; opacity: 1; }
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+/*/input contact form footer/*/
+/* input contact form fly */
+input.fly-form-input::-webkit-input-placeholder       { color: #565a6e; opacity: 1; }
+input.fly-form-input::-moz-placeholder                { color: #565a6e; opacity: 1; }
+input.fly-form-input:-moz-placeholder                 { color: #565a6e; opacity: 1; }
+input.fly-form-input:-ms-input-placeholder            { color: #565a6e; opacity: 1; }
+input.fly-form-input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input.fly-form-input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input.fly-form-input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input.fly-form-input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+/*/input contact form fly/*/
+/**/
+
+.row-container { display: block; width: 100%; position: relative; z-index: 10; }
+
+.row-container.first-margin { margin-top: 900px; }
+
+.row-container.bg-dark { background: #eceff5; }
+
+.row-container.bg-white { background: #ffffff; }
+
+.row-container.bg-footer { background: url('../images/i_contacts/background.png') no-repeat; background-size: cover; }
+
+.row-container .rc-title { display: block; width: 100%; padding: 50px 0 0 0; text-align: center; }
+
+.row-container .rc-title h3 { margin: 0; padding: 0; font-family: 'PFAgoraSansPro-Thin'; font-size: 48px; color: #474d6e; text-transform: uppercase; }
+
+/* ---------------------------------------------- */
+.container {
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.transit-200 {
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+.transit-300 {
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.transit-500 {
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.transit-800 {
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+.transit-1000 {
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+.transit-3000 {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+}
+
+.no-pad { padding: 0; }
+
+a:focus, input:focus, textarea:focus, button:focus, select:focus { outline: none; text-decoration: none; }
+
+.loader-img { 
+	width: 200px; 
+	height: 200px; 
+	position: fixed; 
+	top: 48%; 
+	left: 1%;
+	right: 1%;
+	margin: auto;
+	z-index: 1000;
+	text-align: center;
+}
+.loader-img img { width: 40px; height: 40px; border: none; }
+.loader-none { display: none; }

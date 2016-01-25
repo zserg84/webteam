@@ -32,10 +32,9 @@ class WorkLang extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'work_id', 'lang_id'], 'required'],
+            [['work_id'], 'required'],
             [['work_id', 'lang_id'], 'integer'],
             [['title'], 'string', 'max' => 255],
-            [['work_id', 'lang_id'], 'unique', 'targetAttribute' => ['work_id', 'lang_id'], 'message' => 'The combination of Work ID and Lang ID has already been taken.'],
             [['lang_id'], 'exist', 'skipOnError' => true, 'targetClass' => Lang::className(), 'targetAttribute' => ['lang_id' => 'id']],
             [['work_id'], 'exist', 'skipOnError' => true, 'targetClass' => Work::className(), 'targetAttribute' => ['work_id' => 'id']],
         ];

@@ -1,0 +1,20 @@
+
+.sc-item .sc-item-icon { left: 0 !important; top: 0 !important; }
+
+.inner-bg { display: none; }
+
+/**/
+
+.portfolio-content .portfolio-catalog .port-upper-cell,
+.portfolio-content .portfolio-catalog .port-lower-cell {
+    opacity: 1 !important;
+    visibility: visible !important;
+    left: 0 !important;
+    top: 0 !important;
+}
+
+/**/
+
+input[type="checkbox"] {
+    display: block;
+}

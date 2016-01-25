@@ -18,7 +18,7 @@
 
 /**/
 
-.top-bar .tb-container .logo-container { display: table; height: 90px; position: absolute; left: 0; top: 0; z-index: 2; text-decoration: none; }
+.top-bar .tb-container .logo-container { display: table; height: 90px; position: absolute; left: 0; top: 0; z-index: 1; text-decoration: none; }
 
 .top-bar .tb-container .logo-container .lc-cell { display: table-cell; vertical-align: middle; font-size: 0; }
 

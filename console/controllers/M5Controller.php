@@ -99,7 +99,7 @@ class M5Controller extends Controller
             }
             if(mail($to,$subject,$message, $headers)){
                 $letter->sent_at = time();
-                $letter->save();
+                $letter->save(false);
             }
             else{
                 VarDumper::dump('error');

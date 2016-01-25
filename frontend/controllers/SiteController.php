@@ -12,7 +12,9 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use yii\base\InvalidParamException;
+use yii\base\Model;
 use yii\bootstrap\ActiveForm;
+use yii\helpers\VarDumper;
 use yii\web\BadRequestHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -244,7 +246,9 @@ class SiteController extends Controller
     }
 
     public function actionStatement(){
+        $scenario = Yii::$app->getRequest()->post('scenario', Model::SCENARIO_DEFAULT);
         $model = new StatementLetter();
+        $model->setScenario($scenario);
         $post = Yii::$app->getRequest()->post();
         if($model->load($post)){
             $model->page = Yii::$app->request->referrer;
@@ -262,6 +266,7 @@ class SiteController extends Controller
                 );
                 return $this->redirect(\Yii::$app->request->referrer . '#feedback');
             }
+            VarDumper::dump($model->getErrors());
         }
         else{
             \Yii::$app->response->format = Response::FORMAT_JSON;

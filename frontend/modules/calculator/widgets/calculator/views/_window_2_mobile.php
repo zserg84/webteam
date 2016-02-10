@@ -29,7 +29,11 @@ use frontend\modules\calculator\widgets\calculator\Asset;
     </div>
     <div class="swc-footer transit-1000">
         <div class="swc-4-btn-block">
-            <div class="swc-4-button transit-300 swc-item" data-page="<?=CalculatorWidget::FROM_CALCULATOR_MOBILE?>" data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"">
+            <div class="swc-4-button transit-300 swc-item"
+                 data-page="<?=CalculatorWidget::FROM_CALCULATOR_MOBILE?>"
+                 data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
+                 data-from="<?=CalculatorWidget::TYPE_2_MOBILE?>"
+                >
                 Получить детальный расчёт
             </div>
         </div>

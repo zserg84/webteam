@@ -32,7 +32,7 @@ class RecallForm extends Recall
     {
         return [
             [['translationText', 'translationMember', 'translationCompany'], EachValidator::className(), 'rule'=>['filter', 'filter'=>'trim']],
-            [['image_cover'], 'file', 'skipOnEmpty'=>false, 'mimeTypes'=> ['image/png', 'image/jpeg', 'image/gif'], 'wrongMimeType' => 'Недопустимый тип файла', 'on' => self::SCENARIO_DEFAULT],
+            [['image_cover'], 'file', 'mimeTypes'=> ['image/png', 'image/jpeg', 'image/gif'], 'wrongMimeType' => 'Недопустимый тип файла', 'on' => self::SCENARIO_DEFAULT],
             [['translationText', 'translationMember', 'translationCompany'], LangRequiredValidator::className(), 'langUrls' => 'ru', 'currentLangRequired' => false],
         ];
     }

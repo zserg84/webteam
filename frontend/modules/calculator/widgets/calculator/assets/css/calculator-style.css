@@ -1206,6 +1206,10 @@
     .swc-14-footer-sub-title { margin-top: 12px; }
     .swc-14-footer-content { margin-top: 20px; }
 
+    .item-sub-content .item-sub-cell .item-sub-price { margin-right: 30px !important; }
+    .swc-content .swc-5-items-block .swc-5-title-name .tn-right { margin-right: 30px !important; }
+    .check-container-name { max-width: 450px !important; }
+
 }
 
 .swc-content{
@@ -1293,3 +1297,5 @@
 .top-bar.top-bar-move .tb-btn-calc {
     top: 5px;
 }
+
+.check-container-name { display: inline-block; vertical-align: top; max-width: 510px; padding: 10px 0; }

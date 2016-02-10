@@ -87,16 +87,11 @@ class SiteController extends Controller
     {
         $this->getView()->registerMetaTag([
             'name' => 'keywords',
-            'content' => 'agile проекты, scrum проекты, заказать дорогой сайт, заказать бизнес сайт,
-заказать сайт дорого, профессиональное создание сайтов, разработка сложного сайта, создание креативных сайтов,
-создание сложных сайтов, создание коммерческого сайта'
+            'content' => Helper::t('main', 'PAGE_KEYWORDS')
         ]);
         $this->getView()->registerMetaTag([
             'name' => 'description',
-            'content' => 'Большой опыт сбора команд под большие проекты (от социальных сетей
-до успешных интернет-стартапов). С 2001 по 2008 год компания
-занималась только крупными интернет-проектами для наших иностранных
-партнеров.'
+            'content' => Helper::t('main', 'PAGE_DESCRIPTION')
         ]);
 
 
@@ -151,16 +146,14 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
-        $this->getView()->title = 'Контакты';
+        $this->getView()->title = Helper::t('contacts', 'PAGE_TITLE');
         $this->getView()->registerMetaTag([
             'name' => 'keywords',
-            'content' => 'офис веб студии, визитка веб студии, поиск веб студий, web студия екатеринбург'
+            'content' => Helper::t('contacts', 'PAGE_KEYWORDS')
         ]);
         $this->getView()->registerMetaTag([
             'name' => 'description',
-            'content' => 'Наши контакты: г. Екатеринбург, ул Красноармейская 76, офис 210. Телефон
-для связи: 8 (800) 200-91-88, наш email: info@webteam.pro, skype: yaxonmax
-'
+            'content' => Helper::t('contacts', 'PAGE_DESCRIPTION')
         ]);
         return $this->render('contact');
     }
@@ -262,7 +255,7 @@ class SiteController extends Controller
             if($model->save()){
                 \Yii::$app->session->setFlash(
                     'message',
-                    'Ваше сообщение отправлено'
+                    Helper::t('main', 'SEND_OK_MESSAGE')
                 );
                 return $this->redirect(\Yii::$app->request->referrer . '#feedback');
             }
@@ -271,6 +264,30 @@ class SiteController extends Controller
         else{
             \Yii::$app->response->format = Response::FORMAT_JSON;
             return ActiveForm::validate($model);
+        }
+    }
+
+    public function actionMailTest($email){
+        $from = "info@webteam.pro";
+        $to = $email;
+
+        $subject = 'Тест';
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $headers .= "From:" . $from . "\r\n";
+        $headers .= "Bcc: zserg84@gmail.com, zsergius84@yandex.ru, zsergius84@rambler.ru\r\n";
+        $message = "
+<html>
+<head>
+<title></title>
+</head>
+
+<body>
+Текст сообщения с тегами
+</body>
+</html>";
+        if(mail($to,$subject,$message, $headers)){
+            echo 'Отправлено';
         }
     }
 }

@@ -2,6 +2,8 @@
 
 namespace common\models;
 
+use common\behaviors\LangSaveBehavior;
+use common\behaviors\TranslateBehavior;
 use Yii;
 
 /**
@@ -13,9 +15,14 @@ use Yii;
  * @property integer $image_id
  *
  * @property Image $image
+ * @property VacancyLang[] $vacancyLangs
  */
 class Vacancy extends \yii\db\ActiveRecord
 {
+
+    public $title;
+    public $description;
+
     /**
      * @inheritdoc
      */
@@ -50,6 +57,20 @@ class Vacancy extends \yii\db\ActiveRecord
         ];
     }
 
+    public function behaviors(){
+        return [
+            'langSave' => [
+                'class' => LangSaveBehavior::className(),
+            ],
+            'translate' => [
+                'class' => TranslateBehavior::className(),
+                'translateModelName' => VacancyLang::className(),
+                'relationFieldName' => 'vacancy_id',
+                'translateFieldNames' => ['title', 'description'],
+            ],
+        ];
+    }
+
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -57,6 +78,15 @@ class Vacancy extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Image::className(), ['id' => 'image_id']);
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getVacancyLangs()
+    {
+        return $this->hasMany(VacancyLang::className(), ['vacancy_id' => 'id']);
+    }
+
 
     /**
      * @inheritdoc

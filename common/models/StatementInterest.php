@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use common\behaviors\TranslateBehavior;
 use Yii;
 
 /**
@@ -10,10 +11,13 @@ use Yii;
  * @property integer $id
  * @property string $name
  *
+ * @property StatementInterestLang[] $statementInterestLangs
  * @property StatementLetter[] $statementLetters
  */
 class StatementInterest extends \yii\db\ActiveRecord
 {
+    public $name;
+
     /**
      * @inheritdoc
      */
@@ -42,6 +46,25 @@ class StatementInterest extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Тип интереса',
         ];
+    }
+
+    public function behaviors(){
+        return [
+            'translate' => [
+                'class' => TranslateBehavior::className(),
+                'translateModelName' => StatementInterestLang::className(),
+                'relationFieldName' => 'statement_interest_id',
+                'translateFieldNames' => ['name'],
+            ],
+        ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getStatementInterestLangs()
+    {
+        return $this->hasMany(StatementInterestLang::className(), ['statement_interest_id' => 'id']);
     }
 
     /**

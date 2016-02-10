@@ -2,9 +2,8 @@
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
-?>
+use frontend\components\Helper;
 
-<?
 $model = new \common\models\StatementLetter();
 $form = ActiveForm::begin([
     'enableAjaxValidation' => true,
@@ -15,33 +14,30 @@ $form = ActiveForm::begin([
     'action' => Url::toRoute(['/vacancy/statement/'])
 ])?>
     <div class="ppd-form-title">
-        Записаться на собеседование
+        <?=Helper::t('vacancy', 'FORM_TITLE')?>
     </div>
     <div class="ppd-in-form">
         <?=Html::hiddenInput('hiddenVacancy', '', [
             'id' => 'hiddenVacancy'
         ])?>
         <?=$form->field($model, 'fio')->textInput([
-            'placeholder'=>'Ваше имя',
-            'required'=>"required",
+            'placeholder'=>Helper::t('vacancy', 'FORM_NAME'),
             'class'=>'in-put'
-        ])->label(false)->error(false)?>
+        ])->label(false)?>
         <?=$form->field($model, 'phone')->textInput([
-            'placeholder'=>'Телефон',
+            'placeholder'=>Helper::t('vacancy', 'FORM_PHONE'),
             'class'=>'in-put',
             'type' => 'phone',
-            'required' => 'required',
-        ])->label(false)->error(false)?>
+        ])->label(false)?>
         <?=$form->field($model, 'email')->textInput([
-            'placeholder'=>'E-mail',
-            'required'=>"required",
+            'placeholder'=>Helper::t('vacancy', 'FORM_EMAIL'),
             'class'=>'in-put',
             'type' => 'email',
-        ])->label(false)->error(false)?>
+        ])->label(false)?>
     </div>
     <div class="btn-container">
         <div class="btn-container">
-            <button class="btn-vacancy">Записаться на собеседование</button>
+            <button class="btn-vacancy"><?=Helper::t('vacancy', 'FORM_BUTTON')?></button>
         </div>
     </div>
 <?ActiveForm::end()?>

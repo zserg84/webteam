@@ -6,7 +6,9 @@ use common\modules\calculator\models\Specialist;
 $specs = Specialist::find()->visible()->all();
 ?>
 <div class="sw-container swc-win-14 transit-1000">
-    <div class="btn-back-block transit-300" data-winback="14" data-prev="<?=CalculatorWidget::TYPE_START?>">
+    <div class="btn-back-block transit-300"
+         data-prev="<?=$from?>"
+        >
         <div class="arrow-icon">
             <img src="<?=Asset::imgSrc("arrow-back.png")?>" alt="">
         </div>
@@ -243,10 +245,19 @@ $specs = Specialist::find()->visible()->all();
                     Распечатать расчеты
                 </a>
             </div>
-            <div class="swc-14-footer-btn transit-300" id="sendtoemail" data-page="<?=CalculatorWidget::FROM_CALCULATOR_CALCULATION?>" data-next="<?=CalculatorWidget::TYPE_SEND_EMAIL_FORM?>">
+            <div class="swc-14-footer-btn transit-300"
+                 id="sendtoemail"
+                 data-from = "<?=CalculatorWidget::TYPE_CALCULATION?>"
+                 data-page="<?=CalculatorWidget::FROM_CALCULATOR_CALCULATION?>"
+                 data-next="<?=CalculatorWidget::TYPE_SEND_EMAIL_FORM?>"
+                >
                 Отправить на e-mail
             </div>
-            <div class="swc-14-footer-btn transit-300 swc-item" data-page="<?=CalculatorWidget::FROM_CALCULATOR_CALCULATION?>" data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>">
+            <div class="swc-14-footer-btn transit-300 swc-item"
+                 data-from = "<?=CalculatorWidget::TYPE_CALCULATION?>"
+                 data-page="<?=CalculatorWidget::FROM_CALCULATOR_CALCULATION?>"
+                 data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
+                >
                 Узнать о скидках
             </div>
         </div>
@@ -304,9 +315,11 @@ $specs = Specialist::find()->visible()->all();
 
         var next = $(this).data("next");
         var page = $(this).data("page");
+        var from = $(this).data("from");
+        from = from ? from : 1;
         $.pjax.reload("#pjax-calculator-container", {
             "type": "GET",
-            "data": {calculator_type: next, page: page, data:checks},
+            "data": {calculator_type: next, page: page, data:checks, from:from},
             "push": false,
             "replace": false
         });

@@ -64,7 +64,9 @@ $works = Work::find()->where([
                                             <div class="item-sub-name">
                                                 <input type="checkbox" id="check-sub-corp-<?=$k.'-'.$s?>" data-id="<?=$subWork->id?>">
                                                 <label for="check-sub-corp-<?=$k.'-'.$s?>">
-                                                    <span class="it-name"><?=$subWork->title?></span>
+                                                    <div class="check-container-name">
+                                                        <span class="it-name"><?=$subWork->title?></span>
+                                                    </div>
                                                 </label>
                                             </div>
                                             <div class="item-sub-price" data-price="<?=$subWork->cost?>">
@@ -92,10 +94,18 @@ $works = Work::find()->where([
                     Распечатать расчеты
                 </a>
             </div>
-            <div class="swc-9-footer-btn transit-300" id="sendtoemail" data-page="<?=CalculatorWidget::FROM_CALCULATOR_CORP_SITE?>" data-next="<?=CalculatorWidget::TYPE_SEND_EMAIL_FORM?>">
+            <div class="swc-9-footer-btn transit-300" id="sendtoemail"
+                 data-page="<?=CalculatorWidget::FROM_CALCULATOR_CORP_SITE?>"
+                 data-next="<?=CalculatorWidget::TYPE_SEND_EMAIL_FORM?>"
+                 data-from="<?=CalculatorWidget::TYPE_3_CORP_SITE?>"
+                >
                 Отправить на e-mail
             </div>
-            <div class="swc-9-footer-btn transit-300 swc-item" data-page="<?=CalculatorWidget::FROM_CALCULATOR_CORP_SITE?>" data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>">
+            <div class="swc-9-footer-btn transit-300 swc-item"
+                 data-page="<?=CalculatorWidget::FROM_CALCULATOR_CORP_SITE?>"
+                 data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
+                 data-from="<?=CalculatorWidget::TYPE_3_CORP_SITE?>"
+                >
                 Узнать о скидках
             </div>
         </div>
@@ -146,9 +156,10 @@ $works = Work::find()->where([
 
         var next = $(this).data("next");
         var page = $(this).data("page");
+        var from = $(this).data("from");
         $.pjax.reload("#pjax-calculator-container", {
             "type": "GET",
-            "data": {calculator_type: next, page: page, data:checks},
+            "data": {calculator_type: next, page: page, data:checks, from:from},
             "push": false,
             "replace": false
         });

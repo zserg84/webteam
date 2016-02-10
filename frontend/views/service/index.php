@@ -1,12 +1,14 @@
 <?
+use frontend\assets\AppAssetService;
 use yii\helpers\Url;
+use frontend\components\Helper;
+use common\models\Lang;
 
-\frontend\assets\AppAssetService::register($this);
+AppAssetService::register($this);
 ?>
 <section>
 
     <div class="top-section transit-1000">
-
         <div class="s-item s-1 transit-1000">
             <a href="#item1" class="s-item-title" id="item1">
                 <div class="sit-bg service-background_1 transit-500"></div>
@@ -17,15 +19,14 @@ use yii\helpers\Url;
                             <div class="sit-first-service-title">
                                 <div class="sfs-title">
                                     <div class="sfs-title-name">
-                                        Команды под крупные проекты
+                                        <?=Helper::t('ourservices', 'TEAMS_FOR_PROJECTS')?>
                                     </div>
                                 </div>
                                 <div class="sfs-content-1">
-                                    <span>Webteam.pro – команда профессионалов.</span>
-                                    <span>Наша цель – создавать лучшие в мире сайты.</span>
+                                    <?=Helper::t('ourservices', 'SFS_CONTENT_1')?>
                                 </div>
                                 <div class="sfs-content-2">
-                                    У вас есть идея грандиозного интернет-проекта, но нет команды — не беда! Мы подберем для вас команду профессионалов. Мы обеспечим управление командой и достижение результата.
+                                    <?=Helper::t('ourservices', 'SFS_CONTENT_2')?>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +36,7 @@ use yii\helpers\Url;
             <div class="s-item-description">
                 <div class="sid-item-1">
                     <div class="sid-title-why">
-                        Почему мы?
+                        <?=Helper::t('ourservices', 'TITLE_WHY')?>
                     </div>
                     <div class="sid-list-why">
                         <div class="list-why-item">
@@ -44,7 +45,7 @@ use yii\helpers\Url;
                             </div>
                             <div class="lwi-desc">
                                 <div class="lwi-desc-content">
-                                    <span>Большой опыт</span> сбора команд под большие проекты (от социальных сетей до успешных интернет-стартапов).
+                                    <?=Helper::t('ourservices', 'LIST_WHY_CONTENT_1')?>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
@@ -55,7 +56,7 @@ use yii\helpers\Url;
                             </div>
                             <div class="lwi-desc">
                                 <div class="lwi-desc-content">
-                                    С 2001 по 2008 год компания занималась только <span>крупными интернет-проектами</span> для наших иностранных партнеров
+                                    <?=Helper::t('ourservices', 'LIST_WHY_CONTENT_2')?>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
@@ -66,7 +67,7 @@ use yii\helpers\Url;
                             </div>
                             <div class="lwi-desc">
                                 <div class="lwi-desc-content">
-                                    Имеется <span>большая база разработчиков,</span> которых мы готовы подключить к выполнению ваших IT-задач.
+                                    <?=Helper::t('ourservices', 'LIST_WHY_CONTENT_3')?>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
@@ -77,7 +78,7 @@ use yii\helpers\Url;
                             </div>
                             <div class="lwi-desc">
                                 <div class="lwi-desc-content">
-                                    Используем <span>современные методологии управления</span> командой проекта (Scrum и Agile).
+                                    <?=Helper::t('ourservices', 'LIST_WHY_CONTENT_4')?>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
@@ -85,7 +86,7 @@ use yii\helpers\Url;
                     </div>
                     <div class="sid-result">
                         <div class="sid-res-title">
-                            Что вы получаете
+                            <?=Helper::t('ourservices', 'RES_TITLE_1')?>
                         </div>
                         <div class="sid-res-list">
                             <div class="srl-item">
@@ -93,7 +94,7 @@ use yii\helpers\Url;
                                 <div class="srl-content">
                                     <div class="srl-cont-block">
                                         <div class="srl-cont-cell">
-                                            <span>Команда профессионалов</span> на ваш проект в короткие сроки.
+                                            <?=Helper::t('ourservices', 'LIST_RES_CONTENT_1')?>
                                         </div>
                                     </div>
                                 </div>
@@ -104,7 +105,7 @@ use yii\helpers\Url;
                                 <div class="srl-content">
                                     <div class="srl-cont-block">
                                         <div class="srl-cont-cell">
-                                            <span>Экономия ресурсов</span> за счет содержания команды на аутсорсинге.
+                                            <?=Helper::t('ourservices', 'LIST_RES_CONTENT_2')?>
                                         </div>
                                     </div>
                                 </div>
@@ -115,7 +116,7 @@ use yii\helpers\Url;
                                 <div class="srl-content">
                                     <div class="srl-cont-block">
                                         <div class="srl-cont-cell">
-                                            <span>Концентрация внимания только на управлении и развитии проекта,</span> работа с командой — наша забота.
+                                            <?=Helper::t('ourservices', 'LIST_RES_CONTENT_3')?>
                                         </div>
                                     </div>
                                 </div>
@@ -126,7 +127,7 @@ use yii\helpers\Url;
                                 <div class="srl-content">
                                     <div class="srl-cont-block">
                                         <div class="srl-cont-cell">
-                                            <span>Быстрый вывод рабочей версии продукта</span> на рынок за счет использования передовых технологий управления интернет-проектами.
+                                            <?=Helper::t('ourservices', 'LIST_RES_CONTENT_4')?>
                                         </div>
                                     </div>
                                 </div>
@@ -134,60 +135,48 @@ use yii\helpers\Url;
                             </div>
                         </div>
                     </div>
+                    <?
+                    $lang = Lang::getCurrent();
+                    if($lang->url == 'ru'){
+                        $projects = [
+                            1=>Yii::getAlias('@web').'/page/services/style/images/i_service-1/icon-example-1-name.png',
+                            2=>Yii::getAlias('@web').'/page/services/style/images/i_service-1/icon-example-2-name.png',
+                            3=>Yii::getAlias('@web').'/page/services/style/images/i_service-1/icon-example-3-name.png',
+                            4=>Yii::getAlias('@web').'/page/services/style/images/i_service-1/icon-example-4-name.png'
+                        ];
+                    }
+                    else{
+                        $projects = [
+                            1=>Yii::getAlias('@web').'/page/services/style/images/i_service-1/icon-example-1-name.png',
+                            5=>Yii::getAlias('@web').'/page/services/style/images/i_service-1/icon-example-5-name.png',
+                        ];
+                    }
+
+                    ?>
                     <div class="sid-example">
                         <div class="sid-res-title">
-                            Примеры разработки интернет проектов:
+                            <?=Helper::t('ourservices', 'RES_TITLE_2')?>
                         </div>
                         <div class="sid-res-list">
-                            <div class="srl-item">
-                                <div class="srl-icon srl-1"></div>
-                                <div class="srl-content">
-                                    <div class="srl-cont-block">
-                                        <div class="srl-cont-cell">
-                                            <img src="<?=Yii::getAlias('@web').'/page/services/style/images/i_service-1/icon-example-1-name.png'; ?>" alt="">
+                            <?foreach($projects as $index=>$project):
+                                ?>
+                                <div class="srl-item">
+                                    <div class="srl-icon srl-<?=$index?>"></div>
+                                    <div class="srl-content">
+                                        <div class="srl-cont-block">
+                                            <div class="srl-cont-cell">
+                                                <img src="<?=$project?>" alt="">
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="clearfix"></div>
                                 </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="srl-item">
-                                <div class="srl-icon srl-2"></div>
-                                <div class="srl-content">
-                                    <div class="srl-cont-block">
-                                        <div class="srl-cont-cell">
-                                            <img src="<?=Yii::getAlias('@web').'/page/services/style/images/i_service-1/icon-example-2-name.png'; ?>" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="srl-item">
-                                <div class="srl-icon srl-3"></div>
-                                <div class="srl-content">
-                                    <div class="srl-cont-block">
-                                        <div class="srl-cont-cell">
-                                            <img src="<?=Yii::getAlias('@web').'/page/services/style/images/i_service-1/icon-example-3-name.png'; ?>" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="srl-item">
-                                <div class="srl-icon srl-4"></div>
-                                <div class="srl-content">
-                                    <div class="srl-cont-block">
-                                        <div class="srl-cont-cell">
-                                            <img src="<?=Yii::getAlias('@web').'/page/services/style/images/i_service-1/icon-example-4-name.png'; ?>" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
+                            <?endforeach?>
                         </div>
                     </div>
                     <div class="wt-button-block">
                         <div class="wt-btn-ser transit-300" data-service="project">
-                            Заказать услугу
+                            <?=Helper::t('ourservices', 'SERVICE_BUTTON')?>
                         </div>
                     </div>
                 </div>
@@ -205,13 +194,13 @@ use yii\helpers\Url;
 
                             <div class="sit-second-service-title sst-left">
                                 <div class="st-title">
-                                    Разработка веб-сайтов
+                                    <?=Helper::t('ourservices', 'WEBSITE_DEVELOPMENT')?>
                                 </div>
                                 <div class="st-description">
-                                    Webteam.pro – команда профессионалов. Наша цель – создавать лучшие в мире сайты.
+                                    <?=Helper::t('ourservices', 'WEBSITE_CONTENT_1')?>
                                 </div>
                                 <div class="st-description">
-                                    Мы изучаем технологии, генерируем идеи, продумываем нюансы, шлифуем детали наших продуктов, чтобы пользователи получали удовольствие от работы с ними
+                                    <?=Helper::t('ourservices', 'WEBSITE_CONTENT_2')?>
                                 </div>
                             </div>
 
@@ -222,19 +211,19 @@ use yii\helpers\Url;
             <div class="s-item-description">
                 <div class="sid-item-2">
                     <div class="sid-devel-title">
-                        Почему выбирают команду Webteam?
+                        <?=Helper::t('ourservices', 'DEVELOPMENT_TITLE')?>
                     </div>
                     <div class="sid-devel-why">
                         <div class="devel-why-list">
                             <ul>
                                 <li>
-                                    Решаем именно Ваши задачи - каждый наш партнер уникален, любую задачу мы воспринимаем, как вызов
+                                    <?=Helper::t('ourservices', 'LIST_DEV_CONTENT_1')?>
                                 </li>
                                 <li>
-                                    Не делаем типовых продуктов, мы каждый раз заново проживаем весь цикл создания, от наброска до релиза
+                                    <?=Helper::t('ourservices', 'LIST_DEV_CONTENT_2')?>
                                 </li>
                                 <li>
-                                    Для нас нет мелочей в работе. Каждый пиксель в наших дизайнах не случаен, каждая строчка кода обоснована и верна. Только оттачивая каждую деталь, мы можем создавать продукты, которые радуют наших партнеров и пользователей
+                                    <?=Helper::t('ourservices', 'LIST_DEV_CONTENT_3')?>
                                 </li>
                             </ul>
                         </div>
@@ -249,16 +238,16 @@ use yii\helpers\Url;
                         <div class="devel-why-list">
                             <ul>
                                 <li>
-                                    Команда сформировалась в 2001 году и до 2008 года компания работала только с иностранными партнерами: американцы, немцы, англичане и австралийцы. Сейчас мы активно работаем и с российскими заказчиками, но не перестали делать заказы для зарубежных партнеров
+                                    <?=Helper::t('ourservices', 'LIST_DEV_CONTENT_4')?>
                                 </li>
                                 <li>
-                                    Сегодня Webteam это 2 офиса компании в Екатеринбурге и более 35 высокопрофессиональных специалистов
+                                    <?=Helper::t('ourservices', 'LIST_DEV_CONTENT_5')?>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="sid-devel-title in-cont-ttl">
-                        Успех гарантирован:
+                        <?=Helper::t('ourservices', 'SUCCESS_TITLE')?>
                     </div>
                     <div class="sid-devel-why marg-none">
                         <div class="icon-block-why">
@@ -271,7 +260,7 @@ use yii\helpers\Url;
                                         1
                                     </div>
                                     <div class="devel-list-dsk">
-                                        Знаем психологию пользователей
+                                        <?=Helper::t('ourservices', 'SUCCESS_CONTENT_1')?>
                                     </div>
                                 </li>
                                 <li>
@@ -279,7 +268,7 @@ use yii\helpers\Url;
                                         2
                                     </div>
                                     <div class="devel-list-dsk">
-                                        Умеем создать простые и удобные интерфейсы
+                                        <?=Helper::t('ourservices', 'SUCCESS_CONTENT_2')?>
                                     </div>
                                 </li>
                                 <li>
@@ -287,7 +276,7 @@ use yii\helpers\Url;
                                         3
                                     </div>
                                     <div class="devel-list-dsk">
-                                        Обладаем технологической экспертизой
+                                        <?=Helper::t('ourservices', 'SUCCESS_CONTENT_3')?>
                                     </div>
                                 </li>
                                 <li>
@@ -295,7 +284,7 @@ use yii\helpers\Url;
                                         4
                                     </div>
                                     <div class="devel-list-dsk">
-                                        Владеем современными методиками управления проектами (Classic Waterfall, Scrum, Agile)
+                                        <?=Helper::t('ourservices', 'SUCCESS_CONTENT_4')?>
                                     </div>
                                 </li>
                                 <li>
@@ -303,7 +292,7 @@ use yii\helpers\Url;
                                         5
                                     </div>
                                     <div class="devel-list-dsk">
-                                        Имеем большой опыт разработки в Web
+                                        <?=Helper::t('ourservices', 'SUCCESS_CONTENT_5')?>
                                     </div>
                                 </li>
                             </ul>
@@ -311,7 +300,7 @@ use yii\helpers\Url;
                     </div>
                     <div class="wt-button-block">
                         <div class="wt-btn-ser transit-300" data-service="web">
-                            Заказать услугу
+                            <?=Helper::t('ourservices', 'SERVICE_BUTTON')?>
                         </div>
                     </div>
                 </div>
@@ -329,13 +318,13 @@ use yii\helpers\Url;
 
                             <div class="sit-second-service-title sst-left">
                                 <div class="st-title">
-                                    Разработка мобильных приложений
+                                    <?=Helper::t('ourservices', 'MOBILE_APPS_TITLE')?>
                                 </div>
                                 <div class="st-description">
-                                    Сегодня ваш клиент уже не по другую сторону монитора, а по другую сторону смартфона
+                                    <?=Helper::t('ourservices', 'MOBILE_CONTENT_1')?>
                                 </div>
                                 <div class="st-description">
-                                    За последние несколько лет наблюдается стабильный рост мобильного интернет-траффика. Пользователи проводят в сети гораздо больше времени, используя мобильный телефон, нежели ноутбук или компьютер. Мобильные приложения становятся эффективным способом привлечения новых клиентов и поддержки существующих
+                                    <?=Helper::t('ourservices', 'MOBILE_CONTENT_2')?>
                                 </div>
                             </div>
 
@@ -346,7 +335,7 @@ use yii\helpers\Url;
             <div class="s-item-description">
                 <div class="sid-item-3">
                     <div class="mob-title">
-                        Что мы делаем:
+                        <?=Helper::t('ourservices', 'MOBILE_WHAT_TITLE')?>
                     </div>
                     <div class="mob-we-do-why">
                         <div class="col-xs-12 no-pad">
@@ -356,11 +345,11 @@ use yii\helpers\Url;
                                         <img src="<?=Yii::getAlias('@web').'/page/services/style/images/i_service-3/icon-1.png'; ?>" alt="">
                                     </div>
                                     <div class="mob-os-name">
-                                        iOS-приложения
+                                        <?=Helper::t('ourservices', 'MOBILE_IOS_TITLE')?>
                                     </div>
                                 </div>
                                 <div class="mob-os-description">
-                                    Мы разрабатываем приложения для мобильных устройств Apple: iPhone и iPad. Реализуем имиджевые решения (дополненная реальность) для визитных карточек, проводим интеграцию наших приложений с социальными сетями, переносим каталоги интернет-магазинов.
+                                    <?=Helper::t('ourservices', 'MOBILE_IOS_CONTENT')?>
                                 </div>
                             </div>
                             <div class="col-xs-6 no-pad">
@@ -369,35 +358,35 @@ use yii\helpers\Url;
                                         <img src="<?=Yii::getAlias('@web').'/page/services/style/images/i_service-3/icon-2.png'; ?>" alt="">
                                     </div>
                                     <div class="mob-os-name">
-                                        Android
+                                        <?=Helper::t('ourservices', 'MOBILE_ANDROID_TITLE')?>
                                     </div>
                                 </div>
                                 <div class="mob-os-description no-right">
-                                    Под Android мы разрабатываем приложения для большинства линеек смартфонов и планшетов. Мы знаем поведение пользователей и особенности разработки на данной платформе.
+                                    <?=Helper::t('ourservices', 'MOBILE_ANDROID_CONTENT')?>
                                 </div>
                             </div>
                         </div>
                         <div class="clearfix"></div>
                     </div>
                     <div class="mob-title mt-second">
-                        Как мы делаем:
+                        <?=Helper::t('ourservices', 'MOBILE_HOW_TITLE')?>
                     </div>
                     <div class="mob-we-made">
                         <div class="mvm-item">
                             <div class="mvm-more-width">
                                 <div class="mvm-title">
-                                    Разработка концепции мобильного приложения:
+                                    <?=Helper::t('ourservices', 'MOBILE_CONCEPT')?>
                                 </div>
                                 <div class="mvm-content">
                                     <ul>
                                         <li>
-                                            Анализ потребностей потенциальных клиентов;
+                                            <?=Helper::t('ourservices', 'MOBILE_CONCEPT_CONTENT_1')?>
                                         </li>
                                         <li>
-                                            Разработка интерактивных прототипов интерфейса приложения;
+                                            <?=Helper::t('ourservices', 'MOBILE_CONCEPT_CONTENT_2')?>
                                         </li>
                                         <li>
-                                            Подготовка технического задания.
+                                            <?=Helper::t('ourservices', 'MOBILE_CONCEPT_CONTENT_3')?>
                                         </li>
                                     </ul>
                                 </div>
@@ -412,18 +401,18 @@ use yii\helpers\Url;
                             </div>
                             <div class="mvm-more-width">
                                 <div class="mvm-title">
-                                    Разработка дизайна приложения:
+                                    <?=Helper::t('ourservices', 'MOBILE_DESIGN')?>
                                 </div>
                                 <div class="mvm-content">
                                     <ul>
                                         <li>
-                                            Разработка креативной концепции приложения;
+                                            <?=Helper::t('ourservices', 'MOBILE_DESIGN_CONTENT_1')?>
                                         </li>
                                         <li>
-                                            Подготовка визуалов и концентраторов внимания;
+                                            <?=Helper::t('ourservices', 'MOBILE_DESIGN_CONTENT_2')?>
                                         </li>
                                         <li>
-                                            Предоставление нескольких вариантов по дизайну приложения.
+                                            <?=Helper::t('ourservices', 'MOBILE_DESIGN_CONTENT_3')?>
                                         </li>
                                     </ul>
                                 </div>
@@ -432,7 +421,7 @@ use yii\helpers\Url;
                         <div class="mvm-item">
                             <div class="mvm-more-width">
                                 <div class="mvm-title">
-                                    Программируем, тестируем и публикуем Ваше мобильное приложение в AppStore и<br>Google Play.
+                                    <?=Helper::t('ourservices', 'MOBILE_PROGRAMMING')?>
                                 </div>
                             </div>
                             <div class="mvm-icon">
@@ -442,7 +431,7 @@ use yii\helpers\Url;
                     </div>
                     <div class="wt-button-block">
                         <div class="wt-btn-ser transit-300" data-service="mobile">
-                            Заказать услугу
+                            <?=Helper::t('ourservices', 'SERVICE_BUTTON')?>
                         </div>
                     </div>
                 </div>
@@ -460,10 +449,10 @@ use yii\helpers\Url;
 
                             <div class="sit-second-service-title sst-left">
                                 <div class="st-title">
-                                    Сенсорные экраны
+                                    <?=Helper::t('ourservices', 'MOBILE_TOUCH_TITLE')?>
                                 </div>
                                 <div class="st-description">
-                                    Интерактивный экран с потрясающим дизайном — это современный, эффективный и надежный сотрудник
+                                    <?=Helper::t('ourservices', 'MOBILE_TOUCH_CONTENT')?>
                                 </div>
                             </div>
 
@@ -474,22 +463,22 @@ use yii\helpers\Url;
             <div class="s-item-description">
                 <div class="sid-item-4">
                     <div class="sens-title">
-                        Знакомая ситуация?
+                        <?=Helper::t('ourservices', 'MOBILE_TOUCH_SITUATION_QUESTION')?>
                     </div>
                     <div class="sens-client">
                         <div class="sc-desk">
                             <div class="scd-title">
-                                Клиент не удовлетворен:
+                                <?=Helper::t('ourservices', 'MOBILE_TOUCH_SITUATION_1')?>
                             </div>
                             <ul>
                                 <li>
-                                    низкая квалификация обслуживающего персонала;
+                                    <?=Helper::t('ourservices', 'MOBILE_TOUCH_SITUATION_LIST_1')?>
                                 </li>
                                 <li>
-                                    сложно получить нужную информацию;
+                                    <?=Helper::t('ourservices', 'MOBILE_TOUCH_SITUATION_LIST_2')?>
                                 </li>
                                 <li>
-                                    ожидание в очередях.
+                                    <?=Helper::t('ourservices', 'MOBILE_TOUCH_SITUATION_LIST_3')?>
                                 </li>
                             </ul>
                         </div>
@@ -497,11 +486,11 @@ use yii\helpers\Url;
                             <img src="<?=Yii::getAlias('@web').'/page/services/style/images/i_service-4/icon-0.png'; ?>" align="">
                         </div>
                         <div class="scd-title-bottom">
-                            Высокие затраты на обучение и содержание сотрудников.
+                            <?=Helper::t('ourservices', 'MOBILE_TOUCH_SITUATION_2')?>
                         </div>
                     </div>
                     <div class="sens-title st-second">
-                        Где востребованы?
+                        <?=Helper::t('ourservices', 'MOBILE_TOUCH_NEEDED_QUESTION')?>
                     </div>
                     <div class="sens-claim-block">
                         <div class="sens-claim-cell">
@@ -509,7 +498,7 @@ use yii\helpers\Url;
                                 <img src="<?=Yii::getAlias('@web').'/page/services/style/images/i_service-4/icon-1.png'; ?>" align="">
                             </div>
                             <div class="sc-name">
-                                Магазины
+                                <?=Helper::t('ourservices', 'MOBILE_TOUCH_NEEDED_1')?>
                             </div>
                         </div>
                         <div class="sens-claim-cell">
@@ -517,7 +506,7 @@ use yii\helpers\Url;
                                 <img src="<?=Yii::getAlias('@web').'/page/services/style/images/i_service-4/icon-2.png'; ?>" align="">
                             </div>
                             <div class="sc-name">
-                                Автоцентры
+                                <?=Helper::t('ourservices', 'MOBILE_TOUCH_NEEDED_2')?>
                             </div>
                         </div>
                         <div class="sens-claim-cell">
@@ -525,7 +514,7 @@ use yii\helpers\Url;
                                 <img src="<?=Yii::getAlias('@web').'/page/services/style/images/i_service-4/icon-3.png'; ?>" align="">
                             </div>
                             <div class="sc-name">
-                                Рестораны, бары, кафе
+                                <?=Helper::t('ourservices', 'MOBILE_TOUCH_NEEDED_3')?>
                             </div>
                         </div>
                         <div class="sens-claim-cell">
@@ -533,7 +522,7 @@ use yii\helpers\Url;
                                 <img src="<?=Yii::getAlias('@web').'/page/services/style/images/i_service-4/icon-4.png'; ?>" align="">
                             </div>
                             <div class="sc-name">
-                                Банки
+                                <?=Helper::t('ourservices', 'MOBILE_TOUCH_NEEDED_4')?>
                             </div>
                         </div>
                         <div class="sens-claim-cell">
@@ -541,7 +530,7 @@ use yii\helpers\Url;
                                 <img src="<?=Yii::getAlias('@web').'/page/services/style/images/i_service-4/icon-5.png'; ?>" align="">
                             </div>
                             <div class="sc-name">
-                                Аэропорты, вокзалы
+                                <?=Helper::t('ourservices', 'MOBILE_TOUCH_NEEDED_5')?>
                             </div>
                         </div>
                         <div class="sens-claim-cell">
@@ -549,7 +538,7 @@ use yii\helpers\Url;
                                 <img src="<?=Yii::getAlias('@web').'/page/services/style/images/i_service-4/icon-6.png'; ?>" align="">
                             </div>
                             <div class="sc-name">
-                                Вузы
+                                <?=Helper::t('ourservices', 'MOBILE_TOUCH_NEEDED_6')?>
                             </div>
                         </div>
                         <div class="sens-claim-cell">
@@ -557,31 +546,31 @@ use yii\helpers\Url;
                                 <img src="<?=Yii::getAlias('@web').'/page/services/style/images/i_service-4/icon-7.png'; ?>" align="">
                             </div>
                             <div class="sc-name">
-                                Кинотеатры, театры
+                                <?=Helper::t('ourservices', 'MOBILE_TOUCH_NEEDED_7')?>
                             </div>
                         </div>
                     </div>
                     <div class="sens-title st-second">
-                        Что вы получаете:
+                        <?=Helper::t('ourservices', 'MOBILE_TOUCH_GAIN_TITLE')?>
                     </div>
                     <div class="sens-result">
                         <div class="sr-block">
                             <div class="sr-description">
                                 <div class="sr-dsk-title">
-                                    1  Рост продаж за счет:
+                                    <?=Helper::t('ourservices', 'MOBILE_TOUCH_SALES_GROWTH')?>
                                 </div>
                                 <ul class="sr-dsk-cont">
                                     <li>
-                                        достоверной и исчерпывающей информации о товарах / услугах
+                                        <?=Helper::t('ourservices', 'MOBILE_TOUCH_SALES_LIST_1')?>
                                     </li>
                                     <li>
-                                        доступного и удобного поиска
+                                        <?=Helper::t('ourservices', 'MOBILE_TOUCH_SALES_LIST_2')?>
                                     </li>
                                     <li>
-                                        повышения скорости обслуживания
+                                        <?=Helper::t('ourservices', 'MOBILE_TOUCH_SALES_LIST_3')?>
                                     </li>
                                     <li>
-                                        повышение лояльности клиента
+                                        <?=Helper::t('ourservices', 'MOBILE_TOUCH_SALES_LIST_4')?>
                                     </li>
                                 </ul>
                             </div>
@@ -595,20 +584,20 @@ use yii\helpers\Url;
                             </div>
                             <div class="sr-description">
                                 <div class="sr-dsk-title">
-                                    2  Образ инновационной компании:
+                                    <?=Helper::t('ourservices', 'MOBILE_TOUCH_INNOVATION')?>
                                 </div>
                                 <ul class="sr-dsk-cont">
                                     <li>
-                                        создание имиджа крутой, передовой и высокотехнологичной компании
+                                        <?=Helper::t('ourservices', 'MOBILE_TOUCH_INNOVATION_LIST_1')?>
                                     </li>
                                     <li>
-                                        повышение интереса у клиента к компании / продуктам / услугам
+                                        <?=Helper::t('ourservices', 'MOBILE_TOUCH_INNOVATION_LIST_2')?>
                                     </li>
                                     <li>
-                                        эффектная баннерная зона
+                                        <?=Helper::t('ourservices', 'MOBILE_TOUCH_INNOVATION_LIST_3')?>
                                     </li>
                                     <li>
-                                        повышение лояльности клиента
+                                        <?=Helper::t('ourservices', 'MOBILE_TOUCH_INNOVATION_LIST_4')?>
                                     </li>
                                 </ul>
                             </div>
@@ -616,14 +605,14 @@ use yii\helpers\Url;
                         <div class="sr-block">
                             <div class="sr-description">
                                 <div class="sr-dsk-title">
-                                    3  Сокращение затрат:
+                                    <?=Helper::t('ourservices', 'MOBILE_TOUCH_COST_REDUCTION')?>
                                 </div>
                                 <ul class="sr-dsk-cont">
                                     <li>
-                                        на персонал (количество, обучение, аттестация, подбор, содержание)
+                                        <?=Helper::t('ourservices', 'MOBILE_TOUCH_COST_LIST_1')?>
                                     </li>
                                     <li>
-                                        на промо-материалы
+                                        <?=Helper::t('ourservices', 'MOBILE_TOUCH_COST_LIST_2')?>
                                     </li>
                                 </ul>
                             </div>
@@ -634,7 +623,7 @@ use yii\helpers\Url;
                     </div>
                     <div class="wt-button-block">
                         <div class="wt-btn-ser transit-300" data-service="sensor">
-                            Заказать услугу
+                            <?=Helper::t('ourservices', 'SERVICE_BUTTON')?>
                         </div>
                     </div>
                 </div>
@@ -652,13 +641,13 @@ use yii\helpers\Url;
 
                             <div class="sit-second-service-title sst-left">
                                 <div class="st-title">
-                                    SMM. Продвижение Вашего бизнеса в социальных сетях
+                                    <?=Helper::t('ourservices', 'SMM_TITLE')?>
                                 </div>
                                 <div class="st-description">
-                                    Социальные сети – неотъемлемый инструмент современного маркетинга
+                                    <?=Helper::t('ourservices', 'SMM_CONTENT_1')?>
                                 </div>
                                 <div class="st-description">
-                                    Если Вы владелец бизнеса или у Вас есть компания, работающая на рынке потребительских товаров/услуг - это отличная возможность значительно повысить свой уровень продаж, за счет большого охвата потенциальных клиентов.
+                                    <?=Helper::t('ourservices', 'SMM_CONTENT_2')?>
                                 </div>
                             </div>
 
@@ -669,32 +658,32 @@ use yii\helpers\Url;
             <div class="s-item-description">
                 <div class="sid-item-5">
                     <div class="smm-title">
-                        Как мы продвигаем
+                        <?=Helper::t('ourservices', 'SMM_PROMOTION')?>
                     </div>
                     <div class="smm-advance-block">
                         <div class="smm-advance-item">
                             <div class="smm-advance-content">
                                 <div class="smm-advance-title">
-                                    1  Разрабатываем стратегию
+                                    <?=Helper::t('ourservices', 'SMM_STRATEGY')?>
                                 </div>
                                 <ul>
                                     <li>
-                                        Предварительный брифинг
+                                        <?=Helper::t('ourservices', 'SMM_STRATEGY_LIST_1')?>
                                     </li>
                                     <li>
-                                        Мониторинг и анализ информации
+                                        <?=Helper::t('ourservices', 'SMM_STRATEGY_LIST_2')?>
                                     </li>
                                     <li>
-                                        Четкая постановка целей
+                                        <?=Helper::t('ourservices', 'SMM_STRATEGY_LIST_3')?>
                                     </li>
                                     <li>
-                                        Выбор целевой аудитории и платформы для продвижения
+                                        <?=Helper::t('ourservices', 'SMM_STRATEGY_LIST_4')?>
                                     </li>
                                     <li>
-                                        Определение тематики контента
+                                        <?=Helper::t('ourservices', 'SMM_STRATEGY_LIST_5')?>
                                     </li>
                                     <li>
-                                        Написание концепции и креативной идеи
+                                        <?=Helper::t('ourservices', 'SMM_STRATEGY_LIST_6')?>
                                     </li>
                                 </ul>
                             </div>
@@ -708,26 +697,26 @@ use yii\helpers\Url;
                             </div>
                             <div class="smm-advance-content">
                                 <div class="smm-advance-title">
-                                    2   Осуществляем коммьюнити-менеджмент
+                                    <?=Helper::t('ourservices', 'SMM_MANAGEMENT')?>
                                 </div>
                                 <ul>
                                     <li>
-                                        Создание и дизайн сообществ
+                                        <?=Helper::t('ourservices', 'SMM_MANAGEMENT_LIST_1')?>
                                     </li>
                                     <li>
-                                        Генерация уникального контента
+                                        <?=Helper::t('ourservices', 'SMM_MANAGEMENT_LIST_2')?>
                                     </li>
                                     <li>
-                                        Формирование положительного образа компании
+                                        <?=Helper::t('ourservices', 'SMM_MANAGEMENT_LIST_3')?>
                                     </li>
                                     <li>
-                                        Создание доверительных отношений с целевой аудиторией
+                                        <?=Helper::t('ourservices', 'SMM_MANAGEMENT_LIST_4')?>
                                     </li>
                                     <li>
-                                        Популяризация продукта/услуги
+                                        <?=Helper::t('ourservices', 'SMM_MANAGEMENT_LIST_5')?>
                                     </li>
                                     <li>
-                                        Управление мнениями потребителей о продукте/услуге/бренде
+                                        <?=Helper::t('ourservices', 'SMM_MANAGEMENT_LIST_6')?>
                                     </li>
                                 </ul>
                             </div>
@@ -735,17 +724,17 @@ use yii\helpers\Url;
                         <div class="smm-advance-item">
                             <div class="smm-advance-content">
                                 <div class="smm-advance-title">
-                                    3  Работаем с рекламой
+                                    <?=Helper::t('ourservices', 'SMM_ADVERTISING')?>
                                 </div>
                                 <ul>
                                     <li>
-                                        Создание баннеров
+                                        <?=Helper::t('ourservices', 'SMM_ADVERTISING_LIST_1')?>
                                     </li>
                                     <li>
-                                        Размещение рекламных материалов
+                                        <?=Helper::t('ourservices', 'SMM_ADVERTISING_LIST_2')?>
                                     </li>
                                     <li>
-                                        Ведение рекламной компании
+                                        <?=Helper::t('ourservices', 'SMM_ADVERTISING_LIST_3')?>
                                     </li>
                                 </ul>
                             </div>
@@ -759,24 +748,24 @@ use yii\helpers\Url;
                             </div>
                             <div class="smm-advance-content">
                                 <div class="smm-advance-title">
-                                    4  Ведем метрику
+                                    <?=Helper::t('ourservices', 'SMM_ASSESSMENT')?>
                                 </div>
                                 <ul>
                                     <li>
-                                        Регулярный анализ и подсчет показателей
+                                        <?=Helper::t('ourservices', 'SMM_ASSESSMENT_LIST_1')?>
                                     </li>
                                     <li>
-                                        Ведение отчетности
+                                        <?=Helper::t('ourservices', 'SMM_ASSESSMENT_LIST_2')?>
                                     </li>
                                     <li>
-                                        Оценка отдачи рекламной компании
+                                        <?=Helper::t('ourservices', 'SMM_ASSESSMENT_LIST_3')?>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="smm-title st-second">
-                        В результате вы получаете:
+                        <?=Helper::t('ourservices', 'SMM_RESULT')?>
                     </div>
                     <div class="smm-result-block">
                         <div class="smr-content">
@@ -785,7 +774,7 @@ use yii\helpers\Url;
                                     1
                                 </div>
                                 <div class="smr-cont-desk">
-                                    <span>Высокий уровень</span> узнаваемости бренда, популяризации товара/услуги
+                                    <?=Helper::t('ourservices', 'SMM_RESULT_LIST_1')?>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -794,7 +783,7 @@ use yii\helpers\Url;
                                     2
                                 </div>
                                 <div class="smr-cont-desk">
-                                    <span>Широкий охват</span> потенциальных потребителей
+                                    <?=Helper::t('ourservices', 'SMM_RESULT_LIST_2')?>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -803,7 +792,7 @@ use yii\helpers\Url;
                                     3
                                 </div>
                                 <div class="smr-cont-desk">
-                                    <span>Рост продаж</span>
+                                    <?=Helper::t('ourservices', 'SMM_RESULT_LIST_3')?>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -814,27 +803,30 @@ use yii\helpers\Url;
                         </div>
                     </div>
                     <div class="smm-title st-second">
-                        Успех гарантирован:
+                        <?=Helper::t('ourservices', 'SMM_SUCCESS')?>
                     </div>
                     <div class="smm-luck-block">
                         <ul>
                             <li>
-                                <span>Мы становимся частью Вашей команды</span> (заинтересованы в успехе и развитии Вашего бизнеса
+                                <?=Helper::t('ourservices', 'SMM_SUCCESS_LIST_1')?>
                             </li>
                             <li>
-                                <span>Используем Web-инструменты для автоматизации</span> повышаем качество и скорость работы
+                                <?=Helper::t('ourservices', 'SMM_SUCCESS_LIST_2')?>
                             </li>
                             <li>
-                                <span>Создаем креативные идеи</span> уникальный образ, выделяющий Вас среди конкурентов
+                                <?=Helper::t('ourservices', 'SMM_SUCCESS_LIST_3')?>
                             </li>
                             <li>
-                                <span>Придерживаемся принципа полной прозрачности</span> регулярная отчетность и аналитика
+                                <?=Helper::t('ourservices', 'SMM_SUCCESS_LIST_4')?>
+                            </li>
+                            <li>
+                                <?=Helper::t('ourservices', 'SMM_SUCCESS_LIST_5')?>
                             </li>
                         </ul>
                     </div>
                     <div class="wt-button-block">
                         <div class="wt-btn-ser transit-300"  data-service="promotion">
-                            Заказать услугу
+                            <?=Helper::t('ourservices', 'SERVICE_BUTTON')?>
                         </div>
                     </div>
                 </div>
@@ -851,13 +843,13 @@ use yii\helpers\Url;
 
                             <div class="sit-second-service-title sst-left">
                                 <div class="st-title">
-                                    Разработка фирменных стилей, дизайн логотипов, буклетов и презентаций
+                                    <?=Helper::t('ourservices', 'DESIGN_TITLE')?>
                                 </div>
                                 <div class="st-description">
-                                    Хотите, чтобы в Вашу компанию влюбились с первого взгляда? Webteam.pro знает как это сделать!
+                                    <?=Helper::t('ourservices', 'DESIGN_CONTENT_1')?>
                                 </div>
                                 <div class="st-description">
-                                    Наша команда профессионалов готова создать уникальный стиль Вашего продукта, запоминающийся логотип, яркие буклеты и эффектную презентацию.
+                                    <?=Helper::t('ourservices', 'DESIGN_CONTENT_2')?>
                                 </div>
                             </div>
 
@@ -868,18 +860,18 @@ use yii\helpers\Url;
             <div class="s-item-description">
                 <div class="sid-item-6">
                     <div class="firm-title">
-                        Разработка фирменных стилей
+                        <?=Helper::t('ourservices', 'DESIGN_CORPORATE_TITLE')?>
                     </div>
                     <div class="firm-desk first">
                         <ul>
                             <li>
-                                Создание уникального, креативного оформления Вашего продукта или услуги;
+                                <?=Helper::t('ourservices', 'DESIGN_CORPORATE_LIST_1')?>
                             </li>
                             <li>
-                                Подготовка визуалов и концентраторов внимания. Пользователь будет смотреть туда, куда хотите Вы!
+                                <?=Helper::t('ourservices', 'DESIGN_CORPORATE_LIST_2')?>
                             </li>
                             <li>
-                                Предоставление нескольких вариантов дизайна. Выберите то, что подойдет именно Вам!
+                                <?=Helper::t('ourservices', 'DESIGN_CORPORATE_LIST_3')?>
                             </li>
                         </ul>
                         <div class="firm-icon-block">
@@ -892,41 +884,41 @@ use yii\helpers\Url;
                         </div>
                         <ul>
                             <li>
-                                Разработка нетривиального, запоминающегося логотипа.<br>Клиент не сможет оторвать глаз!
+                                <?=Helper::t('ourservices', 'DESIGN_CORPORATE_LIST_4')?>
                             </li>
                             <li>
-                                Создание ярких, привлекающих буклетов. Обложка не должна быть скучнее содержания!
+                                <?=Helper::t('ourservices', 'DESIGN_CORPORATE_LIST_5')?>
                             </li>
                             <li>
-                                Подготовка эффектной, неординарной презентации Вашего проекта или компании.<br>Такая презентация не сможет не вызвать интерес!
+                                <?=Helper::t('ourservices', 'DESIGN_CORPORATE_LIST_6')?>
                             </li>
                         </ul>
                     </div>
                     <div class="firm-why-title">
-                        Почему именно Webteam.pro:
+                        <?=Helper::t('ourservices', 'DESIGN_WHY_TITLE')?>
                     </div>
                     <div class="firm-why-content">
                         <ul>
                             <li>
-                                Мы — профессионалы своего дела
+                                <?=Helper::t('ourservices', 'DESIGN_WHY_LIST_1')?>
                             </li>
                             <li>
-                                Имеем огромный опыт разработки дизайна
+                                <?=Helper::t('ourservices', 'DESIGN_WHY_LIST_2')?>
                             </li>
                             <li>
-                                Учитываем все Ваши пожелания, детали и нюансы
+                                <?=Helper::t('ourservices', 'DESIGN_WHY_LIST_3')?>
                             </li>
                             <li>
-                                Наши дизайны отличаются креативностью и гармоничностью
+                                <?=Helper::t('ourservices', 'DESIGN_WHY_LIST_4')?>
                             </li>
                             <li>
-                                Мы поможем усовершенствовать Вашу идею и воплотим ее в жизнь
+                                <?=Helper::t('ourservices', 'DESIGN_WHY_LIST_5')?>
                             </li>
                         </ul>
                     </div>
                     <div class="wt-button-block">
                         <div class="wt-btn-ser transit-300" data-service="styles">
-                            Заказать услугу
+                            <?=Helper::t('ourservices', 'SERVICE_BUTTON')?>
                         </div>
                     </div>
                 </div>

@@ -63,8 +63,8 @@ use vova07\imperavi\Widget as Imperavi;
             if($formModel->image_cover){
                 $initialPreview[] = '<img src="'.$formModel->image_cover->getSrc().'" alt="" class="file-preview-image">';
                 $previewConfig[] = [
-//                    'url' => Url::toRoute(['image-delete']),
-//                    'key' => $formModel->image_cover->id,
+                    'url' => Url::toRoute(['image-delete']),
+                    'key' => $formModel->image_cover->id,
                 ];
             }
             ?>

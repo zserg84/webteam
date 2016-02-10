@@ -21,7 +21,6 @@ class AppAssetMain extends AssetBundle
         'scripts/media/selectFx.js',
         'scripts/media/carousel-options.js',
         'scripts/media/wt-mobile-menu.js',
-        'scripts/configuration.js',
     ];
 
     public $jsOptions = ['position' => \yii\web\View::POS_END];

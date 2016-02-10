@@ -9,7 +9,10 @@ use yii\bootstrap\Html;
 $model = new StatementLetter();
 ?>
 <div class="sw-container swc-win-13 transit-1000"> <!-- before-choosen -->
-    <div class="btn-back-block transit-300" data-winback="13" data-prev="<?=CalculatorWidget::TYPE_START?>">
+    <div class="btn-back-block transit-300"
+         data-winback="13"
+         data-prev="<?=$from?>"
+        >
         <div class="arrow-icon">
             <img src="<?=Asset::imgSrc("arrow-back.png")?>" alt="">
         </div>

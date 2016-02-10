@@ -1,14 +1,17 @@
 <?
+use frontend\assets\AppAssetPortfolio;
 use frontend\widgets\statement\StatementWidget;
 use yii\helpers\Url;
+use frontend\components\Helper;
+use common\models\StatementLetter;
 
-\frontend\assets\AppAssetPortfolio::register($this);
+AppAssetPortfolio::register($this);
 ?>
 
 <section>
 
     <div class="top-section transit-1000">
-        С 2001 года мы реализовали более 100 проектов в сфере цифровых коммуникаций. <br>Ниже представлены некоторые из наших проектов.
+        <?=Helper::t('portfolio', 'PORTFOLIO_CONTENT')?>
     </div>
 
     <div class="portfolio-content transit-1000">
@@ -46,7 +49,7 @@ use yii\helpers\Url;
 </section>
 
 <?=StatementWidget::widget([
-    'from' => \common\models\StatementLetter::getFromValue(\common\models\StatementLetter::FROM_PORTFOLIO_FLY)
+    'from' => StatementLetter::getFromValue(StatementLetter::FROM_PORTFOLIO_FLY)
 ])?>
 
 <div class="to-top-container transit-300">
@@ -54,7 +57,7 @@ use yii\helpers\Url;
         <img src="<?=Yii::getAlias('@web').'/page/portfolio/style/images/i_top.png'; ?>" alt="">
     </div>
     <div class="text-cont">
-        вверх
+        <?=Helper::t('portfolio', 'icon-arrow')?>
     </div>
 </div>
 

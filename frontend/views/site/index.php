@@ -3,10 +3,11 @@ use yii\helpers\Url;
 use frontend\assets\AppAssetMain;
 use frontend\widgets\statement\StatementWidget;
 use common\models\StatementLetter;
+use frontend\components\Helper;
 
 AppAssetMain::register($this);
 
-$this->title = 'Создаем команды под крупные проекты';
+$this->title = Helper::t('main', 'MAIN_HEADER');
 ?>
 <!--<section>-->
 
@@ -14,33 +15,35 @@ $this->title = 'Создаем команды под крупные проект
     <div class="wc-lamp-block">
         <img src="<?echo Yii::getAlias('@web').'/style/images/i_first-container/lamp.png'; ?>" alt="" class="ilamp">
         <div class="wcl-text">
-            <img src="<?echo Yii::getAlias('@web').'/style/images/i_first-container/lamp-text.png'; ?>" alt="" class="iwcl-text">
+            <img src="<?echo Yii::getAlias('@web').Helper::t('main', 'MAIN_HEADER_PIC_TEXT'); ?>" alt="" class="iwcl-text">
         </div>
     </div>
     <div class="wc-title-block">
         <div class="wct-title">
             <h1>
-                <span class="wctt-1">Cоздаем команды</span><br>
-                <span class="wctt-2">под</span>
-                <span class="wctt-3"><a href="<?=Url::toRoute(['/service/index']).'#item1'?>" class="transit-300">крупные проекты</a></span>
+                <span class="wctt-1"><?=Helper::t('main', 'MAIN_HEADER1')?></span><br>
+                <span class="wctt-2"><?=Helper::t('main', 'MAIN_HEADER2')?></span>
+                <span class="wctt-3"><a href="<?=Url::toRoute(['/service/index']).'#item1'?>" class="transit-300">
+                        <?=Helper::t('main', 'MAIN_HEADER3')?>
+                </a></span>
             </h1>
         </div>
         <div class="wc-button" id="wc-button">
             <a href="#contacts" class="wcb-demand transit-300">
-                оставить заявку
+                <?=Helper::t('main', 'ORDER_BUTTON')?>
             </a>
         </div>
         <div class="wct-download-block">
-            <a href="files/presentation.pdf" target="_blank" download class="wct-download-link">
+            <a href="<?=Helper::t('main', 'PDF_LINK')?>" target="_blank" download class="wct-download-link">
                 <div class="wctl-icon-file">
                     <img src="<?echo Yii::getAlias('@web').'/style/images/i_first-container/icon-file.png'; ?>" alt="">
                 </div>
                 <div class="wctl-right">
                     <div class="download-link-title transit-300">
-                        Скачать презентацию
+                        <?=Helper::t('main', 'PRESENTATION_TEXT')?>
                     </div>
                     <div class="info-file-size">
-                        5.3 мб
+                        5.3 <?=Helper::t('main', 'INFO_FILE_SIZE')?>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -51,14 +54,14 @@ $this->title = 'Создаем команды под крупные проект
         <a class="wcr-element wcr-real transit-300">
             <div class="wcr-element-icon icon-1"></div>
             <div class="wcr-element-name">
-                перейти в дополненную реальность
+                <?=Helper::t('main', 'WCR_ELEMENT_NAME')?>
             </div>
             <div class="clearfix"></div>
         </a>
         <a href="https://www.facebook.com/WebTeam.PRO" target="_blank" class="wcr-element transit-300">
             <div class="wcr-element-icon icon-2"></div>
             <div class="wcr-element-name">
-                смотрите все новости на Facebook
+                <?=Helper::t('main', 'WCR_ELEMENT_FACEBOOK')?>
                 <div class="fb-like-icon">
                     <img src="<?echo Yii::getAlias('@web').'/style/images/i_first-container/right-flip-icon-3.png'; ?>" alt="">
                 </div>
@@ -91,7 +94,7 @@ echo $this->render('_recall', [
 
     <div class="row-container bg-footer footer-block" id="contacts">
         <div class="rc-title footer-title">
-            <h3>Контакты</h3>
+            <h3><?=Helper::t('main', 'CONTACTS_HEADER')?></h3>
         </div>
         <div class="footer-lamp-block">
             <img src="<?echo Yii::getAlias('@web').'/style/images/i_contacts/footer-lamp.png'; ?>" alt="">
@@ -100,26 +103,26 @@ echo $this->render('_recall', [
             <div class="fc-form-title">
                 <div class="fcf-cell fcf-1">
                     <div class="fcf-name">
-                        Контактный телефон
+                        <?=Helper::t('main', 'CONTACT_PHONE')?>
                     </div>
                     <div class="fcf-description">
-                        <a href="tel:88007754523">8 (800) 200-91-88</a>
+                        <a href="tel:88007754523"><?=Helper::t('main', 'PHONE_NUMBER')?></a>
                     </div>
                 </div>
                 <div class="fcf-cell fcf-2">
                     <div class="fcf-name">
-                        Skype
+                        <?=Helper::t('main', 'CONTACT_SKYPE')?>
                     </div>
                     <div class="fcf-description">
-                        <a href="skype:yaxonmax?call">yaxonmax</a>
+                        <a href="skype:<?=Helper::t('main', 'SKYPE_ACCOUNT')?>?call"><?=Helper::t('main', 'SKYPE_ACCOUNT')?></a>
                     </div>
                 </div>
                 <div class="fcf-cell">
                     <div class="fcf-name">
-                        E-mail
+                        <?=Helper::t('main', 'CONTACT_EMAIL')?>
                     </div>
                     <div class="fcf-description">
-                        <a href="mailto:info@webteam.pro">info@webteam.pro</a>
+                        <a href="mailto:info@webteam.pro"><?=Helper::t('main', 'EMAIL_ACCOUNT')?></a>
                     </div>
                 </div>
             </div>

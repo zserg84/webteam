@@ -12,10 +12,16 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'homeUrl' => '/',
+    'language' => 'ru-RU',
     'modules' => [
         'calculator' => 'frontend\modules\calculator\Module',
     ],
     'components' => [
+        'request' => [
+            'class' => 'frontend\components\LangRequest',
+            'cookieValidationKey' => 'sdi8s#fnj98jwiqiw;qfh!fjgh0d8f',
+            'baseUrl' => ''
+        ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
@@ -45,6 +51,19 @@ return [
                 '<controller:\w+>/<id:\d+>'=>'<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
                 '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+            ],
+        ],
+        'i18n' => [
+            'translations' => [
+                '*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'sourceLanguage' => 'en',
+                    'forceTranslation' => true,
+                    'fileMap' => [
+                        'html' => 'html.php',
+                    ],
+                ],
             ],
         ],
     ],

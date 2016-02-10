@@ -28,7 +28,11 @@ use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
                     от 250 тысяч рублей
                 </div>
                 <div class="swc-8-btn-block">
-                    <div class="swc-8-button transit-300 swc-item" data-page="<?=CalculatorWidget::FROM_CALCULATOR_INTERNET_STORE_1S?>" data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>">
+                    <div class="swc-8-button transit-300 swc-item"
+                         data-page="<?=CalculatorWidget::FROM_CALCULATOR_INTERNET_STORE_1S?>"
+                         data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
+                         data-from = "<?=CalculatorWidget::TYPE_3_INTERNET_STORE?>"
+                        >
                         Получить детальный расчёт
                     </div>
                 </div>
@@ -45,7 +49,11 @@ use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
                     от 1 миллиона рублей
                 </div>
                 <div class="swc-8-btn-block">
-                    <div class="swc-8-button transit-300 swc-item" data-page="<?=CalculatorWidget::FROM_CALCULATOR_INTERNET_STORE_YOURS?>" data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>">
+                    <div class="swc-8-button transit-300 swc-item"
+                         data-page="<?=CalculatorWidget::FROM_CALCULATOR_INTERNET_STORE_YOURS?>"
+                         data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
+                         data-from = "<?=CalculatorWidget::TYPE_3_INTERNET_STORE?>"
+                        >
                         Получить детальный расчёт
                     </div>
                 </div>

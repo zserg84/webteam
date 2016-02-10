@@ -17,6 +17,7 @@
 }
 
 .fly-button-great .fbg-name { display: block; width: 52px; height: 304px; background: url('../images/form-name.png') center center no-repeat; }
+.fly-button-great .fbg-name.en {background: url('../images/form-name-en.png') center center no-repeat;}
 
 .fly-button-great:hover {
     -webkit-transition: 0.3s;

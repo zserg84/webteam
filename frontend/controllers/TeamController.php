@@ -10,6 +10,7 @@ namespace frontend\controllers;
 
 
 use common\models\Team;
+use frontend\components\Helper;
 
 class TeamController extends Controller
 {
@@ -17,19 +18,14 @@ class TeamController extends Controller
     public function init(){
         parent::init();
 
-        $this->getView()->title = 'Команда разработчиков';
+        $this->getView()->title = Helper::t('team', 'PAGE_TITLE');
         $this->getView()->registerMetaTag([
             'name' => 'keywords',
-            'content' => 'agile команда, scrum команда, команда для стартапа, команда веб-разработчиков,
-команда на интернет-проект, команда разработчиков, команда разработчиков на проект,
-команда разработчиков программного обеспечения, команда веб разработчиков, команда разработчиков сайтов'
+            'content' => Helper::t('team', 'PAGE_KEYWORDS')
         ]);
         $this->getView()->registerMetaTag([
             'name' => 'description',
-            'content' => 'Команда квалифицированных специалистов, обеспечит качественное
-и оперативное выполнение работ. Создаем сайты любой сложности, обеспечим
-продвижение в социальных сетях.
-'
+            'content' => Helper::t('team', 'PAGE_DESCRIPTION')
         ]);
     }
 

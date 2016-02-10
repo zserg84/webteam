@@ -1,6 +1,10 @@
+<?
+use frontend\components\Helper;
+?>
+
 <div class="row-container bg-white" id="comment">
     <div class="rc-title">
-        <h3>Партнеры и отзывы</h3>
+        <h3><?=Helper::t('main', 'PARTNERS_HEADER')?></h3>
     </div>
     <div class="comment-container">
         <ul class="slides">

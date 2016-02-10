@@ -11,11 +11,15 @@ namespace backend\models\form;
 
 use backend\models\Vacancy;
 use common\behaviors\ImageBehavior;
+use common\validators\EachValidator;
+use common\validators\LangRequiredValidator;
 
 class VacancyForm extends Vacancy
 {
 
     public $image;
+    public $translationTitle = [];
+    public $translationDescription = [];
 
     /**
      * @inheritdoc
@@ -23,9 +27,9 @@ class VacancyForm extends Vacancy
     public function rules()
     {
         return [
-            [['title', 'description'], 'safe'],
-            [['title'], 'required'],
+            [['translationTitle', 'translationDescription'], EachValidator::className(), 'rule'=>['filter', 'filter'=>'trim']],
             [['image'], 'file', 'mimeTypes'=> ['image/png', 'image/jpeg', 'image/gif'], 'wrongMimeType' => 'Недопустимый тип файла'],
+            [['translationTitle', 'translationDescription'], LangRequiredValidator::className(), 'langUrls' => 'ru', 'currentLangRequired' => false],
         ];
     }
 
@@ -36,6 +40,8 @@ class VacancyForm extends Vacancy
     {
         return array_merge(parent::attributeLabels(), [
                 'image' => 'Картинка',
+                'translationTitle' => 'Название',
+                'translationDescription' => 'Описание',
             ]
         );
     }

@@ -171,6 +171,7 @@
 .sid-item-1 .sid-example .sid-res-list .srl-item .srl-icon.srl-2 { background: url('../images/i_service-1/icon-example-2.png') center center no-repeat; }
 .sid-item-1 .sid-example .sid-res-list .srl-item .srl-icon.srl-3 { background: url('../images/i_service-1/icon-example-3.png') center center no-repeat; }
 .sid-item-1 .sid-example .sid-res-list .srl-item .srl-icon.srl-4 { background: url('../images/i_service-1/icon-example-4.png') center center no-repeat; }
+.sid-item-1 .sid-example .sid-res-list .srl-item .srl-icon.srl-5 { background: url('../images/i_service-1/icon-example-5.png') center center no-repeat; }
 
 .sid-item-1 .sid-example .sid-res-list .srl-item .srl-content { margin-left: 140px; }
 
@@ -449,14 +450,7 @@
 .btn-container .btn-order { display: inline-block; vertical-align: top; padding: 4px 30px; background: #ef2200; border-radius: 4px; font-size: 20px; color: #ffffff; border: 0; }
 
 
-
-
-
-
-
-
-
-
-
+.ppd-in-form .form-group { margin-bottom: 20px; position: relative; }
+.has-error .help-block {display: block; width: 100%; font-family: 'PFAgoraSansPro-Light'; font-size: 12px; color: #ff0000 !important; font-weight: bold; text-align: right; position: absolute; left: -30px; top: 100%; z-index: 1; left: 0; opacity: 1; visibility: visible; }
 
 

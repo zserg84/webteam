@@ -3,6 +3,7 @@ use frontend\widgets\statement\StatementWidget;
 use frontend\assets\AppAssetPortfolioView;
 use common\models\StatementLetter;
 use yii\helpers\Url;
+use frontend\components\Helper;
 
 AppAssetPortfolioView::register($this);
 
@@ -16,7 +17,7 @@ $backUrl = Url::toRoute(['/portfolio/index/']);
                     <img src="/page/portfolio/view/style/images/arrow-back.png" alt="">
                 </div>
                 <div class="btn-name">
-                    Назад
+                    <?=Helper::t('portfolio', 'BACK_BUTTON_1')?>
                 </div>
             </a>
     </div>
@@ -37,10 +38,10 @@ $backUrl = Url::toRoute(['/portfolio/index/']);
         <?endforeach?>
 
     </div>
-	
+
 	<div class="btn-back-block text-center">
             <a href="<?=$backUrl?>" class="transit-300">
-                Вернуться к списку проектов
+                <?=Helper::t('portfolio', 'BACK_BUTTON_2')?>
             </a>
     </div>
 

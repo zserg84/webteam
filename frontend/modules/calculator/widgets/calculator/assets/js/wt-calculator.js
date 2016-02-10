@@ -68,7 +68,7 @@ $("body").on("click", ".item-btn-arrow", function() {
 
 
 /* back */
-$("body").on("click", ".btn-back-block", function() {
+$("body").on("click", ".calculator-container .btn-back-block", function() {
 
     var wBack = $(this).data("winback");
 	
@@ -203,16 +203,19 @@ $("body").on("click", ".swc-item", function() {
     var next = $(this).data("next");
     var page = $(this).data("page");
     var data = $(this).data("data");
+    var from = $(this).data("from");
+    from = from ? from : 1;
     $.pjax.reload("#pjax-calculator-container", {
         type: 'GET',
-        data: {calculator_type: next, page: page, data:data},
+        data: {calculator_type: next, page: page, data:data, from: from},
         push: false,
         replace: false
     });
 });
-$("body").on("click", ".btn-back-block", function() {
+$("body").on("click", ".calculator-container .btn-back-block", function() {
     if($(this).hasClass("btn-disable"))
         return;
+    $(".substrate-window").removeClass("max-width-window");
     var prev = $(this).data("prev");
     $.pjax.reload("#pjax-calculator-container", {
         type: 'GET',

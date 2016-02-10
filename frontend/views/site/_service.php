@@ -1,30 +1,31 @@
 <?
 use yii\helpers\Url;
+use frontend\components\Helper;
 
 $services = [
     [
-        'title' => 'Команды под<br>крупные проекты',
+        'title' => Helper::t('main', 'TEAMS_FOR_PROJECTS'),
     ],
     [
-        'title' => 'Cайты и сервисы',
+        'title' => Helper::t('main', 'SITES_AND_SERVICES'),
     ],
     [
-        'title' => 'Мобильные<br>приложения',
+        'title' => Helper::t('main', 'MOBILE_APPS'),
     ],
     [
-        'title' => 'Сенсорные экраны',
+        'title' => Helper::t('main', 'SENSOR_SCREENS'),
     ],
     [
-        'title' => 'Social Media Marketing',
+        'title' => Helper::t('main', 'SMM'),
     ],
     [
-        'title' => 'Презентации<br>и фирменные стили',
+        'title' => Helper::t('main', 'PRESENTATIONS'),
     ],
 ];
 ?>
 <div class="row-container bg-dark first-margin" id="services">
     <div class="rc-title">
-        <h3>Наши услуги</h3>
+        <h3><?=Helper::t('main', 'OURSERVICES_HEADER')?></h3>
     </div>
     <div class="services-content">
         <?foreach($services as $k=>$service):
@@ -49,7 +50,7 @@ $services = [
     </div>
     <div class="services-button-more">
         <a href="<?=Url::toRoute(['service/index'])?>" class="sr-btn-more transit-300">
-            узнать подробнее
+            <?=Helper::t('main', 'LEARNMORE_BUTTON')?>
         </a>
     </div>
 </div>

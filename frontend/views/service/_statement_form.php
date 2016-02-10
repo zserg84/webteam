@@ -2,6 +2,7 @@
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
+use frontend\components\Helper;
 ?>
 
 <?
@@ -15,32 +16,29 @@ $form = ActiveForm::begin([
     'action' => Url::toRoute(['/service/statement/'])
 ])?>
     <div class="ppd-form-title">
-        Заказать услугу
+        <?=Helper::t('ourservices_form', 'SERVICE_TITLE')?>
     </div>
     <div class="ppd-in-form">
         <?=Html::hiddenInput('hiddenService', null, [
             'id' => 'hiddenService'
         ])?>
         <?=$form->field($model, 'fio')->textInput([
-            'placeholder'=>'Ваше имя',
-            'required'=>"required",
+            'placeholder'=>Helper::t('ourservices_form', 'FORM_NAME'),
             'class'=>'in-put'
-        ])->label(false)->error(false)?>
+        ])->label(false)?>
         <?=$form->field($model, 'phone')->textInput([
-            'placeholder'=>'Телефон',
+            'placeholder'=>Helper::t('ourservices_form', 'FORM_PHONE'),
             'class'=>'in-put',
             'type' => 'phone',
-            'required' => 'required',
-        ])->label(false)->error(false)?>
+        ])->label(false)?>
         <?=$form->field($model, 'email')->textInput([
-            'placeholder'=>'E-mail',
-            'required'=>"required",
+            'placeholder'=>Helper::t('ourservices_form', 'FORM_EMAIL'),
             'class'=>'in-put',
 //            'type' => 'email',
-        ])->label(false)->error(false)?>
+        ])->label(false)?>
     </div>
     <div class="btn-container">
-        <button class="btn-order">Заказать услугу</button>
+        <button class="btn-order"><?=Helper::t('ourservices_form', 'SERVICE_BUTTON')?></button>
     </div>
 <?ActiveForm::end()?>
 

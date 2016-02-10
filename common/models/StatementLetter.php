@@ -2,6 +2,8 @@
 
 namespace common\models;
 
+use common\behaviors\TranslateBehavior;
+use frontend\components\Helper;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 
@@ -47,7 +49,7 @@ class StatementLetter extends \yii\db\ActiveRecord
     {
         return [
             [['fio','email'], 'filter', 'filter' => 'trim'],
-            [['fio', 'email', 'interest_id'], 'required'],
+            [['fio', 'email', 'interest_id'], 'required', 'message' => Helper::t('flyform', 'FORM_NOTE')],
             [['interest_id', 'created_at', 'sent_at'], 'integer'],
             [['text'], 'string'],
             [['fio', 'from'], 'string', 'max' => 255],
@@ -65,8 +67,8 @@ class StatementLetter extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'fio' => 'Имя',
-            'email' => 'Почта',
-            'phone' => 'Телефон',
+            'email' => Helper::t('flyform', 'FORM_EMAIL'),
+            'phone' => Helper::t('flyform', 'FORM_PHONE'),
             'interest_id' => 'Тип интереса',
             'text' => 'Text',
             'created_at' => 'Время заявки',

@@ -51,7 +51,11 @@ use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
     </div>
     <div class="swc-footer transit-1000">
         <div class="swc-7-btn-block">
-            <div class="swc-7-button transit-300 swc-item" data-page="<?=CalculatorWidget::FROM_CALCULATOR_LANDING?>" data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>">
+            <div class="swc-7-button transit-300 swc-item"
+                 data-page="<?=CalculatorWidget::FROM_CALCULATOR_LANDING?>"
+                 data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
+                 data-from="<?=CalculatorWidget::TYPE_3_LANDING?>"
+                >
                 Получить детальный расчёт
             </div>
         </div>

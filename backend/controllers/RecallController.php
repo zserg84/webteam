@@ -69,10 +69,10 @@ class RecallController extends Controller
                     }
                     return $formModel;
                 },
-                'beforeValidate' => function($model, $formModel){
+               /* 'beforeValidate' => function($model, $formModel){
                     $formModel->image_cover = UploadedFile::getInstance($formModel, 'image_cover');
                     return $formModel;
-                },
+                },*/
                 'afterAction' => function($action, $model, $formModel){
                     return $this->afterEdit($action, $model, $formModel);
                 }

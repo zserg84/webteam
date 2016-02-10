@@ -7,6 +7,9 @@ use yii\helpers\Html;
 use frontend\assets\AppAsset;
 use frontend\components\Helper;
 use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
+use common\models\Lang;
+use yii\helpers\Url;
+use common\models\Image;
 
 AppAsset::register($this);
 ?>
@@ -65,6 +68,10 @@ else{
     $topMenu = Helper::fillFirstPageMenu();
 }
 ?>
+<?
+$curLang = Lang::getCurrent();
+$curLangImage = $curLang->image ? $curLang->image : new Image;
+?>
 <div class="wt-mobile-content transit-1000">
     <?foreach($topMenu['menu'] as $menu):?>
         <a href="<?=$menu['url']?>" class="wt-link-menu transit-300">
@@ -79,35 +86,33 @@ else{
     <div class="wt-lang-mobile">
         <div class="wt-lang-title transit-300">
             <div class="wt-lang-name">
-                Русский
+                <?=$curLang->name?>
             </div>
             <div class="wt-lang-country">
-                <img src="<?=Yii::getAlias('@web').'/style/images/i_mobile-menu/icon-rus.png'; ?>" alt="">
+                <img src="<?=$curLangImage->getSrc(); ?>" alt="">
             </div>
             <div class="wt-lang-arrow">
                 <img src="<?=Yii::getAlias('@web').'/style/images/i_mobile-menu/icon-arrow-lang.png'; ?>" alt="" class="iwt-lang-arrow transit-300">
             </div>
         </div>
         <div class="wt-lang-list">
-            <a href="#1" class="wt-lang-item transit-300">
-                <div class="lang-item-name">
-                    English
+            <?foreach(Lang::find()->all() as $lang):
+                if($lang->id == $curLang->id)
+                    continue;
+                $imageLang = $lang->image ? $lang->image : new Image();
+                ?>
+                <a href="<?=Url::to('/'.$lang->url.Yii::$app->getRequest()->getLangUrl())?>" class="wt-lang-item transit-300">
+                    <div class="lang-item-name">
+                        <?=$lang->name?>
+                    </div>
+                    <div class="lang-item-country">
+                        <img src="<?=$imageLang->getSrc() ?>" alt="">
+                    </div>
+                </a>
+                <div class="lang-item-separator">
+                    <div class="li-separator"></div>
                 </div>
-                <div class="lang-item-country">
-                    <img src="<?=Yii::getAlias('@web').'/style/images/i_mobile-menu/icon-eng.png'; ?>" alt="">
-                </div>
-            </a>
-            <div class="lang-item-separator">
-                <div class="li-separator"></div>
-            </div>
-            <a href="#1" class="wt-lang-item transit-300">
-                <div class="lang-item-name">
-                    Русский
-                </div>
-                <div class="lang-item-country">
-                    <img src="<?=Yii::getAlias('@web').'/style/images/i_mobile-menu/icon-rus.png'; ?>" alt="">
-                </div>
-            </a>
+            <?endforeach?>
             <div class="wt-ls-bottom-separator"></div>
         </div>
     </div>
@@ -116,7 +121,7 @@ else{
 <header>
     <div class="<?=$topMenu['class']?>">
         <div class="tb-container">
-            <a href="<?=\yii\helpers\Url::toRoute(['/site/index'])?>" class="logo-container transit-300">
+            <a href="<?=Url::toRoute(['/site/index'])?>" class="logo-container transit-300">
                 <div class="lc-cell">
                     <div class="logo-picture">
                         <img src="<?=Yii::getAlias('@web').'/style/images/logo.png'; ?>" alt="" class="transit-300">
@@ -146,34 +151,45 @@ else{
                 <div class="tbr-cell">
                     <div class="tbr-call-mail">
                         <a href="tel:88002009188" class="tbr-link-call">
-                            8 (800) 200-91-88
+                            <?=Helper::t('main', 'PHONE_NUMBER')?>
                         </a>
                     </div>
+
                     <div class="tb-language-container">
                         <div class="tb-lang-block">
                             <div class="tb-flag-country">
-                                <img src="<?=Yii::getAlias('@web').'/style/images/i_lang/f-rus.png'; ?>" alt="">
+                                <img src="<?=$curLangImage->getSrc(); ?>" alt="">
                             </div>
-<!--                            <div class="tb-lang-arrow">-->
-<!--                                <img src="--><?//=Yii::getAlias('@web').'/style/images/i_lang/arrow-lang.png'; ?><!--" alt="">-->
-<!--                            </div>-->
+                            <div class="tb-lang-arrow">
+                                <img src="<?=Yii::getAlias('@web').'/style/images/i_lang/arrow-lang.png'; ?>" alt="">
+                            </div>
                         </div>
-<!--                        <div class="tb-lang-list transit-300">-->
-<!--                            <a href="#eng">-->
-<!--                                <div class="tb-lang-list-country">-->
-<!--                                    <img src="--><?//=Yii::getAlias('@web').'/style/images/i_lang/f-eng.png'; ?><!--" alt="">-->
-<!--                                </div>-->
-<!--                                <div class="tb-lang-list-name">-->
-<!--                                    Eng-->
-<!--                                </div>-->
-<!--                            </a>-->
-<!--                        </div>-->
+                        <div class="tb-lang-list transit-300">
+                            <?foreach(Lang::find()->all() as $lang):
+                                if($lang->id == $curLang->id)
+                                    continue;
+                                $imageLang = $lang->image ? $lang->image : new Image();
+                                ?>
+                                <a href="<?=Url::to('/'.$lang->url.Yii::$app->getRequest()->getLangUrl())?>">
+                                    <div class="tb-lang-list-country">
+                                        <img src="<?=$imageLang->getSrc() ?>" alt="">
+                                    </div>
+                                    <div class="tb-lang-list-name">
+                                        <?=$lang->name?>
+                                    </div>
+                                </a>
+                            <?endforeach?>
+                        </div>
                     </div>
                     <?
-                    $type = Yii::$app->getRequest()->get('calculator_type', CalculatorWidget::TYPE_START);
-                    echo CalculatorWidget::widget([
-                        'type' => $type
-                    ])?>
+                    $lang = Lang::getCurrent();
+                    if($lang->url == 'ru'){
+                        $type = Yii::$app->getRequest()->get('calculator_type', CalculatorWidget::TYPE_START);
+                        echo CalculatorWidget::widget([
+                            'type' => $type
+                        ]);
+                    }
+                    ?>
                 </div>
             </div>
         </div>

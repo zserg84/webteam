@@ -16,9 +16,12 @@ class EmailFormWidget extends \yii\base\Widget
 
     public $data;
 
+    public $from;
+
     public function run(){
         return \Yii::$app->controller->run('/calculator/default/email-form', [
             'page' => $this->page,
+            'from' => $this->from,
             'data' => Json::encode($this->data),
         ]);
     }

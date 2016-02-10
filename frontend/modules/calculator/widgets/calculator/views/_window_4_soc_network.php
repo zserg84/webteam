@@ -26,10 +26,17 @@ use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
     </div>
     <div class="swc-footer transit-1000">
         <div class="swc-12-btn-block">
-            <div class="swc-12-button transit-300 win-moving14 swc-item" data-next="<?=CalculatorWidget::TYPE_CALCULATION?>">
+            <div class="swc-12-button transit-300 win-moving14 swc-item"
+                 data-next="<?=CalculatorWidget::TYPE_CALCULATION?>"
+                 data-from="<?=CalculatorWidget::TYPE_4_SOC_NETWORK?>"
+                >
                 Посчитать команду самому
             </div>
-            <div class="swc-12-button transit-300 swc-item" data-page="<?=CalculatorWidget::FROM_CALCULATOR_SOC_NETWORK?>" data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>">
+            <div class="swc-12-button transit-300 swc-item"
+                 data-page="<?=CalculatorWidget::FROM_CALCULATOR_SOC_NETWORK?>"
+                 data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
+                 data-from="<?=CalculatorWidget::TYPE_4_SOC_NETWORK?>"
+                >
                 Получить детальный расчёт
             </div>
         </div>

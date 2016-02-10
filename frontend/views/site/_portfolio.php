@@ -1,9 +1,10 @@
 <?
 use yii\helpers\Url;
+use frontend\components\Helper;
 ?>
 <div class="row-container bg-white" id="portfolio">
     <div class="rc-title">
-        <h3>Портфолио</h3>
+        <h3><?=Helper::t('main', 'PORTFOLIO_HEADER')?></h3>
     </div>
     <div class="portfolio-content">
         <div class="portfolio-catalog upper">
@@ -91,7 +92,7 @@ use yii\helpers\Url;
     </div>
     <div class="portfolio-button-more">
         <a href="<?=Url::toRoute(['/portfolio/index'])?>" class="pb-btn-more transit-300">
-            Посмотреть все
+            <?=Helper::t('main', 'VIEWALL_BUTTON')?>
         </a>
     </div>
 </div>

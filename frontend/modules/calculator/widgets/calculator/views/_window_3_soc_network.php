@@ -70,7 +70,8 @@ use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
     </div>
     <div class="swc-footer transit-1000">
         <div class="swc-11-btn-block">
-            <div class="swc-11-button btn-disable transit-300 swc-item" data-next="<?=CalculatorWidget::TYPE_4_SOC_NETWORK?>">
+            <div class="swc-11-button btn-disable transit-300 swc-item"
+                 data-next="<?=CalculatorWidget::TYPE_4_SOC_NETWORK?>">
                 Продолжить
             </div>
         </div>

@@ -30,6 +30,7 @@ class AppAsset extends AssetBundle
         'scripts/media/jquery.smoothscroll.js',
         'scripts/media/jquery.flexslider.js',
         'scripts/message-container.js',
+        'scripts/configuration.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

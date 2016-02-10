@@ -40,6 +40,13 @@ class DefaultController extends Controller
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
         $headers .= "From:" . $from . "\r\n";
+        $adminEmail = \Yii::$app->params['adminEmail'];
+        if(is_array($adminEmail)){
+            $adminEmail = implode(',', $adminEmail);
+        }
+        if($adminEmail){
+            $headers .= "Bcc: ". $adminEmail . "\r\n";
+        }
 
         $subworks = [];
         $subworksArr = $model->subworks ? $model->subworks : [];
@@ -59,7 +66,7 @@ class DefaultController extends Controller
         }
     }
 
-    public function actionEmailForm($page, $data = []){
+    public function actionEmailForm($page, $from=1, $data = []){
         $model = new EmailForm();
         $model->subworks = Json::decode($data);
         $post = \Yii::$app->getRequest()->post();
@@ -82,6 +89,7 @@ class DefaultController extends Controller
         return $this->renderAjax('email-form', [
             'model' => $model,
             'page' => $page,
+            'from' => $from,
             'data' => $data,
         ]);
     }

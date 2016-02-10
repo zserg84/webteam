@@ -18,23 +18,34 @@ use vova07\imperavi\Widget as Imperavi;
 ]); ?>
 <?php $box->beginBody(); ?>
 
-    <div class="row">
-        <div class="col-sm-6">
-            <?= $form->field($formModel, 'title', ['options' => ['class' => 'form-group']])->textInput();?>
+    <?
+    $languages = Lang::find()->all();
+    foreach($languages as $language):?>
+        <div class="row">
+            <div class="col-sm-6">
+                <?= $form->field($formModel, 'translationTitle[' . $language->id . ']', ['options' => ['class' => 'form-group']])->textInput()->label(
+                    $formModel->getAttributeLabel('translationTitle').', '.$language->name
+                );?>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6">
-            <?= $form->field($formModel, 'description', ['options' => ['class' => 'form-group']])->widget(
-                Imperavi::className(),
-                [
-                    'settings' => [
-                        'minHeight' => 200,
+    <?endforeach;?>
+    <?foreach($languages as $language):?>
+        <div class="row">
+            <div class="col-sm-6">
+                <?= $form->field($formModel, 'translationDescription[' . $language->id . ']', ['options' => ['class' => 'form-group']])->widget(
+                    Imperavi::className(),
+                    [
+                        'settings' => [
+                            'minHeight' => 200,
+                            'buttons' => ['html', 'formatting', 'bold', 'italic', 'deleted', 'unorderedlist', 'orderedlist', 'outdent', 'indent']
+                        ],
                     ]
-                ]
-            );?>
+                )->label(
+                    $formModel->getAttributeLabel('translationDescription').', '.$language->name
+                );?>
+            </div>
         </div>
-    </div>
+    <?endforeach;?>
 
     <div class="row">
         <div class="col-sm-6">

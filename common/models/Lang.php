@@ -16,6 +16,9 @@ use yii\helpers\ArrayHelper;
  * @property integer $default
  * @property integer $created_at
  * @property integer $updated_at
+ * @property integer $image_id
+ *
+ * @property Image $image
  */
 class Lang extends \yii\db\ActiveRecord
 {
@@ -38,8 +41,9 @@ class Lang extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['url', 'local', 'name', 'created_at', 'updated_at'], 'required'],
-            [['default', 'created_at', 'updated_at'], 'integer'],
+            ['default', 'default', 'value' => 0],
+            [['url', 'local', 'name'], 'required'],
+            [['default', 'created_at', 'updated_at', 'image_id'], 'integer'],
             [['url'], 'string', 'max' => 5],
             [['local'], 'string', 'max' => 10],
             [['name'], 'string', 'max' => 25]
@@ -141,5 +145,13 @@ class Lang extends \yii\db\ActiveRecord
     public static function getArr($fieldVal='name', $filedKey='id') {
         $list = self::find()->all();
         return ($list) ? ArrayHelper::map($list, $filedKey, $fieldVal) : [];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getImage()
+    {
+        return $this->hasOne(Image::className(), ['id' => 'image_id']);
     }
 }

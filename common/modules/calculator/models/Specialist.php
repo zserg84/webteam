@@ -112,6 +112,8 @@ class Specialist extends \yii\db\ActiveRecord
     }
 
     public function getUsn(){
-        return ceil(10*$this->usn * ($this->getSalary() + $this->getTax() + $this->getAmortization() + $this->getMaintenance() + $this->getProfit())/100) / 10;
+        $sum = $this->getSalary() + $this->getTax() + $this->getAmortization() + $this->getMaintenance() + $this->getProfit();
+        $usn = $this->usn * $sum / (100 - $this->usn);
+        return ceil(10 * $usn)/10;
     }
 }

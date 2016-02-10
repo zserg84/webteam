@@ -18,6 +18,9 @@ use common\actions\DeleteAction;
 use common\actions\IndexAction;
 use common\actions\UpdateAction;
 use common\models\Image;
+use common\models\Lang;
+use common\models\VacancyLang;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
 use yii\web\UploadedFile;
 
@@ -49,6 +52,15 @@ class VacancyController extends Controller
                 'ajaxValidation' => true,
                 'beforeAction' => function($model, $formModel){
                     $formModel->image = $model->image;
+
+                    $languages = Lang::find()->all();
+                    $itemLangs = $model->vacancyLangs;
+                    $itemLangs = ArrayHelper::index($itemLangs, 'lang_id');
+                    foreach($languages as $language){
+                        $itemLang = isset($itemLangs[$language->id]) ? $itemLangs[$language->id] : new VacancyLang();
+                        $formModel->translationTitle[$language->id] = $itemLang->title;
+                        $formModel->translationDescription[$language->id] = $itemLang->description;
+                    }
                     return $formModel;
                 },
                 'afterAction' => function($action, $model, $formModel){
@@ -80,6 +92,8 @@ class VacancyController extends Controller
             $model->image_id = $image->id;
             $model->save();
         }
+        $model->saveLangsRelations('vacancyLangs', $formModel, 'translationTitle', 'title', 'vacancy_id');
+        $model->saveLangsRelations('vacancyLangs', $formModel, 'translationDescription', 'description', 'vacancy_id');
 
         return $model;
     }

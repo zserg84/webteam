@@ -10,6 +10,7 @@ namespace frontend\controllers;
 
 
 use common\models\Portfolio;
+use frontend\components\Helper;
 use yii\base\Exception;
 use yii\web\NotFoundHttpException;
 
@@ -19,19 +20,14 @@ class PortfolioController extends Controller
     public function init(){
         parent::init();
 
-        $this->getView()->title = 'Наше портфолио';
+        $this->getView()->title = Helper::t('portfolio', 'PAGE_TITLE');
         $this->getView()->registerMetaTag([
             'name' => 'keywords',
-            'content' => 'создание сайтов портфолио, крутые сайты портфолио, лучшие сайты портфолио,
-дизайн сайта портфолио, разработка сайтов портфолио, примеры сайтов портфолио, красивые сайты портфолио,
-создание сайтов портфолио москва, портфолио сайтов веб студия, портфолио веб студии'
+            'content' => Helper::t('portfolio', 'PAGE_KEYWORDS')
         ]);
         $this->getView()->registerMetaTag([
             'name' => 'description',
-            'content' => 'В нашем портфолио более 100 успешно реализованных проектов:
-от информационных порталов для посетителей до мобильных приложений.
-В портфолио представлены последние проекты для крупных клиентов.
-'
+            'content' => Helper::t('portfolio', 'PAGE_DESCRIPTION')
         ]);
     }
 

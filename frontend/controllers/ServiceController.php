@@ -11,6 +11,7 @@ namespace frontend\controllers;
 
 use common\models\StatementInterest;
 use common\models\StatementLetter;
+use frontend\components\Helper;
 use yii\web\Response;
 use yii\widgets\ActiveForm;
 
@@ -20,19 +21,14 @@ class ServiceController extends Controller
     public function init(){
         parent::init();
 
-        $this->getView()->title = 'Команды под крупные проекты';
+        $this->getView()->title = Helper::t('ourservices', 'PAGE_TITLE');
         $this->getView()->registerMetaTag([
             'name' => 'keywords',
-            'content' => 'заказать мобильную версию сайта, заказная разработка по, agile development,
-agile web development, agile команда, agile проекты, agile разработка, заказать портал,
-заказать сайт на битрикс, интерактивный экран дизайн, smm-продвижение, услуги веб студии'
+            'content' => Helper::t('ourservices', 'PAGE_KEYWORDS')
         ]);
         $this->getView()->registerMetaTag([
             'name' => 'description',
-            'content' => 'Услуги Webteam - создаем команды под крупные проекты, сайты и сервисы,
-мобильные приложения, презентации и фирменные стили, сенсорные экраны,
-а также Social Media Marketing (SMM продвижение).
-'
+            'content' => Helper::t('ourservices', 'PAGE_DESCRIPTION')
         ]);
     }
 
@@ -75,7 +71,7 @@ agile web development, agile команда, agile проекты, agile раз�
             if($model->save()){
                 \Yii::$app->session->setFlash(
                     'message',
-                    'Ваше сообщение отправлено'
+                    Helper::t('main', 'SEND_OK_MESSAGE')
                 );
                 return $this->redirect(\Yii::$app->request->referrer . '#' . $service);
             }

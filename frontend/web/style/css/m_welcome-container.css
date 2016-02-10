@@ -58,7 +58,7 @@
 .welcome-container .wc-right-element .wcr-element .wcr-element-icon.icon-1 { background: url('../images/i_first-container/right-flip-icon-1.png') center center no-repeat; }
 .welcome-container .wc-right-element .wcr-element .wcr-element-icon.icon-2 { background: url('../images/i_first-container/right-flip-icon-2.png') center center no-repeat; }
 
-.welcome-container .wc-right-element .wcr-element .wcr-element-name { margin-left: 56px; font-family: 'PFAgoraSansPro-Light', 'Arial'; font-size: 12px; text-transform: uppercase; line-height: 14px; }
+.welcome-container .wc-right-element .wcr-element .wcr-element-name { margin-left: 56px; font-family: 'PFAgoraSansPro-Light', 'Arial'; font-size: 12px; text-transform: uppercase; line-height: 14px; padding-right:10px;}
 
 .fb-like-icon { display: block; width: 100%; margin-top: 8px; }
 .fb-like-icon img { width: 38px; }

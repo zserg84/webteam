@@ -43,7 +43,7 @@ $works = Work::find()->where([
                             <div class="item-swc-6 item-block">
                                 <div class="item-title">
                                     <div class="item-title-name">
-                                        <input type="checkbox" id="check-ds-<?=$k?>" data-id="<?=$work->id?>">
+                                        <input type="checkbox" id="check-ds-<?=$k?>" data-id="<?=$work->id?>" checked>
                                         <label for="check-ds-<?=$k?>">
                                             <span class="it-name"><?=$work->title?></span>
                                         </label>
@@ -57,7 +57,7 @@ $works = Work::find()->where([
                                         &nbsp;
                                     </div>
                                     <div class="desk-qty">
-                                        1
+                                        0
                                     </div>
                                     <div class="btn-qty qty-max transit-300">
                                         &nbsp;
@@ -81,10 +81,18 @@ $works = Work::find()->where([
                     Распечатать расчеты
                 </a>
             </div>
-            <div class="swc-5-footer-btn transit-300" id="sendtoemail" data-page="<?=CalculatorWidget::FROM_CALCULATOR_DESIGN?>" data-next="<?=CalculatorWidget::TYPE_SEND_EMAIL_FORM?>">
+            <div class="swc-5-footer-btn transit-300" id="sendtoemail"
+                 data-page="<?=CalculatorWidget::FROM_CALCULATOR_DESIGN?>"
+                 data-next="<?=CalculatorWidget::TYPE_SEND_EMAIL_FORM?>"
+                 data-from="<?=CalculatorWidget::TYPE_3_DESIGN?>"
+                >
                 Отправить на e-mail
             </div>
-            <div class="swc-5-footer-btn transit-300 swc-item" data-page="<?=CalculatorWidget::FROM_CALCULATOR_DESIGN?>"data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>">
+            <div class="swc-5-footer-btn transit-300 swc-item"
+                 data-page="<?=CalculatorWidget::FROM_CALCULATOR_DESIGN?>"
+                 data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
+                 data-from="<?=CalculatorWidget::TYPE_3_DESIGN?>"
+                >
                 Узнать о скидках
             </div>
         </div>
@@ -105,6 +113,8 @@ $works = Work::find()->where([
         $("#itog").html(itog);
     }
 
+    calcItog();
+
     $(document).on("change", ".item-title input[type=checkbox]", function(){
         calcItog();
     });
@@ -124,9 +134,10 @@ $works = Work::find()->where([
 
         var next = $(this).data("next");
         var page = $(this).data("page");
+        var from = $(this).data("from");
         $.pjax.reload("#pjax-calculator-container", {
             "type": "GET",
-            "data": {calculator_type: next, page: page, data:checks},
+            "data": {calculator_type: next, page: page, data:checks, from:from},
             "push": false,
             "replace": false
         });

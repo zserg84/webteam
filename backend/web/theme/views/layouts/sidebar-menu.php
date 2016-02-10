@@ -22,6 +22,10 @@ echo SideNav::widget([
             'active' => Yii::$app->request->url === Yii::$app->homeUrl
         ],
         [
+            'label' => 'Языки',
+            'url' => ['/lang/index'],
+        ],
+        [
             'label' => 'Заявки',
             'url' => ['/statement/index'],
         ],

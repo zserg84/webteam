@@ -31,7 +31,7 @@ $(document).mousedown(function (e){
     var langBox = $(".tb-lang-list");
     if (!langBox.is(e.target) && langBox.has(e.target).length === 0) { langBox.removeClass("ll-show"); }
 });
-$(".tb-lang-block").click(function() {
+$(document).on("click", ".tb-lang-block", function() {
     if ( $(".tb-lang-list").hasClass("ll-show") ) {
         $(".tb-lang-list").removeClass("ll-show");
     } else {
@@ -49,11 +49,11 @@ $("a[href^='#']").click( function(){
 });
 
 /* real container */
-$(".wcr-real").click(function() {
+$(document).on("click", ".wcr-real", function() {
     $(".real-container").addClass("real-show");
     $("body, html").css("overflow", "hidden");
 });
-$(".real-btn-close").click(function() {
+$(document).on("click", ".real-btn-close", function() {
     $(".real-container").removeClass("real-show");
     $("body, html").css("overflow", "visible");
 });
@@ -311,7 +311,9 @@ $(window).resize(function(){
 
 });
 
-$(".loader-img").addClass("loader-none");
+$(function(){
+    $(".loader-img").addClass("loader-none");
+});
 
 $(document).on("click", ".submit-button", function(){
    $(this).closest("form").submit();

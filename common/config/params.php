@@ -6,7 +6,8 @@ return [
         'ilya@indra.pro',
         'maxim22999@gmail.com',
         'maxim@yaxon.ru',
-'zserg84@gmail.com'
+        'zserg84@gmail.com',
+        'heltop@gmail.com'
     ],
     'supportEmail' => 'support@example.com',
     'user.passwordResetTokenExpire' => 3600,

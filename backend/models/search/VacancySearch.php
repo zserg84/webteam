@@ -42,12 +42,14 @@ class VacancySearch extends Vacancy
             ]
         ]);
 
+        $query->lang();
+
         if (!($this->load($params) && $this->validate())) {
             return $dataProvider;
         }
 
-        $query->andFilterWhere(['LIKE', 'vacancy.title', $this->title]);
-        $query->andFilterWhere(['LIKE', 'vacancy.description' , $this->description]);
+        $query->andFilterWhere(['LIKE', 'vacancy_lang.title', $this->title]);
+        $query->andFilterWhere(['LIKE', 'vacancy_lang.description' , $this->description]);
 
         return $dataProvider;
     }

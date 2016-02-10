@@ -9,9 +9,11 @@
 namespace frontend\controllers;
 
 
+use common\models\Lang;
 use common\models\StatementInterest;
 use common\models\StatementLetter;
 use common\models\Vacancy;
+use frontend\components\Helper;
 use yii\helpers\VarDumper;
 use yii\web\Response;
 use yii\widgets\ActiveForm;
@@ -21,25 +23,22 @@ class VacancyController extends Controller
     public function init(){
         parent::init();
 
-        $this->getView()->title = 'IT вакансии';
+        $this->getView()->title = Helper::t('vacancy', 'PAGE_TITLE');
         $this->getView()->registerMetaTag([
             'name' => 'keywords',
-            'content' => 'создание сайтов вакансии, руководитель интернет проекта вакансии, руководитель ит проектов вакансии,
-ит специалист вакансии, вакансии ит руководитель, проектировщик интерфейсов вакансия,
-php программист вакансии, вакансия front end разработчика, html верстальщик вакансии,
-ios разработчик вакансии, тестировщик сайтов вакансии, веб студия вакансии'
+            'content' => Helper::t('vacancy', 'PAGE_KEYWORDS')
         ]);
         $this->getView()->registerMetaTag([
             'name' => 'description',
-            'content' => 'Работать в нашей команде одно удовольствие! На постоянную работу требуется:
-руководитель проектов, аналитик, проектировщик интерфейсов, PHP программист,
-front-end разработчик, HTML верстальщик, Android разработчик для
-мобильных приложений, тестировщик сайтов и приложений
-'
+            'content' => Helper::t('vacancy', 'PAGE_DESCRIPTION')
         ]);
     }
 
     public function actionIndex(){
+        $lang = Lang::getCurrent();
+        if($lang->url != 'ru')
+            return $this->redirect('/team/index');
+
         $vacancies = Vacancy::find()->all();
         return $this->render('index', [
             'vacancies' => $vacancies,
@@ -75,7 +74,7 @@ front-end разработчик, HTML верстальщик, Android разр�
             if($model->save()){
                 \Yii::$app->session->setFlash(
                     'message',
-                    'Ваше сообщение отправлено'
+                    Helper::t('main', 'SEND_OK_MESSAGE')
                 );
                 return $this->redirect(\Yii::$app->request->referrer);
             }

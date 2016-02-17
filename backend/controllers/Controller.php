@@ -31,4 +31,10 @@ class Controller extends \yii\web\Controller
             ]
         ];
     }
+
+    public function beforeAction($action){
+        if(!\Yii::$app->getUser()->can('accessBackend') && !\Yii::$app->getUser()->getIsGuest())
+            return $this->redirect('/');
+        return parent::beforeAction($action);
+    }
 } 

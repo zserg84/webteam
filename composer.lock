@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "07e86eccc344f158ee13b276de1219b7",
-    "content-hash": "5038850be2a50d97f057f694c84d44ee",
+    "hash": "bb34b2d527bb8a4658b027f1aaea1bcc",
+    "content-hash": "50c482e36ac384318d5c1b95655ad34d",
     "packages": [
         {
             "name": "2amigos/yii2-file-input-widget",
@@ -342,7 +342,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cebe/markdown/zipball/35d47fe727a453a8aa5c6be7e627caad8f16d586",
+                "url": "https://api.github.com/repos/cebe/markdown/zipball/e4499350d8a94c4c693a7e784295eff7a717ae67",
                 "reference": "35d47fe727a453a8aa5c6be7e627caad8f16d586",
                 "shasum": ""
             },
@@ -754,6 +754,49 @@
                 "mailer"
             ],
             "time": "2016-01-03 15:42:47"
+        },
+        {
+            "name": "tabgeo/country",
+            "version": "1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dostelon/TabGeo.git",
+                "reference": "f7aad9fcac44d35ec7b1477fdc6012a98bfb302a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dostelon/TabGeo/zipball/f7aad9fcac44d35ec7b1477fdc6012a98bfb302a",
+                "reference": "f7aad9fcac44d35ec7b1477fdc6012a98bfb302a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/TabGeo/country.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vasili Yurkevich",
+                    "email": "dostelon@gmail.com"
+                }
+            ],
+            "description": "geoip (only countries) php library (http://tabgeo.com)",
+            "keywords": [
+                "countrycode",
+                "geoip",
+                "geolocation",
+                "location",
+                "tabgeo"
+            ],
+            "time": "2016-02-02 18:17:12"
         },
         {
             "name": "twitter/bootstrap",
@@ -1434,7 +1477,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/7ccbfdf4cfb0ce025e27455dc3e516af23eb2800",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/abb6d386b71fe4d30d028c293202223311162dd2",
                 "reference": "7ccbfdf4cfb0ce025e27455dc3e516af23eb2800",
                 "shasum": ""
             },
@@ -1754,7 +1797,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/d63b5813b4684d4ec6880537f1f93c4a47a37462",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/772feacf6849bf0114873e2b869bb500fccfd438",
                 "reference": "d63b5813b4684d4ec6880537f1f93c4a47a37462",
                 "shasum": ""
             },

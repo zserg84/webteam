@@ -67,8 +67,8 @@ class StatementLetter extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'fio' => 'Имя',
-            'email' => Helper::t('flyform', 'FORM_EMAIL'),
-            'phone' => Helper::t('flyform', 'FORM_PHONE'),
+            'email' => 'Email',
+            'phone' => 'Телефон',
             'interest_id' => 'Тип интереса',
             'text' => 'Text',
             'created_at' => 'Время заявки',

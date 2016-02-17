@@ -9,7 +9,9 @@
 namespace frontend\controllers;
 
 
+use common\models\Lang;
 use frontend\components\Helper;
+use yii\helpers\VarDumper;
 
 class Controller extends \yii\web\Controller
 {
@@ -27,4 +29,13 @@ class Controller extends \yii\web\Controller
             throw new NotFoundHttpException();
         return $model;
     }
+
+    public function beforeAction($action){
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $country_code = \TabGeo\country($ip);
+        if($country_code != 'RU' && !\Yii::$app->session->get('language'))
+            Lang::setCurrent('en');
+        return parent::beforeAction($action);
+    }
+
 } 

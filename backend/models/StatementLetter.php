@@ -12,4 +12,5 @@ namespace backend\models;
 class StatementLetter extends \common\models\StatementLetter
 {
 
+
 } 

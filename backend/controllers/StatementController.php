@@ -12,7 +12,7 @@ namespace backend\controllers;
 use backend\models\search\StatementLetterSearch;
 use common\actions\DeleteAction;
 use common\actions\IndexAction;
-use common\models\StatementLetter;
+use backend\models\StatementLetter;
 use yii\helpers\Url;
 use yii\web\NotFoundHttpException;
 

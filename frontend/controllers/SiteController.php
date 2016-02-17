@@ -3,7 +3,7 @@ namespace frontend\controllers;
 
 use common\models\Portfolio;
 use common\models\Recall;
-use common\models\StatementLetter;
+use frontend\models\StatementLetter;
 use common\models\Team;
 use frontend\components\Helper;
 use Yii;

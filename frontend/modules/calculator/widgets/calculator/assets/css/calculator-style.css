@@ -238,7 +238,7 @@
 
 .substrate-window .sw-container.swc-win-3 .swc-content .swc-3-items-block { display: block; width: 100%; margin-top: 0; text-align: center; }
 
-    .substrate-window .sw-container.swc-win-3 .swc-content .swc-3-items-block .swc-3-sub-title { display: block; width: 100%; margin-top: -14px; font-size: 14px; color: #6b6b6b; }
+.substrate-window .sw-container.swc-win-3 .swc-content .swc-3-items-block .swc-3-sub-title { display: block; width: 100%; margin-top: -14px; font-size: 14px; color: #6b6b6b; }
 
 .substrate-window .sw-container.swc-win-3 .swc-content .swc-3-items-block .swc-3-item { display: inline-block; vertical-align: top; width: 166px; margin: 16px 38px 0 38px; position: relative; top: 0; }
 

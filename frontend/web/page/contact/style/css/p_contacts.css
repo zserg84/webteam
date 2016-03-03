@@ -35,9 +35,9 @@
 
 .contacts-info-container .cic-cell .cic-description { display: block; width: 100%; margin-top: 8px; color: #00c2d9; }
 
-.contacts-info-container .cic-cell .cic-description .cic-icon-posit { display: inline-block; vertical-align: top; margin-right: 20px; position: relative; top: 10px; }
+.contacts-info-container .cic-cell .cic-description .cic-icon-posit { display: block; width: 22px; float: left; }
 
-.contacts-info-container .cic-cell .cic-description .cic-address { display: inline-block; vertical-align: top; color: #474d6e; }
+.contacts-info-container .cic-cell .cic-description .cic-address { margin-left: 22px; color: #474d6e; }
 
 .contacts-info-container .cic-cell .cic-description .cic-map { display: block; width: 100%; height: 480px; margin-top: 20px; overflow: hidden; }
 

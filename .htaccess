@@ -11,6 +11,9 @@
     # Enable mod_rewrite
     RewriteEngine On
 
+RewriteCond %{REQUEST_URI} ^/prj
+RewriteRule ^prj/(.*)$ prj/$1 [L]
+
     # Backend redirect
     RewriteCond %{REQUEST_URI} ^/backend
     RewriteRule ^backend/(.*)$ backend/web/$1 [L]
@@ -22,4 +25,5 @@
     # Frontend redirect
     RewriteCond %{REQUEST_URI} ^(.*)$
     RewriteRule ^(.*)$ frontend/web/$1
+
 </IfModule>

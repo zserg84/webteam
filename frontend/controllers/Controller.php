@@ -31,10 +31,7 @@ class Controller extends \yii\web\Controller
     }
 
     public function beforeAction($action){
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $country_code = \TabGeo\country($ip);
-        if($country_code != 'RU' && !\Yii::$app->session->get('language'))
-            Lang::setCurrent('en');
+
         return parent::beforeAction($action);
     }
 

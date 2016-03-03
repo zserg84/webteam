@@ -105,6 +105,14 @@ class Lang extends \yii\db\ActiveRecord
         if($language === null){
             $language = Yii::$app->session->get('language');
         }
+
+        if(!$language){
+            $ip = $_SERVER['REMOTE_ADDR'];
+            $country_code = \TabGeo\country($ip);
+            if(!in_array($country_code, ['RU', 'KZ', 'BY', 'UA']))
+                $language = self::getLangByUrl('en');
+        }
+
         self::$current = ($language === null) ? self::getDefaultLang() : $language;
         Yii::$app->session->set('language', self::$current);
         Yii::$app->language = self::$current->local;

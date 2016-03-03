@@ -250,7 +250,7 @@
 
     /**/
     .ccs-item { padding: 0 20px; }
-    .ccs-item .ccs-logon, .ccs-item .ccs-logon .ccs-logon-cell { display: block; width: 100%; text-align: center; }
+    .ccs-item .ccs-logon, .ccs-item .ccs-logon .ccs-logon-cell { display: block; width: 100%; text-align: center; padding: 0 20px; }
     .ccs-item .cc-comment-block { display: block; width: 100%; margin-left: 0; }
     .ccs-item .cc-comment-block .cc-com-desk { min-height: auto; padding-top: 20px; }
     .comment-container .flex-direction-nav a { top: 54px; }

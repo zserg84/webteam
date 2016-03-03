@@ -17,7 +17,10 @@
     .welcome-container .wc-title-block .wct-title .wctt-3 { left: auto; right: -104px; top: 20px; }
     .welcome-container .wc-title-block .wct-title .wctt-3 a { line-height: 44px; }
 
-    .welcome-container .wc-title-block .wct-title .wctt-1 { left: 0; top: 8px; }
+    .welcome-container .wc-title-block .wct-title .wctt-1 { left: 22px; top: 8px; }
+
+    .lng-page-ru-RU .welcome-container .wc-title-block .wct-title .wctt-1 { left: -18px; }
+    .lng-page-en-US .welcome-container .wc-title-block .wct-title .wctt-3 { left: 106px; }
 
 
     /**/
@@ -99,6 +102,8 @@
     .welcome-container .wc-title-block .wct-title .wctt-3 { right: -80px; top: 18px; }
     .welcome-container .wc-title-block .wct-title .wctt-3 a { line-height: 34px; }
     .welcome-container .wc-title-block .wct-title .wctt-1 { top: 6px; }
+
+    .lng-page-en-US .welcome-container .wc-title-block .wct-title .wctt-3 { left: 85px; }
 
     .wc-button { width: 314px; margin-top: 42px; left: 172px; }
     .wc-button .wcb-demand { font-size: 18px; }

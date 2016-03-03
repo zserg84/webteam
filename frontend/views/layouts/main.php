@@ -51,7 +51,7 @@ AppAsset::register($this);
     <script src="<?=Yii::getAlias('@web') . '/scripts/google_analitics.js'; ?>"></script>
     <?php $this->head() ?>
 </head>
-<body>
+<body class="lng-page-<?= Yii::$app->language ?>">
 <?php $this->beginBody() ?>
 
 <div class="loader-img">

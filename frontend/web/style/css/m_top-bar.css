@@ -102,6 +102,8 @@
 
 .tb-lang-list .tb-lang-list-name { display: inline-block; vertical-align: middle; font-size: 14px; position: relative; top: 2px; }
 
+.tb-lang-list a:hover { text-decoration: none; }
+
 .tb-lang-list a:hover .tb-lang-list-name { text-decoration: underline; }
 
 /**/

@@ -222,7 +222,7 @@
 
     .row-container .rc-title { padding: 30px 10px 0 10px !important; }
     /**/
-    .fly-button-great { display: none; }
+    .fly-button-great { display: none !important; }
     .fly-form-container { display: none; }
     /**/
 

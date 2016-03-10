@@ -34,7 +34,7 @@ $this->title = Helper::t('main', 'MAIN_HEADER');
             </a>
         </div>
         <div class="wct-download-block">
-            <a href="<?=Helper::t('main', 'PDF_LINK')?>" target="_blank" download class="wct-download-link">
+            <a href="<?=Url::to(Helper::t('main', 'PDF_LINK'), true)?>" target="_blank" download class="wct-download-link">
                 <div class="wctl-icon-file">
                     <img src="<?echo Yii::getAlias('@web').'/style/images/i_first-container/icon-file.png'; ?>" alt="">
                 </div>

@@ -4,6 +4,7 @@ use common\modules\calculator\models\Work;
 use common\modules\calculator\models\Worktype;
 use yii\helpers\Url;
 use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
+use frontend\modules\calculator\Module;
 
 $works = Work::find()->where([
     'worktype_id' => Worktype::TYPE_FIRSTYLE,
@@ -16,20 +17,20 @@ $works = Work::find()->where([
             <img src="<?=Asset::imgSrc("arrow-back.png")?>" alt="">
         </div>
         <div class="btn-name">
-            Назад
+            <?=Module::t('main', 'BUTTON_BACK')?>
         </div>
     </div>
     <div class="swc-title transit-1000">
-        Расчет стоимости создания фирменного стиля
+        <?=Module::t('design', 'STYLE_TITLE')?>
     </div>
     <div class="swc-content">
         <div class="swc-5-items-block transit-1000">
             <div class="swc-5-title-name">
                 <div class="tn-left">
-                    Работа
+                    <?=Module::t('design', 'STYLE_TABLE_1')?>
                 </div>
                 <div class="tn-right">
-                    Стоимость, <img src="<?=Asset::imgSrc("icon-rub.png")?>" alt="" class="icon-rub-small">
+                    <?=Module::t('design', 'STYLE_TABLE_2')?>, <img src="<?=Asset::imgSrc(Module::t('main', 'SITE_CURRENCY_SMALL'))?>" alt="" class="icon-rub-small">
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -86,12 +87,12 @@ $works = Work::find()->where([
     </div>
     <div class="swc-footer transit-1000">
         <div class="swc-5-footer-title">
-            Итого: <span id="itog">0</span> <img src="<?=Asset::imgSrc("icon-rub-big.png")?>" alt="" class="icon-rub-big">
+            Итого: <span id="itog">0</span> <img src="<?=Asset::imgSrc(Module::t('main', 'SITE_CURRENCY_BIG'))?>" alt="" class="icon-rub-big">
         </div>
         <div class="swc-5-footer-content">
             <div class="swc-5-footer-btn transit-300" id="print_button">
                 <a data-pjax="0" href="#" data-href="<?=Url::toRoute(['/calculator/default/print-page', 'page'=>CalculatorWidget::FROM_CALCULATOR_FIRSTYLE])?>" target="_blank">
-                    Распечатать расчеты
+                    <?=Module::t('main', 'BUTTON_PRINT')?>
                 </a>
             </div>
             <div class="swc-5-footer-btn transit-300" id="sendtoemail"
@@ -99,14 +100,14 @@ $works = Work::find()->where([
                  data-next="<?=CalculatorWidget::TYPE_SEND_EMAIL_FORM?>"
                  data-from="<?=CalculatorWidget::TYPE_3_FIRSTYLE?>"
                 >
-                Отправить на e-mail
+                <?=Module::t('main', 'BUTTON_TO_EMAIL')?>
             </div>
             <div class="swc-5-footer-btn transit-300 swc-item"
                  data-page="<?=CalculatorWidget::FROM_CALCULATOR_FIRSTYLE?>"
                  data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
                  data-from="<?=CalculatorWidget::TYPE_3_FIRSTYLE?>"
                 >
-                Узнать о скидках
+                <?=Module::t('main', 'BUTTON_DISCOUNT')?>
             </div>
         </div>
     </div>

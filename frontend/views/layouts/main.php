@@ -183,7 +183,7 @@ $curLangImage = $curLang->image ? $curLang->image : new Image;
                     </div>
                     <?
                     $lang = Lang::getCurrent();
-                    if($lang->url == 'ru'){
+                    if($lang->url == 'ru' || true){
                         $type = Yii::$app->getRequest()->get('calculator_type', CalculatorWidget::TYPE_START);
                         echo CalculatorWidget::widget([
                             'type' => $type

@@ -1,6 +1,8 @@
 <?
 use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
 use frontend\modules\calculator\widgets\calculator\Asset;
+use frontend\modules\calculator\Module;
+use common\modules\calculator\models\WorkLang;
 ?>
 <div class="sw-container swc-win-4 transit-1000">
     <div class="btn-back-block transit-300" data-winback="4" data-prev="<?=CalculatorWidget::TYPE_START?>">
@@ -8,22 +10,28 @@ use frontend\modules\calculator\widgets\calculator\Asset;
             <img src="<?=Asset::imgSrc('arrow-back.png')?>" alt="">
         </div>
         <div class="btn-name">
-            Назад
+            <?=Module::t('main', 'BUTTON_BACK')?>
         </div>
     </div>
     <div class="swc-title transit-1000">
-        Стоимость мобильного приложения
+        <?=Module::t('portal', 'MOBILE_TITLE')?>
     </div>
     <div class="swc-content">
         <div class="swc-4-items-block transit-1000">
             <p>
-                Стоимость создания мобильного приложения в нашей студии начинается от 250 тысяч рублей.
+                <?=Module::t('portal', 'MOBILE_CONTENT_1')?>
             </p>
             <p>
-                К сожалению, невозможно точно ответить на общий вопрос «сколько стоит мобильное приложение». Конечная цена зависит от требуемого функционала, количества поддерживаемых платформ и желаемой скорости разработки.
+                <?=Module::t('portal', 'MOBILE_CONTENT_2')?>
+                <?
+                $wl = WorkLang::find()->getCost('mobile')->one();
+                ?>
+                <?=Module::t('portal', 'from {n} cost', [
+                    'n' => $wl ? number_format($wl->cost, 0, '.', ' ') : null
+                ])?>
             </p>
             <p>
-                Оставьте свои координаты и мы оперативно свяжемся с Вами для выяснения всех деталей.
+                <?=Module::t('portal', 'MOBILE_CONTENT_3')?>
             </p>
         </div>
     </div>
@@ -34,7 +42,7 @@ use frontend\modules\calculator\widgets\calculator\Asset;
                  data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
                  data-from="<?=CalculatorWidget::TYPE_2_MOBILE?>"
                 >
-                Получить детальный расчёт
+                <?=Module::t('main', 'BUTTON_CALCULATION')?>
             </div>
         </div>
     </div>

@@ -55,6 +55,9 @@ class SpecialistController extends Controller
                     foreach($languages as $language){
                         $itemLang = isset($itemLangs[$language->id]) ? $itemLangs[$language->id] : new SpecialistLang();
                         $formModel->translationName[$language->id] = $itemLang->name;
+                        $formModel->translationSalary[$language->id] = $itemLang->salary;
+                        $formModel->translationAmortization[$language->id] = $itemLang->amortization;
+                        $formModel->translationMaintenance[$language->id] = $itemLang->maintenance;
                     }
                     return $formModel;
                 },
@@ -77,6 +80,9 @@ class SpecialistController extends Controller
     public function afterEdit($action, $model, $formModel)
     {
         $model->saveLangsRelations('specialistLangs', $formModel, 'translationName', 'name', 'specialist_id');
+        $model->saveLangsRelations('specialistLangs', $formModel, 'translationSalary', 'salary', 'specialist_id');
+        $model->saveLangsRelations('specialistLangs', $formModel, 'translationAmortization', 'amortization', 'specialist_id');
+        $model->saveLangsRelations('specialistLangs', $formModel, 'translationMaintenance', 'maintenance', 'specialist_id');
 
         return $model;
     }

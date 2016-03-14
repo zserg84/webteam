@@ -35,11 +35,13 @@ use kartik\switchinput\SwitchInput;
         </div>
     <?endforeach;?>
     <div class="row">
-        <div class="col-sm-6">
-            <?= $form->field($formModel, 'salary', ['options' => ['class' => 'form-group']])->label(
-                $formModel->getAttributeLabel('salary').', тыс.р.'
+        <?foreach($languages as $language):?>
+        <div class="col-sm-4">
+            <?= $form->field($formModel, 'translationSalary[' . $language->id . ']', ['options' => ['class' => 'form-group']])->label(
+                $formModel->getAttributeLabel('translationSalary_'.$language->id)
             );?>
         </div>
+        <?endforeach;?>
     </div>
     <div class="row">
         <div class="col-sm-6">
@@ -49,18 +51,22 @@ use kartik\switchinput\SwitchInput;
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6">
-            <?= $form->field($formModel, 'amortization', ['options' => ['class' => 'form-group']])->label(
-                $formModel->getAttributeLabel('amortization').', тыс.р.'
-            );?>
-        </div>
+        <?foreach($languages as $language):?>
+            <div class="col-sm-4">
+                <?= $form->field($formModel, 'translationAmortization[' . $language->id . ']', ['options' => ['class' => 'form-group']])->label(
+                    $formModel->getAttributeLabel('translationAmortization_'.$language->id)
+                );?>
+            </div>
+        <?endforeach;?>
     </div>
     <div class="row">
-        <div class="col-sm-6">
-            <?= $form->field($formModel, 'maintenance', ['options' => ['class' => 'form-group']])->label(
-                $formModel->getAttributeLabel('maintenance').', тыс.р.'
-            );?>
-        </div>
+        <?foreach($languages as $language):?>
+            <div class="col-sm-4">
+                <?= $form->field($formModel, 'translationMaintenance[' . $language->id . ']', ['options' => ['class' => 'form-group']])->label(
+                    $formModel->getAttributeLabel('translationMaintenance_'.$language->id)
+                );?>
+            </div>
+        <?endforeach;?>
     </div>
     <div class="row">
         <div class="col-sm-6">

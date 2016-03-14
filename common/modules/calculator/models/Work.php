@@ -22,6 +22,7 @@ use Yii;
 class Work extends \yii\db\ActiveRecord
 {
     public $title;
+    public $cost;
 
     /**
      * @inheritdoc
@@ -39,7 +40,6 @@ class Work extends \yii\db\ActiveRecord
         return [
             [['worktype_id'], 'required'],
             [['worktype_id', 'parent_id'], 'integer'],
-            [['cost'], 'number'],
             [['parent_id'], 'exist', 'skipOnError' => true, 'targetClass' => Work::className(), 'targetAttribute' => ['parent_id' => 'id']],
             [['worktype_id'], 'exist', 'skipOnError' => true, 'targetClass' => Worktype::className(), 'targetAttribute' => ['worktype_id' => 'id']],
         ];
@@ -67,7 +67,7 @@ class Work extends \yii\db\ActiveRecord
                 'class' => TranslateBehavior::className(),
                 'translateModelName' => WorkLang::className(),
                 'relationFieldName' => 'work_id',
-                'translateFieldNames' => ['title'],
+                'translateFieldNames' => ['title', 'cost'],
             ],
         ];
     }

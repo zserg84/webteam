@@ -11,6 +11,9 @@ use Yii;
  * @property string $name
  * @property integer $specialist_id
  * @property integer $lang_id
+ * @property double $salary
+ * @property double $amortization
+ * @property double $maintenance
  *
  * @property Lang $lang
  * @property Specialist $specialist
@@ -34,6 +37,7 @@ class SpecialistLang extends \yii\db\ActiveRecord
             [['specialist_id', 'lang_id'], 'required'],
             [['specialist_id', 'lang_id'], 'integer'],
             [['name'], 'string', 'max' => 64],
+            [['salary', 'amortization', 'maintenance'], 'number'],
             [['specialist_id', 'lang_id'], 'unique', 'targetAttribute' => ['specialist_id', 'lang_id'], 'message' => 'The combination of Specialist ID and Lang ID has already been taken.']
         ];
     }
@@ -48,6 +52,9 @@ class SpecialistLang extends \yii\db\ActiveRecord
             'name' => 'Name',
             'specialist_id' => 'Specialist ID',
             'lang_id' => 'Lang ID',
+            'salary' => 'Зарплата',
+            'amortization' => 'Амортизация',
+            'maintenance' => 'Содержание',
         ];
     }
 

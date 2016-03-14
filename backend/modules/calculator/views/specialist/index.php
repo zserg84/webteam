@@ -17,16 +17,16 @@ $gridId = 'specialist-grid';
 $gridConfig = [
     'id' => $gridId,
     'dataProvider' => $dataProvider,
-    'filterModel' => $searchModel,
+//    'filterModel' => $searchModel,
     'columns' => [
         [
             'class' => CheckboxColumn::classname()
         ],
         'name',
-        'salary',
+        'salaryRu',
         'tax',
-        'amortization',
-        'maintenance',
+        'amortizationRu',
+        'maintenanceRu',
         'profit',
         'usn',
         [
@@ -42,6 +42,9 @@ $gridConfig = [
                 return '<span class="'.$class.'"></span>';
             }
         ],
+        'salaryEn',
+        'amortizationEn',
+        'maintenanceEn',
     ]
 ];
 

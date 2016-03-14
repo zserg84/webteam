@@ -5,6 +5,7 @@ use yii\bootstrap\ActiveForm;
 use frontend\modules\calculator\models\form\EmailForm;
 use yii\helpers\Url;
 use yii\bootstrap\Html;
+use frontend\modules\calculator\Module;
 
 $model = isset($model) ? $model : new EmailForm();
 ?>
@@ -14,12 +15,12 @@ $model = isset($model) ? $model : new EmailForm();
             <img src="<?=Asset::imgSrc("arrow-back.png")?>" alt="">
         </div>
         <div class="btn-name">
-            Назад
+            <?=Module::t('main', 'BUTTON_BACK')?>
         </div>
     </div>
     <div class="swc-title transit-1000">
         <div class="swc-present-title">
-            Оставьте свою контактную информацию
+            <?=Module::t('contact', 'EMAIL_TITLE')?>
         </div>
     </div>
     <?$form = ActiveForm::begin([
@@ -34,7 +35,7 @@ $model = isset($model) ? $model : new EmailForm();
         <div class="swc-13-items-block transit-1000">
             <div class="form-cell">
                 <?=$form->field($model, 'email')->textInput([
-                    'placeholder'=>'E-mail',
+                    'placeholder'=>Module::t('contact', 'EMAIL_HOLDER'),
                     'required'=>"required",
                     'class'=>'calc-form-input',
 //                'type' => 'email',
@@ -46,7 +47,7 @@ $model = isset($model) ? $model : new EmailForm();
     <div class="swc-footer transit-1000">
         <div class="swc-13-btn-block">
             <div class="swc-13-button transit-300 submit-button">
-                Отправить запрос
+                <?=Module::t('contact', 'CONTACT_BUTTON')?>
             </div>
         </div>
     </div>

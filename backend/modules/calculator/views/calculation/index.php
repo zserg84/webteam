@@ -43,7 +43,8 @@ $gridConfig = [
             'visible' => in_array($editRole, ['BEditCalculationCommon', 'BEditCalculationDesign']) ? false : true
         ],
         'title',
-        'cost',
+        'costRu',
+        'costEn'
     ]
 ];
 

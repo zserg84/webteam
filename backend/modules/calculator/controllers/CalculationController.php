@@ -70,6 +70,7 @@ abstract class CalculationController extends Controller implements Calculation
                     foreach($languages as $language){
                         $itemLang = isset($itemLangs[$language->id]) ? $itemLangs[$language->id] : new WorkLang();
                         $formModel->translationTitle[$language->id] = $itemLang->title;
+                        $formModel->translationCost[$language->id] = $itemLang->cost;
                     }
                     return $formModel;
                 },
@@ -96,6 +97,7 @@ abstract class CalculationController extends Controller implements Calculation
     public function afterEdit($action, $model, $formModel)
     {
         $model->saveLangsRelations('workLangs', $formModel, 'translationTitle', 'title', 'work_id');
+        $model->saveLangsRelations('workLangs', $formModel, 'translationCost', 'cost', 'work_id');
 
         return $model;
     }

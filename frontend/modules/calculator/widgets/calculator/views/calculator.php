@@ -2,16 +2,17 @@
 use yii\widgets\Pjax;
 use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
 use frontend\modules\calculator\widgets\calculator\Asset;
+use frontend\modules\calculator\Module;
 ?>
 <div class="tb-btn-calc blink-btn-calc transit-300" >
     <div class="calc-icon">
         <img src="<?=Asset::imgSrc("c-icon.png")?>" alt="">
     </div>
     <div class="calc-context">
-        Узнай стоимость своего проекта
+        <?=Module::t('main', 'CALC_CONTEXT')?>
     </div>
     <div class="tb-btn-calc-tooltip">
-        Узнай стоимость своего проекта
+        <?=Module::t('main', 'CALC_CONTEXT')?>
         <img src="<?=Asset::imgSrc("arrow-info-tooltip.png")?>" alt="">
     </div>
     <div class="clearfix"></div>

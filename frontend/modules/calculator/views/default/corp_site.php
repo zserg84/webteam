@@ -2,6 +2,7 @@
 use frontend\modules\calculator\widgets\calculator\Asset;
 use common\modules\calculator\models\Work;
 use common\modules\calculator\models\Worktype;
+use frontend\modules\calculator\Module;
 
 $works = Work::find()->where([
     'work.worktype_id' => Worktype::TYPE_SITE,
@@ -22,17 +23,17 @@ $itog = 0;
         <div style="display: block; max-width: 1200px; margin: 0 auto 0 auto; font-size: 14px; font-family: 'Arial';">
 
             <div style="display: block; width: 100%; text-align: center; margin-top: 20px;">
-                Стоимость корпоративного сайта (портала)
+                <?=Module::t('portal', 'CORPORATE_TITLE')?>
             </div>
 
             <div style="display: block; width: 100%; margin-top: 20px;">
                 <div style="display: block; width: 100%;">
                     <div style="display: block; width: 100%;">
                         <div style="display: block; float: left; padding: 10px;">
-                            Работа
+                            <?=Module::t('portal', 'CORPORATE_TABLE_1')?>
                         </div>
                         <div style="display: block; float: right; padding: 10px;">
-                            Стоимость, Р.
+                            <?=Module::t('portal', 'CORPORATE_TABLE_2')?> <?=Module::t('main', 'CURRENCY')?>
                         </div>
                         <div style="height: 0; clear: both;"></div>
                     </div>
@@ -79,7 +80,7 @@ $itog = 0;
 
             <div style="display: block; width: 100%; text-align: center; margin-top: 20px; border-top: 1px solid #eceff5; padding-top: 20px;">
                 <div style="display: block; width: 100%; font-size: 20px;">
-                    Итого: <?=$itog?> Р.
+                    <?=Module::t('portal', 'CORPORATE_TOTAL')?> <?=$itog?> <?=Module::t('main', 'CURRENCY')?>
                 </div>
             </div>
         </div>

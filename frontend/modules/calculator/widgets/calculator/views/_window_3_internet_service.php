@@ -1,6 +1,7 @@
 <?
 use frontend\modules\calculator\widgets\calculator\Asset;
 use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
+use frontend\modules\calculator\Module;
 ?>
 <div class="sw-container swc-win-10 transit-1000">
     <div class="btn-back-block transit-300" data-winback="10" data-prev="<?=CalculatorWidget::TYPE_2_WEBSITE?>">
@@ -8,25 +9,25 @@ use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
             <img src="<?=Asset::imgSrc("arrow-back.png")?>" alt="">
         </div>
         <div class="btn-name">
-            Назад
+            <?=Module::t('main', 'BUTTON_BACK')?>
         </div>
     </div>
     <div class="swc-title transit-1000">
-        Стоимость интернет сервиса
+        <?=Module::t('portal', 'SERVICE_TITLE')?>
     </div>
     <div class="swc-content">
         <div class="swc-10-items-block transit-1000">
             <p>
-                Интернет сервис - это всегда интересная и уникальная задача, для решения которой мы формируем отдельную команду, занимающуюся только Вашим проектом.
+                <?=Module::t('portal', 'SERVICE_CONTENT_1')?>
             </p>
             <p>
-                У нашей студии богатый опыт создания уникальных интернет-сервисов для решения различных задач. Мы работаем как в секторе B2B, так и B2C.
+                <?=Module::t('portal', 'SERVICE_CONTENT_2')?>
             </p>
             <p>
-                К сожалению, невозможно ответить на общий вопрос «сколько стоит интернет сервис».<br>Это может быть 500 тысяч рублей, а может быть и 10 миллионов рублей.
+                <?=Module::t('portal', 'SERVICE_CONTENT_3')?>
             </p>
             <p>
-                В каждом случае мы выясняем потребности (задачи) и затем готовим коммерческое предложение. Напишите нам, и мы оперативно свяжемся с Вами!
+                <?=Module::t('portal', 'SERVICE_CONTENT_4')?>
             </p>
         </div>
     </div>
@@ -36,14 +37,14 @@ use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
                  data-next="<?=CalculatorWidget::TYPE_CALCULATION?>"
                  data-from="<?=CalculatorWidget::TYPE_3_INTERNET_SERVICE?>"
                 >
-                Посчитать команду самому
+                <?=Module::t('main', 'BUTTON_SELF_CALCULATION')?>
             </div>
             <div class="swc-10-button transit-300 swc-item"
                  data-page="<?=CalculatorWidget::FROM_CALCULATOR_INTERNET_SERVICE?>"
                  data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
                  data-from="<?=CalculatorWidget::TYPE_3_INTERNET_SERVICE?>"
                 >
-                Получить детальный расчёт
+                <?=Module::t('main', 'BUTTON_CALCULATION')?>
             </div>
         </div>
     </div>

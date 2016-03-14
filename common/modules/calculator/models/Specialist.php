@@ -4,6 +4,7 @@ namespace common\modules\calculator\models;
 
 use common\behaviors\LangSaveBehavior;
 use common\behaviors\TranslateBehavior;
+use common\models\Lang;
 use Yii;
 
 /**
@@ -11,10 +12,7 @@ use Yii;
  *
  * @property integer $id
  * @property integer $visible
- * @property double $salary
  * @property double $tax
- * @property double $amortization
- * @property double $maintenance
  * @property double $profit
  * @property double $usn
  *
@@ -23,6 +21,9 @@ use Yii;
 class Specialist extends \yii\db\ActiveRecord
 {
     public $name;
+    public $salary;
+    public $amortization;
+    public $maintenance;
 
     /**
      * @inheritdoc
@@ -39,7 +40,7 @@ class Specialist extends \yii\db\ActiveRecord
     {
         return [
             [['visible'], 'integer'],
-            [['salary', 'tax', 'amortization', 'maintenance', 'profit', 'usn'], 'number']
+            [['tax', 'profit', 'usn'], 'number']
         ];
     }
 
@@ -52,7 +53,7 @@ class Specialist extends \yii\db\ActiveRecord
                 'class' => TranslateBehavior::className(),
                 'translateModelName' => SpecialistLang::className(),
                 'relationFieldName' => 'specialist_id',
-                'translateFieldNames' => ['name'],
+                'translateFieldNames' => ['name', 'salary', 'amortization', 'maintenance'],
             ],
         ];
     }
@@ -91,8 +92,17 @@ class Specialist extends \yii\db\ActiveRecord
         return new \common\modules\calculator\models\query\SpecialistQuery(get_called_class());
     }
 
+    public function getSpecialistLang(){
+        return SpecialistLang::findOne([
+            'specialist_id' => $this->id,
+            'lang_id' => Lang::getCurrent()->id
+        ]);
+    }
+
     public function getSalary(){
-        return ceil(10*$this->salary) / 10;
+        $sl = $this->getSpecialistLang();
+        if($sl)
+            return ceil(10*$sl->salary) / 10;
     }
 
     public function getTax(){
@@ -100,15 +110,19 @@ class Specialist extends \yii\db\ActiveRecord
     }
 
     public function getAmortization(){
-        return ceil(10*$this->amortization) / 10;
+        $sl = $this->getSpecialistLang();
+        if($sl)
+            return ceil(10*$sl->amortization) / 10;
     }
 
     public function getMaintenance(){
-        return ceil(10*$this->maintenance) / 10;
+        $sl = $this->getSpecialistLang();
+        if($sl)
+            return ceil(10*$sl->maintenance) / 10;
     }
 
     public function getProfit(){
-        return ceil(10*$this->profit * $this->salary / 100) / 10;
+        return ceil(10*$this->profit * $this->getSalary() / 100) / 10;
     }
 
     public function getUsn(){

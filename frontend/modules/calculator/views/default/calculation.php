@@ -1,6 +1,7 @@
 <?
 use frontend\modules\calculator\widgets\calculator\Asset;
 use common\modules\calculator\models\Specialist;
+use frontend\modules\calculator\Module;
 
 $specs = Specialist::find()->andWhere([
     'specialist.id' => array_keys($subworks)
@@ -19,7 +20,7 @@ foreach($subworks as $swKey=>$swVal){
         <div style="display: block; width: 100%; font-family: 'Arial'; font-size: 14px;">
 
             <div style="display: block; width: 100%; text-align: center; margin-top: 20px;">
-                Расчет ежемесячной стоимости команды от WebTeam.pro", тысяч рублей
+                <?=Module::t('calculation', 'TEAM_TITLE')?>
             </div>
             <div style="display: block; width: 100%; margin-top: 20px;">
                 <div style="display: block; width: 100%;">
@@ -28,47 +29,47 @@ foreach($subworks as $swKey=>$swVal){
                             <thead>
                             <tr>
                                 <td style="width: 176px;">
-                                    <div>Специалист</div>
-                                    <div>наименование</div>
+                                    <div><?=Module::t('calculation', 'TEAM_NAME_1')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_SUBNAME_1')?></div>
                                 </td>
                                 <td>
-                                    <div>Количество</div>
-                                    <div>специалистов</div>
+                                    <div><?=Module::t('calculation', 'TEAM_NAME_2')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_SUBNAME_2')?></div>
                                 </td>
                                 <td>
-                                    <div>Итого</div>
-                                    <div>стоимость,</div>
-                                    <div>тыс.р</div>
+                                    <div><?=Module::t('calculation', 'TEAM_NAME_3')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_SUBNAME_3')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_CURRENCY')?></div>
                                 </td>
                                 <td>
-                                    <div>Зарплата</div>
-                                    <div>специалиста,</div>
-                                    <div>тыс.р</div>
+                                    <div><?=Module::t('calculation', 'TEAM_NAME_4')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_SUBNAME_4')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_CURRENCY')?></div>
                                 </td>
                                 <td>
-                                    <div>Налоги</div>
-                                    <div>на зарплату,</div>
-                                    <div>% от зарплаты</div>
+                                    <div><?=Module::t('calculation', 'TEAM_NAME_5')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_SUBNAME_5')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_PERCENT')?></div>
                                 </td>
                                 <td>
-                                    <div>Амортизация</div>
-                                    <div>техники,</div>
-                                    <div>тыс.р</div>
+                                    <div><?=Module::t('calculation', 'TEAM_NAME_6')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_SUBNAME_6')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_CURRENCY')?></div>
                                 </td>
                                 <td>
-                                    <div>Содержание</div>
-                                    <div>офиса,</div>
-                                    <div>тыс.р</div>
+                                    <div><?=Module::t('calculation', 'TEAM_NAME_7')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_SUBNAME_7')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_CURRENCY')?></div>
                                 </td>
                                 <td>
-                                    <div>Прибыль</div>
-                                    <div>WebTeam,</div>
-                                    <div>% от зарплаты</div>
+                                    <div><?=Module::t('calculation', 'TEAM_NAME_8')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_SUBNAME_8')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_PERCENT')?></div>
                                 </td>
                                 <td>
-                                    <div>Налог</div>
-                                    <div>УСН,</div>
-                                    <div>% от общих затрат</div>
+                                    <div><?=Module::t('calculation', 'TEAM_NAME_9')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_SUBNAME_9')?></div>
+                                    <div><?=Module::t('calculation', 'TEAM_PERCENT_TOTAL')?></div>
                                 </td>
                             </tr>
                             </thead>
@@ -108,12 +109,11 @@ foreach($subworks as $swKey=>$swVal){
             </div>
             <div style="display: block; width: 100%; margin-top: 20px; text-align: center;">
                 <div style="display: block; width: 100%; font-size: 20px;">
-                    Ежемесячная стоимость выбранной Вами команды из <span><?=$peopleCnt?></span> человек составит
-                        <span id="itog"><?=$itog?></span> Р.
+                    <?=Module::t('calculation', 'TEAM_TOTAL_1')?> <span><?=$peopleCnt?></span> <?=Module::t('calculation', 'TEAM_TOTAL_2')?>
+                        <span id="itog"><?=$itog?></span> <?=Module::t('main', 'CURRENCY')?>
                 </div>
                 <div style="display: block; width: 100%; margin-top: 20px;">
-                    Закажите индивидуальный расчёт (info@webteam.pro), если Вам требуются особые условия<br>
-                    (частичная занятость, наличная оплата, очень большая команда)
+                    <?=Module::t('calculation', 'TEAM_CONTENT')?>
                 </div>
 
             </div>

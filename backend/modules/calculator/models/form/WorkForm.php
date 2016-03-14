@@ -16,6 +16,7 @@ use common\validators\LangRequiredValidator;
 class WorkForm extends Work
 {
     public $translationTitle = [];
+    public $translationCost = [];
     protected $worktype_id;
 
     /**
@@ -28,6 +29,7 @@ class WorkForm extends Work
             [['cost', 'parent_id', 'worktype_id'], 'number'],
             [['translationTitle'], EachValidator::className(), 'rule'=>['filter', 'filter'=>'trim']],
             [['translationTitle'], LangRequiredValidator::className(), 'langUrls' => 'ru', 'currentLangRequired' => false],
+            [['translationCost'], EachValidator::className(), 'rule'=>['number']],
         ];
     }
 
@@ -38,6 +40,7 @@ class WorkForm extends Work
     {
         return array_merge(parent::attributeLabels(), [
                 'translationTitle' => 'Название',
+                'translationCost' => 'Стоимость',
             ]
         );
     }

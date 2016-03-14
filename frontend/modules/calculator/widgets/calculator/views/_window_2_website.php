@@ -1,6 +1,7 @@
 <?
 use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
 use frontend\modules\calculator\widgets\calculator\Asset;
+use frontend\modules\calculator\Module;
 ?>
 <div class="sw-container swc-win-3 transit-1000">
     <div class="btn-back-block transit-300" data-winback="3" data-prev="<?=CalculatorWidget::TYPE_START?>">
@@ -8,17 +9,17 @@ use frontend\modules\calculator\widgets\calculator\Asset;
             <img src="<?=Asset::imgSrc('arrow-back.png')?>" alt="">
         </div>
         <div class="btn-name">
-            Назад
+            <?=Module::t('main', 'BUTTON_BACK')?>
         </div>
     </div>
     <div class="swc-title transit-1000">
-        Выберите один из пунктов чтобы узнать стоимость Веб проекта
+        <?=Module::t('portal', 'PORTAL_TITLE')?>
     </div>
     <div class="swc-content">
         <div class="swc-3-items-block">
 
             <div class="swc-3-sub-title">
-                Если не знаете, что выбрать, то кликайте на Интернет сервис
+                <?=Module::t('portal', 'PORTAL_CONTENT')?>
             </div>
 
             <div class="swc-item swc-3-item transit-1000 swc-3-animate-1" data-next="<?=CalculatorWidget::TYPE_3_LANDING?>">
@@ -26,7 +27,7 @@ use frontend\modules\calculator\widgets\calculator\Asset;
                     <img src="<?=Asset::imgSrc('c-win-3/item-1.jpg')?>" alt="" class="transit-300">
                 </div>
                 <div class="swc-3-item-name transit-300">
-                    Лендинг пейдж или сайт-визитка
+                    <?=Module::t('portal', 'PORTAL_LIST_1')?>
                 </div>
             </div>
             <div class="swc-item swc-3-item transit-1000 swc-3-animate-2" data-next="<?=CalculatorWidget::TYPE_3_INTERNET_STORE?>">
@@ -34,7 +35,7 @@ use frontend\modules\calculator\widgets\calculator\Asset;
                     <img src="<?=Asset::imgSrc('c-win-3/item-2.jpg')?>" alt="" class="transit-300">
                 </div>
                 <div class="swc-3-item-name transit-300">
-                    Интернет магазин
+                    <?=Module::t('portal', 'PORTAL_LIST_2')?>
                 </div>
             </div>
             <div class="swc-item swc-3-item transit-1000 swc-3-animate-3" data-next="<?=CalculatorWidget::TYPE_3_CORP_SITE?>">
@@ -42,7 +43,7 @@ use frontend\modules\calculator\widgets\calculator\Asset;
                     <img src="<?=Asset::imgSrc('c-win-3/item-3.jpg')?>" alt="" class="transit-300">
                 </div>
                 <div class="swc-3-item-name transit-300">
-                    Корпоративный сайт
+                    <?=Module::t('portal', 'PORTAL_LIST_3')?>
                 </div>
             </div>
             <div class="swc-item swc-3-item transit-1000 swc-3-animate-4" data-next="<?=CalculatorWidget::TYPE_3_INTERNET_SERVICE?>">
@@ -50,7 +51,7 @@ use frontend\modules\calculator\widgets\calculator\Asset;
                     <img src="<?=Asset::imgSrc('c-win-3/item-4.jpg')?>" alt="" class="transit-300">
                 </div>
                 <div class="swc-3-item-name transit-300">
-                    Интернет сервис
+                    <?=Module::t('portal', 'PORTAL_LIST_4')?>
                 </div>
             </div>
             <div class="swc-item swc-3-item transit-1000 swc-3-animate-5" data-next="<?=CalculatorWidget::TYPE_3_SOC_NETWORK?>">
@@ -58,7 +59,7 @@ use frontend\modules\calculator\widgets\calculator\Asset;
                     <img src="<?=Asset::imgSrc('c-win-3/item-5.jpg')?>" alt="" class="transit-300">
                 </div>
                 <div class="swc-3-item-name transit-300">
-                    Социальная сеть
+                    <?=Module::t('portal', 'PORTAL_LIST_5')?>
                 </div>
             </div>
 

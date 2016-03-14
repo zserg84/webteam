@@ -3,6 +3,7 @@ use frontend\modules\calculator\widgets\calculator\Asset;
 use common\modules\calculator\models\Work;
 use common\modules\calculator\models\Worktype;
 use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
+use frontend\modules\calculator\Module;
 
 $works = Work::find()->where([
     'worktype_id' => Worktype::TYPE_FIRSTYLE,
@@ -11,16 +12,16 @@ $works = Work::find()->where([
 ?>
 <div class="sw-container swc-win-5 transit-1000">
     <div class="swc-title transit-1000">
-        Расчет стоимости создания фирменного стиля
+        <?=Module::t('design', 'STYLE_TITLE')?>
     </div>
     <div class="swc-content">
         <div class="swc-5-items-block transit-1000">
             <div class="swc-5-title-name">
                 <div class="tn-left">
-                    Работа
+                    <?=Module::t('design', 'STYLE_TABLE_1')?>
                 </div>
                 <div class="tn-right">
-                    Стоимость, <img src="<?=Asset::imgSrc("icon-rub.png")?>" alt="" class="icon-rub-small">
+                    <?=Module::t('design', 'STYLE_TABLE_2')?>, <img src="<?=Asset::imgSrc(Module::t('main', 'SITE_CURRENCY_SMALL'))?>" alt="" class="icon-rub-small">
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -73,7 +74,7 @@ $works = Work::find()->where([
     </div>
     <div class="swc-footer transit-1000">
         <div class="swc-5-footer-title">
-            Итого: <span id="itog">0</span> <img src="<?=Asset::imgSrc("icon-rub-big.png")?>" alt="" class="icon-rub-big">
+            Итого: <span id="itog">0</span> <img src="<?=Asset::imgSrc(Module::t('main', 'SITE_CURRENCY_BIG'))?>" alt="" class="icon-rub-big">
         </div>
         <div class="swc-5-footer-content">
             <div class="swc-5-footer-btn transit-300" onclick="
@@ -83,13 +84,13 @@ $works = Work::find()->where([
                 window.print();
                 window.setTimeout(pageCleaner, 0);
             ">
-                Распечатать расчеты
+                <?=Module::t('main', 'BUTTON_PRINT')?>
             </div>
             <div class="swc-5-footer-btn transit-300">
-                Отправить на e-mail
+                <?=Module::t('main', 'BUTTON_TO_EMAIL')?>
             </div>
             <div class="swc-5-footer-btn transit-300 swc-item" data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>">
-                Узнать о скидках
+                <?=Module::t('main', 'BUTTON_DISCOUNT')?>
             </div>
         </div>
     </div>

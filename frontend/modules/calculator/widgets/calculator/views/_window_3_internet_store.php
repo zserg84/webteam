@@ -1,6 +1,8 @@
 <?
 use frontend\modules\calculator\widgets\calculator\Asset;
 use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
+use frontend\modules\calculator\Module;
+use common\modules\calculator\models\WorkLang;
 ?>
 <div class="sw-container swc-win-8 transit-1000">
     <div class="btn-back-block transit-300" data-winback="8" data-prev="<?=CalculatorWidget::TYPE_2_WEBSITE?>">
@@ -8,11 +10,11 @@ use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
             <img src="<?=Asset::imgSrc("arrow-back.png")?>" alt="">
         </div>
         <div class="btn-name">
-            Назад
+            <?=Module::t('main', 'BUTTON_BACK')?>
         </div>
     </div>
     <div class="swc-title transit-1000">
-        Стоимость интернет магазина
+        <?=Module::t('portal', 'SHOP_TITLE')?>
     </div>
     <div class="swc-content">
         <div class="swc-8-items-block transit-1000">
@@ -22,10 +24,15 @@ use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
                     <img src="<?=Asset::imgSrc("c-win-8/item-1.png")?>" alt="">
                 </div>
                 <div class="item-name">
-                    Интернет-магазин на платформе<br>1С Битрикс
+                    <?=Module::t('portal', 'SHOP_CONTENT_1')?>
                 </div>
                 <div class="item-price">
-                    от 250 тысяч рублей
+                    <?
+                    $wl = WorkLang::find()->getCost('internet_store_bitrix')->one();
+                    ?>
+                    <?=Module::t('portal', 'from {n} cost', [
+                        'n' => $wl ? number_format($wl->cost, 0, '.', ' ') : null
+                    ])?>
                 </div>
                 <div class="swc-8-btn-block">
                     <div class="swc-8-button transit-300 swc-item"
@@ -33,7 +40,7 @@ use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
                          data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
                          data-from = "<?=CalculatorWidget::TYPE_3_INTERNET_STORE?>"
                         >
-                        Получить детальный расчёт
+                        <?=Module::t('main', 'BUTTON_CALCULATION')?>
                     </div>
                 </div>
             </div>
@@ -43,10 +50,15 @@ use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
                     <img src="<?=Asset::imgSrc("c-win-8/item-2.png")?>" alt="">
                 </div>
                 <div class="item-name">
-                    Уникальное решение, созданное<br>специально под Вас
+                    <?=Module::t('portal', 'SHOP_CONTENT_3')?>
                 </div>
                 <div class="item-price">
-                    от 1 миллиона рублей
+                    <?
+                    $wl = WorkLang::find()->getCost('internet_store_custom')->one();
+                    ?>
+                    <?=Module::t('portal', 'from {n} cost', [
+                        'n' => $wl ? number_format($wl->cost, 0, '.', ' ') : null
+                    ])?>
                 </div>
                 <div class="swc-8-btn-block">
                     <div class="swc-8-button transit-300 swc-item"
@@ -54,7 +66,7 @@ use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
                          data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
                          data-from = "<?=CalculatorWidget::TYPE_3_INTERNET_STORE?>"
                         >
-                        Получить детальный расчёт
+                        <?=Module::t('main', 'BUTTON_CALCULATION')?>
                     </div>
                 </div>
             </div>

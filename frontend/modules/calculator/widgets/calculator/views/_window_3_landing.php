@@ -1,6 +1,9 @@
 <?
 use frontend\modules\calculator\widgets\calculator\Asset;
 use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
+use frontend\modules\calculator\Module;
+use common\modules\calculator\models\WorkLang;
+use common\models\Lang;
 ?>
 <div class="sw-container swc-win-7 transit-1000">
     <div class="btn-back-block transit-300" data-winback="7" data-prev="<?=CalculatorWidget::TYPE_2_WEBSITE?>">
@@ -8,44 +11,49 @@ use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
             <img src="<?=Asset::imgSrc("arrow-back.png")?>" alt="">
         </div>
         <div class="btn-name">
-            Назад
+            <?=Module::t('main', 'BUTTON_BACK')?>
         </div>
     </div>
     <div class="swc-title transit-1000">
-        Стоимость лендинг пейдж или сайта-визитки
+        <?=Module::t('portal', 'LANDING_TITLE')?>
     </div>
     <div class="swc-content">
         <div class="swc-7-items-block transit-1000">
             <div class="swc-7-context">
-                Мы создаем высококачественный продающий продукт, который конвертирует Ваших посетителей в заказы.
+                <?=Module::t('portal', 'LANDING_CONTENT_1')?>
             </div>
             <div class="swc-7-context">
-                Наш подход требует привлечения высокопрофессиональных специалистов:
+                <?=Module::t('portal', 'LANDING_CONTENT_2')?>
                 <ul>
                     <li>
                         <span>
-                            проектировщика интерфейсов
+                            <?=Module::t('portal', 'LANDING_LIST_1')?>
                         </span>
                     </li>
                     <li>
                         <span>
-                            арт-директора (дизайнера)
+                            <?=Module::t('portal', 'LANDING_LIST_2')?>
                         </span>
                     </li>
                     <li>
                         <span>
-                            фронт-энд программиста
+                            <?=Module::t('portal', 'LANDING_LIST_3')?>
                         </span>
                     </li>
                     <li>
                         <span>
-                            контент-менеджера
+                            <?=Module::t('portal', 'LANDING_LIST_4')?>
                         </span>
                     </li>
                 </ul>
             </div>
             <div class="swc-7-context">
-                Стоимость подобного сайта в нашей студии начинается от 120 тысяч рублей
+                <?
+                $wl = WorkLang::find()->getCost('landing')->one();
+                ?>
+                <?=Module::t('portal', 'LANDING_CONTENT_3').' '.Module::t('portal', 'from {n} cost', [
+                    'n' => $wl ? number_format($wl->cost, 0, '.', ' ') : null
+                ])?>
             </div>
         </div>
     </div>
@@ -56,7 +64,7 @@ use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
                  data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
                  data-from="<?=CalculatorWidget::TYPE_3_LANDING?>"
                 >
-                Получить детальный расчёт
+                <?=Module::t('main', 'BUTTON_CALCULATION')?>
             </div>
         </div>
     </div>

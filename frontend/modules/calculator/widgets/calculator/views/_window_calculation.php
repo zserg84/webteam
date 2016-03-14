@@ -2,6 +2,7 @@
 use frontend\modules\calculator\widgets\calculator\Asset;
 use frontend\modules\calculator\widgets\calculator\CalculatorWidget;
 use common\modules\calculator\models\Specialist;
+use frontend\modules\calculator\Module;
 
 $specs = Specialist::find()->visible()->all();
 ?>
@@ -13,11 +14,11 @@ $specs = Specialist::find()->visible()->all();
             <img src="<?=Asset::imgSrc("arrow-back.png")?>" alt="">
         </div>
         <div class="btn-name">
-            Назад
+            <?=Module::t('main', 'BUTTON_BACK')?>
         </div>
     </div>
     <div class="swc-title transit-1000">
-        Расчет ежемесячной стоимости команды, тысяч рублей
+        <?=Module::t('calculation', 'TEAM_TITLE')?>
     </div>
     <div class="swc-content">
         <div class="swc-14-items-block transit-1000">
@@ -27,23 +28,23 @@ $specs = Specialist::find()->visible()->all();
                         <tr>
                             <td>
                                 <div class="t-name">
-                                    Специалист
+                                    <?=Module::t('calculation', 'TEAM_NAME_1')?>
                                 </div>
                                 <div class="t-sub-name">
-                                    наименование
+                                    <?=Module::t('calculation', 'TEAM_SUBNAME_1')?>
                                 </div>
                             </td>
                             <td>
                                 <div class="t-name">
-                                    Количество
+                                    <?=Module::t('calculation', 'TEAM_NAME_2')?>
                                 </div>
                                 <div class="t-sub-name">
-                                    специалистов
+                                    <?=Module::t('calculation', 'TEAM_SUBNAME_2')?>
                                 </div>
                             </td>
                             <td>
                                 <div class="t-name">
-                                    Итого
+                                    <?=Module::t('calculation', 'TEAM_NAME_3')?>
                                     <!--
                                     <div class="t-info">
                                         <span>?</span>
@@ -59,19 +60,18 @@ $specs = Specialist::find()->visible()->all();
                                     -->
                                 </div>
                                 <div class="t-sub-name">
-                                    стоимость
+                                    <?=Module::t('calculation', 'TEAM_SUBNAME_3')?>
                                 </div>
                             </td>
                             <td>
                                 <div class="t-name">
-                                    Зарплата
-
+                                    <?=Module::t('calculation', 'TEAM_NAME_4')?>
                                     <div class="t-info">
                                         <span>?</span>
 
                                         <div class="t-tooltip">
                                             <div class="t-tooltip-context">
-                                                размер зарплаты, которую наш сотрудник получит "на руки"
+                                                <?=Module::t('calculation', 'TEAM_TOOLTIP_4')?>
                                             </div>
                                             <div class="t-tooltip-arrow"></div>
                                         </div>
@@ -80,19 +80,17 @@ $specs = Specialist::find()->visible()->all();
 
                                 </div>
                                 <div class="t-sub-name">
-                                    специалиста
+                                    <?=Module::t('calculation', 'TEAM_SUBNAME_4')?>
                                 </div>
                             </td>
                             <td>
                                 <div class="t-name">
-                                    Налоги
-
+                                    <?=Module::t('calculation', 'TEAM_NAME_5')?>
                                     <div class="t-info">
                                         <span>?</span>
-
                                         <div class="t-tooltip">
                                             <div class="t-tooltip-context">
-                                                льготная система налогообложения 13% НДФЛ + 20%ФСС + 0.2% ФСС НС
+                                                <?=Module::t('calculation', 'TEAM_TOOLTIP_5')?>
                                             </div>
                                             <div class="t-tooltip-arrow"></div>
                                         </div>
@@ -101,19 +99,19 @@ $specs = Specialist::find()->visible()->all();
 
                                 </div>
                                 <div class="t-sub-name">
-                                    на зарплату
+                                    <?=Module::t('calculation', 'TEAM_SUBNAME_5')?>
                                 </div>
                             </td>
                             <td>
                                 <div class="t-name">
-                                    Амортизация
+                                    <?=Module::t('calculation', 'TEAM_NAME_6')?>
 
                                     <div class="t-info">
                                         <span>?</span>
 
                                         <div class="t-tooltip">
                                             <div class="t-tooltip-context">
-                                                апгрейд (замена) оборудования происходит через 2 года работы
+                                                <?=Module::t('calculation', 'TEAM_TOOLTIP_6')?>
                                             </div>
                                             <div class="t-tooltip-arrow"></div>
                                         </div>
@@ -122,19 +120,19 @@ $specs = Specialist::find()->visible()->all();
 
                                 </div>
                                 <div class="t-sub-name">
-                                    техники
+                                    <?=Module::t('calculation', 'TEAM_SUBNAME_6')?>
                                 </div>
                             </td>
                             <td>
                                 <div class="t-name">
-                                    Содержание
+                                    <?=Module::t('calculation', 'TEAM_NAME_7')?>
 
                                     <div class="t-info">
                                         <span>?</span>
 
                                         <div class="t-tooltip">
                                             <div class="t-tooltip-context">
-                                                аренда офиса, содержание (уборка) помещений, вода/чай-кофе/бакалея, зарплата бухгалтеров и юристов, офисные расходы
+                                                <?=Module::t('calculation', 'TEAM_TOOLTIP_7')?>
                                             </div>
                                             <div class="t-tooltip-arrow"></div>
                                         </div>
@@ -143,19 +141,19 @@ $specs = Specialist::find()->visible()->all();
 
                                 </div>
                                 <div class="t-sub-name">
-                                    офиса
+                                    <?=Module::t('calculation', 'TEAM_SUBNAME_7')?>
                                 </div>
                             </td>
                             <td>
                                 <div class="t-name">
-                                    Прибыль
+                                    <?=Module::t('calculation', 'TEAM_NAME_8')?>
 
                                     <div class="t-info">
                                         <span>?</span>
 
                                         <div class="t-tooltip">
                                             <div class="t-tooltip-context">
-                                                в больших проектах мы работаем по принципу "прозрачности" с Клиентом
+                                                <?=Module::t('calculation', 'TEAM_TOOLTIP_5')?>
                                             </div>
                                             <div class="t-tooltip-arrow"></div>
                                         </div>
@@ -164,19 +162,19 @@ $specs = Specialist::find()->visible()->all();
 
                                 </div>
                                 <div class="t-sub-name">
-                                    WebTeam
+                                    <?=Module::t('calculation', 'TEAM_SUBNAME_8')?>
                                 </div>
                             </td>
                             <td>
                                 <div class="t-name">
-                                    Налог
+                                    <?=Module::t('calculation', 'TEAM_NAME_9')?>
 
                                     <div class="t-info">
                                         <span>?</span>
 
                                         <div class="t-tooltip">
                                             <div class="t-tooltip-context">
-                                                Мы платим 6% налог со всех входящих платежей
+                                                <?=Module::t('calculation', 'TEAM_TOOLTIP_9')?>
                                             </div>
                                             <div class="t-tooltip-arrow"></div>
                                         </div>
@@ -185,7 +183,7 @@ $specs = Specialist::find()->visible()->all();
 
                                 </div>
                                 <div class="t-sub-name">
-                                    УСН
+                                    <?=Module::t('calculation', 'TEAM_SUBNAME_9')?>
                                 </div>
                             </td>
                         </tr>
@@ -231,18 +229,18 @@ $specs = Specialist::find()->visible()->all();
     <div class="swc-footer transit-1000">
 
         <div class="swc-14-footer-title">
-            Ежемесячная стоимость выбранной Вами команды из <span id="peopleCnt">0</span> человек составит
+            <?=Module::t('calculation', 'TEAM_TOTAL_1')?> <span id="peopleCnt">0</span> <?=Module::t('calculation', 'TEAM_TOTAL_2')?>
             <span id="itog">
                 0
-            </span> <img src="<?=Asset::imgSrc("icon-rub-big.png")?>" alt="" class="icon-rub-big">
+            </span> <img src="<?=Asset::imgSrc(Module::t('main', 'SITE_CURRENCY_BIG'))?>" alt="" class="icon-rub-big">
         </div>
         <div class="swc-14-footer-sub-title">
-            Закажите индивидуальный расчёт, если Вам требуются особые условия<br>(частичная занятость, наличная оплата, очень большая команда)
+            <?=Module::t('calculation', 'TEAM_CONTENT')?>
         </div>
         <div class="swc-14-footer-content">
             <div class="swc-14-footer-btn transit-300" id="print_button">
                 <a data-pjax="0" href="#" data-href="<?=\yii\helpers\Url::toRoute(['/calculator/default/print-page', 'page'=>CalculatorWidget::FROM_CALCULATOR_CALCULATION])?>" target="_blank">
-                    Распечатать расчеты
+                    <?=Module::t('main', 'BUTTON_PRINT')?>
                 </a>
             </div>
             <div class="swc-14-footer-btn transit-300"
@@ -251,14 +249,14 @@ $specs = Specialist::find()->visible()->all();
                  data-page="<?=CalculatorWidget::FROM_CALCULATOR_CALCULATION?>"
                  data-next="<?=CalculatorWidget::TYPE_SEND_EMAIL_FORM?>"
                 >
-                Отправить на e-mail
+                <?=Module::t('main', 'BUTTON_TO_EMAIL')?>
             </div>
             <div class="swc-14-footer-btn transit-300 swc-item"
                  data-from = "<?=CalculatorWidget::TYPE_CALCULATION?>"
                  data-page="<?=CalculatorWidget::FROM_CALCULATOR_CALCULATION?>"
                  data-next="<?=CalculatorWidget::TYPE_SEND_FORM?>"
                 >
-                Узнать о скидках
+                <?=Module::t('main', 'BUTTON_DISCOUNT')?>
             </div>
         </div>
 

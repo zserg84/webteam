@@ -50,12 +50,15 @@ use backend\modules\calculator\models\Work;
             </div>
         </div>
     <?endforeach;?>
-    <div class="row">
-        <div class="col-sm-6">
-            <?= $form->field($formModel, 'cost', ['options' => ['class' => 'form-group']]);?>
+    <?foreach($languages as $language):?>
+        <div class="row">
+            <div class="col-sm-6">
+                <?= $form->field($formModel, 'translationCost[' . $language->id . ']', ['options' => ['class' => 'form-group']])->textInput()->label(
+                    $formModel->getAttributeLabel('translationCost').', '.$language->name
+                );?>
+            </div>
         </div>
-    </div>
-
+    <?endforeach;?>
 <?php $box->endBody(); ?>
 <?php $box->beginFooter(); ?>
 <?= Html::submitButton('Сохранить',

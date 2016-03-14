@@ -10,6 +10,7 @@ namespace backend\modules\calculator\models\search;
 
 
 use backend\modules\calculator\models\Work;
+use common\modules\calculator\models\WorkLang;
 use yii\data\ActiveDataProvider;
 use yii\data\ArrayDataProvider;
 use yii\helpers\VarDumper;
@@ -18,10 +19,12 @@ class WorkSearch extends Work
 {
     protected $_children;
     public $worktypeId;
+    private $_costRu;
+    private $_costEn;
 
     public function rules(){
         return [
-            [['title', 'cost', 'worktype_id', 'parent_id'], 'safe'],
+            [['title', 'costRu', 'costEn', 'worktype_id', 'parent_id'], 'safe'],
         ];
     }
 
@@ -59,7 +62,18 @@ class WorkSearch extends Work
         $query->andFilterWhere(['=', 'work.parent_id', $this->parent_id])->orFilterWhere(['=', 'work.id', $this->parent_id]);
         $query->andFilterWhere(['=', 'work.worktype_id', $this->worktype_id]);
         $query->andFilterWhere(['LIKE', 'work_lang.title', $this->title]);
-        $query->andFilterWhere(['=', 'work.cost', $this->cost]);
+
+        if($this->_costRu){
+            $query->andFilterWhere(['=', 'work_lang.cost', $this->_costRu])->andWhere([
+                'work_lang.lang_id'=> 2
+            ]);
+        }
+        if($this->_costEn){
+            $query->andFilterWhere(['=', 'work_lang.cost', $this->_costEn])->andWhere([
+                'work_lang.lang_id' => 1
+            ]);
+        }
+
 
         $models = $query->all();
         $array = [];
@@ -83,6 +97,32 @@ class WorkSearch extends Work
         ]);
 
         return $dataProvider;
+    }
+
+    public function getCostRu(){
+        if($this->_costRu)
+            return $this->_costRu;
+        $wl = WorkLang::findOne([
+            'lang_id' => 2,
+            'work_id' => $this->id
+        ]);
+        return $wl ? $wl->cost : null;
+    }
+    public function setCostRu($value){
+        $this->_costRu = $value;
+    }
+
+    public function getCostEn(){
+        if($this->_costEn)
+            return $this->_costEn;
+        $wl = WorkLang::findOne([
+            'lang_id' => 1,
+            'work_id' => $this->id
+        ]);
+        return $wl ? $wl->cost : null;
+    }
+    public function setCostEn($value){
+        $this->_costEn = $value;
     }
 
     public function attributeLabels()

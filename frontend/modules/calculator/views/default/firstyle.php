@@ -1,6 +1,7 @@
 <?
 use common\modules\calculator\models\Work;
 use common\modules\calculator\models\Worktype;
+use frontend\modules\calculator\Module;
 
 $itog = 0;
 ?>
@@ -9,16 +10,16 @@ $itog = 0;
     <body>
         <div style="display: block; max-width: 1200px; margin: 0 auto 0 auto; font-size: 14px; font-family: 'Arial';">
             <div style="display: block; width: 100%; text-align: center; margin-top: 20px;">
-                Расчет стоимости создания фирменного стиля от WebTeam.pro"
+                <?=Module::t('design', 'STYLE_TITLE')?>
             </div>
             <div style="display: block; width: 100%; margin-top: 20px;">
                 <div style="display: block; width: 100%;">
                     <div style="display: block; width: 100%;">
                         <div style="display: block; float: left; padding: 10px;">
-                            Работа
+                            <?=Module::t('design', 'STYLE_TABLE_1')?>
                         </div>
                         <div style="display: block; float: right; padding: 10px;">
-                            Стоимость, Р.
+                            <?=Module::t('design', 'STYLE_TABLE_2')?>, <?=Module::t('main', 'CURRENCY')?>
                         </div>
                         <div style="height: 0; clear: both;"></div>
                     </div>
@@ -77,7 +78,7 @@ $itog = 0;
             </div>
             <div style="display: block; width: 100%; text-align: center; margin-top: 20px; border-top: 1px solid #eceff5; padding-top: 20px;">
                 <div style="display: block; width: 100%; font-size: 20px;">
-                    Итого: <span id="itog"><?=$itog?></span> Р.
+                    <?=Module::t('design', 'SITE_TOTAL')?> <span id="itog"><?=$itog?></span> <?=Module::t('main', 'CURRENCY')?>
                 </div>
             </div>
         </div>

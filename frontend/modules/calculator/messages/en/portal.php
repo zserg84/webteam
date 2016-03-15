@@ -1,6 +1,6 @@
 <?php
 return [
-    'PORTAL_TITLE' => 'Choose one of the items to inquire about the cost of your Web project',
+    'PORTAL_TITLE' => 'Choose one of the items below to know the cost',
     'PORTAL_CONTENT' => 'If you do not know what to choose, click Internet service',
     'PORTAL_LIST_1' => 'Landing page or  promo-site',
     'PORTAL_LIST_2' => 'Internet shop ',
@@ -32,7 +32,7 @@ return [
     'SERVICE_TITLE' => 'Internet service cost',
     'SERVICE_CONTENT_1' => 'Developing Internet service is always an interesting and unique task; to cope with it, we form an individual team that works exclusively on your project.',
     'SERVICE_CONTENT_2' => 'Our studio has a rich experience in creating unique Internet services to perform different tasks. We work both in B2B and B2C sectors. ',
-    'SERVICE_CONTENT_3' => 'Unfortunately, the common question "How much does  Internet service cost?" is difficult to answer.    It may be ….$ or …..$.',
+    'SERVICE_CONTENT_3' => 'Unfortunately, the common question "How much does  Internet service cost?" is difficult to answer.    It may be 3 000 $ or 1 000 000 $.',
     'SERVICE_CONTENT_4' => 'In each case, we find out the needs (tasks) and prepare a commercial quotation. Write to us and we will contact you promptly! ',
 
     'NETWORK_TITLE' => 'Social  network cost',

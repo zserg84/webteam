@@ -26,7 +26,7 @@ $works = Work::find()->where([
                             <tr>
                                 <td><?=Module::t('design', 'SITE_TABLE_1')?></td>
                                 <td style="width: 200px; text-align: center;"><?=Module::t('design', 'SITE_TABLE_2')?></td>
-                                <td style="width: 200px; text-align: right;"><?=Module::t('design', 'SITE_TABLE_4')?>, <?=Module::t('main', 'CURRENCY')?></td>
+                                <td style="width: 200px; text-align: right;"><?=Module::t('design', 'SITE_TABLE_3')?>, <?=Module::t('main', 'CURRENCY')?></td>
                             </tr>
                         </table>
                     </div>

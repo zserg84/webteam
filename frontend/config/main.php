@@ -62,6 +62,13 @@ return [
                     'forceTranslation' => true,
                     'fileMap' => [
                         'html' => 'html.php',
+                        'main' => 'main.php',
+                        'menu' => 'menu.php',
+                        'ourservices' => 'ourservices.php',
+                        'ourservices_form' => 'ourservices_form.php',
+                        'portfolio' => 'portfolio.php',
+                        'team' => 'team.php',
+                        'vacancy' => 'vacancy.php',
                     ],
                 ],
             ],

@@ -20,4 +20,6 @@ return [
     'BUTTON_CALCULATION' => 'Получить детальный расчет',
     'BUTTON_SELF_CALCULATION' => 'Посчитать команду самому',
     'CURRENCY' => 'Р',
+    'SEND_OK_MESSAGE' => 'Ваше сообщение отправлено',
+    'COST_CALCULATION' => 'Расчет стоимости',
 ];

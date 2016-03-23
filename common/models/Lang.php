@@ -5,6 +5,7 @@ namespace common\models;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\helpers\ArrayHelper;
+use common\components\TabGeo\Tabgeo;
 
 /**
  * This is the model class for table "lang".
@@ -108,7 +109,7 @@ class Lang extends \yii\db\ActiveRecord
 
         if(!$language){
             $ip = $_SERVER['REMOTE_ADDR'];
-            $country_code = \TabGeo\country($ip);
+            $country_code = Tabgeo::country($ip);
             if(!in_array($country_code, ['RU', 'KZ', 'BY', 'UA']))
                 $language = self::getLangByUrl('en');
         }

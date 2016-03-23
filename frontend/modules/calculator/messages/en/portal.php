@@ -5,7 +5,7 @@ return [
     'PORTAL_LIST_1' => 'Landing page or  promo-site',
     'PORTAL_LIST_2' => 'Internet shop ',
     'PORTAL_LIST_3' => 'Corporate site',
-    'PORTAL_LIST_4' => 'Intenret service',
+    'PORTAL_LIST_4' => 'Internet service',
     'PORTAL_LIST_5' => 'Social network',
     'from {n} cost' => 'from {n} $',
 
@@ -18,10 +18,10 @@ return [
     'LANDING_LIST_4' => 'content manager',
     'LANDING_CONTENT_3' => 'The cost of such a site in our studio starts ',
 
-    'SHOP_TITLE' => 'Cost of  Internet shop ',
-    'SHOP_CONTENT_1' => 'Internet shop on the 1C Bitrix platform',
+    'SHOP_TITLE' => 'Cost of Internet shop ',
+    'SHOP_CONTENT_1' => 'Internet shop based on any ready solution of your choice',
     'SHOP_CONTENT_2' => 'starts from…$',
-    'SHOP_CONTENT_3' => 'A unique solution, specially created for  you on the Bitrix platform  ',
+    'SHOP_CONTENT_3' => 'A unique, custom solution, created for your business case',
     'SHOP_CONTENT_4' => 'from …$',
 
     'CORPORATE_TITLE' => 'Cost of corporate site (portal)',

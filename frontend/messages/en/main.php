@@ -43,4 +43,5 @@ return [
     'PAGE_DESCRIPTION' => 'Expertise in forming major project teams (from social networks to successful start-ups). From 2001 to 2008, our company was engaged only in larger Internet projects for our foreign partners.',
     'PDF_LINK' => 'files/presentation_en.pdf',
     'SEND_OK_MESSAGE' => 'Your message has sent',
+    'COST_CALCULATION' => 'Cost calculation',
 ];

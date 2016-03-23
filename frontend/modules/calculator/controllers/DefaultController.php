@@ -8,13 +8,16 @@
 
 namespace frontend\modules\calculator\controllers;
 
+use frontend\components\Helper;
 use frontend\modules\calculator\models\form\EmailForm;
+use frontend\modules\calculator\Module;
 use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\helpers\VarDumper;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\widgets\ActiveForm;
+use Yii;
 
 class DefaultController extends Controller
 {
@@ -36,7 +39,7 @@ class DefaultController extends Controller
     public function sendToEmail($page, $model){
         $from = "info@webteam.pro";
         $to = $model->email;
-        $subject = 'Расчет стоимости';
+        $subject = Module::t('main', 'COST_CALCULATION');
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
         $headers .= "From:" . $from . "\r\n";
@@ -60,7 +63,7 @@ class DefaultController extends Controller
         if(mail($to,$subject,$message, $headers)){
             \Yii::$app->session->setFlash(
                 'message',
-                'Ваше сообщение отправлено'
+                Module::t('main', 'SEND_OK_MESSAGE')
             );
             return $this->redirect('/');
         }

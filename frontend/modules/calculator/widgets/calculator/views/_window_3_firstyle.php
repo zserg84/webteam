@@ -87,7 +87,7 @@ $works = Work::find()->where([
     </div>
     <div class="swc-footer transit-1000">
         <div class="swc-5-footer-title">
-            Итого: <span id="itog">0</span> <img src="<?=Asset::imgSrc(Module::t('main', 'SITE_CURRENCY_BIG'))?>" alt="" class="icon-rub-big">
+            <?=Module::t('portal', 'CORPORATE_TOTAL')?> <span id="itog">0</span> <img src="<?=Asset::imgSrc(Module::t('main', 'SITE_CURRENCY_BIG'))?>" alt="" class="icon-rub-big">
         </div>
         <div class="swc-5-footer-content">
             <div class="swc-5-footer-btn transit-300" id="print_button">

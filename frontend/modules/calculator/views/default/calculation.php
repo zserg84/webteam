@@ -101,7 +101,10 @@ foreach($subworks as $swKey=>$swVal){
                                     <td class="price"><?=$spec->getUsn()?></td>
                                 </tr>
                             <?endforeach?>
-                            <?$itog = 1000*$itog;?>
+                            <?
+                            if(\common\models\Lang::getCurrent()->url == 'ru')
+                                $itog = 1000*$itog;
+                            ?>
                             </tbody>
                         </table>
                     </div>

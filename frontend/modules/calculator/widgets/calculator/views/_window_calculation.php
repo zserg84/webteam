@@ -263,6 +263,13 @@ $specs = Specialist::find()->visible()->all();
     </div>
 </div>
 
+<?
+$index = 1;
+if(\common\models\Lang::getCurrent()->url == 'ru'){
+    $index = 1000;
+}
+?>
+
 <?$this->registerJs('
     $(function(){
         scrollPane();
@@ -288,7 +295,7 @@ $specs = Specialist::find()->visible()->all();
             allPrice += rowItog;
             allPeopleCount += count;
         });
-        allPrice = 1000 * allPrice;
+        allPrice = '.$index.' * allPrice;
         allPrice = allPrice.toFixed(0);
         allPrice = String(allPrice);
         allPrice = allPrice.replace(/(\d)(?=(\d{3})+(\D|$))/g, "$1 ");

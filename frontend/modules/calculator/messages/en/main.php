@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'CALC_CONTEXT' => 'Find out the cost of your project.',
+    'CALC_CONTEXT' => 'Find out the cost of your project',
     'MAIN_TITLE' => 'Choose one of the items to find out the cost of your project',
     'MAIN_LINK_1' => 'Design and corporate identity ',
-    'MAIN_LINK_2' => 'Website, Bitrix portal  or service ',
+    'MAIN_LINK_2' => 'Website, Internet portal or service ',
     'MAIN_LINK_3' => 'Mobile application',
-    'MAIN_BUTTON' => 'I know what personnel is needed for the team.',
+    'MAIN_BUTTON' => 'I know what personnel is needed for my team.',
     'MAIN_CONTENT' => 'calculation of the monthly cost of IT specialists',
     'BUTTON_BACK' => 'Back',
     'DESIGN_TITLE' => 'Choose one of the items to find out the cost of your project',
@@ -18,6 +18,8 @@ return [
     'BUTTON_TO_EMAIL' => 'Send by e-mail',
     'BUTTON_DISCOUNT' => 'Inquire about  discounts',
     'BUTTON_CALCULATION' => 'Get detailed calculation',
-    'BUTTON_SELF_CALCULATION' => 'Calculate the cost of the team yourself',
+    'BUTTON_SELF_CALCULATION' => 'Calculate the cost of the team',
     'CURRENCY' => '$',
+    'SEND_OK_MESSAGE' => 'Your message has sent',
+    'COST_CALCULATION' => 'Cost calculation',
 ];

@@ -13,7 +13,7 @@ return [
     'TEAM_TOOLTIP_4' => 'net salary',
     'TEAM_NAME_5' => 'Payroll tax',
     'TEAM_SUBNAME_5' => ' ',
-    'TEAM_TOOLTIP_5' => 'concessionary tax rate - 13%  TIPI (Tax on Individual Personal Income)+20% SIF FR (Social Insurance Fund of the Russian Federation) + 0.2 Accident Social Insurance Fund. Или: concessionary tax rate: 33.2% totally',
+    'TEAM_TOOLTIP_5' => 'In large projects we work with the client under the principle of information transparancy',
     'TEAM_NAME_6' => 'Depreciation and amortization',
     'TEAM_SUBNAME_6' => 'of equipment ',
     'TEAM_TOOLTIP_6' => 'upgrade (replacing ) of equipment in 2 years of work',

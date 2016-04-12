@@ -27,10 +27,13 @@ $(".nav-item").mouseenter(function() {
 /*/menu navigate effect/*/
 
 /* language effect block */
+/*
 $(document).mousedown(function (e){
     var langBox = $(".tb-lang-list");
     if (!langBox.is(e.target) && langBox.has(e.target).length === 0) { langBox.removeClass("ll-show"); }
 });
+*/
+/*
 $(document).on("click", ".tb-lang-block", function() {
     if ( $(".tb-lang-list").hasClass("ll-show") ) {
         $(".tb-lang-list").removeClass("ll-show");
@@ -38,6 +41,7 @@ $(document).on("click", ".tb-lang-block", function() {
         $(".tb-lang-list").addClass("ll-show");
     }
 });
+*/
 /*/language effect block/*/
 
 $("a[href^='#']").click( function(){

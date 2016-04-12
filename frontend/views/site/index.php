@@ -43,7 +43,7 @@ $this->title = Helper::t('main', 'MAIN_HEADER');
                         <?=Helper::t('main', 'PRESENTATION_TEXT')?>
                     </div>
                     <div class="info-file-size">
-                        5.3 <?=Helper::t('main', 'INFO_FILE_SIZE')?>
+                        11 <?=Helper::t('main', 'INFO_FILE_SIZE')?>
                     </div>
                 </div>
                 <div class="clearfix"></div>
